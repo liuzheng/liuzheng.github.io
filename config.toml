@@ -1,0 +1,16 @@
+baseURL = "https://liuzheng.github.io/"
+languageCode = "en"
+title = "LZ's Blog"
+theme = "dream"
+
+[params]
+author = "liuzheng"
+motto = ""
+description = ""
+avatar = "https://avatars2.githubusercontent.com/u/1198380"
+
+email = "Gmail@liuzheng712"
+github = "https://github.com/liuzheng"
+linkedin = ""
+codepen = ""
+stackoverflow = ""
