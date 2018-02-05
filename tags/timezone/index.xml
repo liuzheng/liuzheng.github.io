@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Timezone on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/timezone/</link>
+    <description>Recent content in Timezone on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/timezone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows 和 Linux共存时时间不一致</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</guid>
+      <description>让Windows把硬件时间当作UTC，与Linux/Unix/Mac保持一致。
+在 注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+下中添加一项数据类型为REG_DWORD，名称为RealTimeIsUniversal，值设为1 的键值。
+或者在windows下运行下列代码
+@echo off color 0a Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 echo. echo 已让Windows识别存贮在主板CMOS内的时间为格林威治标准时间（GMT）,即系统根据CMOS时间和设置的时区来确定当前系统的时间。 echo. pause  </description>
+    </item>
+    
+  </channel>
+</rss>

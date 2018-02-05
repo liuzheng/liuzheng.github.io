@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/proxy/</link>
+    <description>Recent content in Proxy on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git设置goagent代理</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</guid>
+      <description>git代理
+git config --global http.proxy 127.0.0.1:8087 git config --global https.proxy 127.0.0.1:8087 git config --global http.sslCAinfo GoAgent/CA.crt  取消代理
+git config --global http.proxy &amp;quot;&amp;quot; git config --global https.proxy &amp;quot;&amp;quot; git config --global http.sslCAinfo &amp;quot;&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>gitWithGoAgent</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-13-gitwithgoagent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-13-gitwithgoagent/</guid>
+      <description>找到.gitconfig隐藏目录，添加两行设置
+[http] proxy = http://127.0.0.1:8087 sslVerify = false sslCAinfo = $goagent/local/CA.crt [https] proxy = https://127.0.0.1:8087 sslVerify = false sslCAinfo = $goagent/local/CA.crt ssh-keygen -t rsa -P &#39;&#39; -f /root/.ssh/id_rsa  </description>
+    </item>
+    
+  </channel>
+</rss>

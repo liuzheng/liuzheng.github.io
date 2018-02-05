@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码规范 on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</link>
+    <description>Recent content in 代码规范 on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google HTML/CSS Style Guide</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-21-google-htmlcss-style-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-21-google-htmlcss-style-guide/</guid>
+      <description>参译：https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+今天在写HTML代码时稍稍反省了一下代码风格，所以决定抽空学习一下Google的代码风格标准。
+一般风格规则 http/https协议 对于http和https协议，建议使用双斜杠代替
+对于HTML代码：
+&amp;lt;!-- 不建议使用 --&amp;gt; &amp;lt;script src=&amp;quot;http://www.google.com/js/gweb/analytics/autotrack.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;!-- 建议使用 --&amp;gt; &amp;lt;script src=&amp;quot;//www.google.com/js/gweb/analytics/autotrack.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  对于CSS代码：
+/* 不建议使用 */ .example { background: url(http://www.google.com/images/example); } /* 建议使用 */ .example { background: url(//www.google.com/images/example); }  一般格式规则 缩进 不建议使用TAB或者混合TAB &amp;amp; 空格作为缩进，建议使用两个空格作为缩进：
+对于HTML代码：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Fantastic &amp;lt;li&amp;gt;Great &amp;lt;/ul&amp;gt;  对于CSS代码：
+.example { color: blue; }  大小写 建议仅使用小写：包括HTML元素名称、属性、属性值（text/CDATA除外），CSS选择器、属性和属性值（不含字符串）
+对于HTML代码：
+&amp;lt;!-- 不建议使用 --&amp;gt; &amp;lt;A HREF=&amp;quot;/&amp;quot;&amp;gt;Home&amp;lt;/A&amp;gt; &amp;lt;!-- 建议使用 --&amp;gt; &amp;lt;img src=&amp;quot;google.png&amp;quot; alt=&amp;quot;Google&amp;quot;&amp;gt;  对于CSS代码：</description>
+    </item>
+    
+  </channel>
+</rss>

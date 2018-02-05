@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phpmyadmin on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/phpmyadmin/</link>
+    <description>Recent content in Phpmyadmin on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>phpmyadmin去除iframe限制</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-24-phpmyadmin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-24-phpmyadmin/</guid>
+      <description>无聊要将phpmyadmin页面嵌入到某页面iframe中，做成统一的控制台管理界面，在此记录一下对phpmyadmin源代码的一些操作
+修改 /usr/share/phpmyadmin/libraries/Header.class.php 461 行
+//&#39;X-Frame-Options: DENY&#39;  将其注释
+修改 /usr/share/phpmyadmin/js/cross_framing_protection.js
+/* vim: set expandtab sw=4 ts=4 sts=4: */ /** * Conditionally included if framing is not allowed */ //if(self == top) { document.documentElement.style.display = &#39;block&#39; ; //} else { // top.location = self.location ; //}  至此phpmyadmin可以在iframe内展示咯</description>
+    </item>
+    
+  </channel>
+</rss>

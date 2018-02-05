@@ -1,0 +1,2070 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/</link>
+    <description>Recent content on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Make a db?</title>
+      <link>https://liuzheng.github.io/before2018/2017-08-10-make-a-db/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2017-08-10-make-a-db/</guid>
+      <description>Why? Already build a high performance and high throughput log system, so want try to build a db system.
+godis Tried to write a redis in golang, but have very low preformance in SET and GET, maybe there have more optimizable space, need a lot time to think.
+Want Using golang! And build a DB like database.
+Todo [] Read the sqlite source code [] Enhance the godis</description>
+    </item>
+    
+    <item>
+      <title>Activating a volume group</title>
+      <link>https://liuzheng.github.io/before2018/2015-07-13-activating-a-volume-group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-07-13-activating-a-volume-group/</guid>
+      <description>http://tldp.org/HOWTO/LVM-HOWTO/activatevgs.html
+After rebooting the system or running vgchange -an, you will not be able to access your VGs and LVs. To reactivate the volume group, run:
+# vgchange -ay my_volume_group  </description>
+    </item>
+    
+    <item>
+      <title>Add Two Numbers</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-27-add-two-numbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-27-add-two-numbers/</guid>
+      <description>r=0 up = 0 while True: if l1==0: L1 = 0 else: L1 = l1.val if l1.next == None: l1=0 else: l1=l1.next
+ if l2==0: L2 = 0 else: L2 = l2.val if l2.next == None: l2=0 else: l2=l2.next o=L1+L2+up #r.val=o%10 up=o/10 if r==0: r=ListNode(o%10) else: r.next=ListNode(o%10) if l1==0 and l2==0: if up&amp;gt;0: r.val=up return r if l1 == None: return l2 if l2 == None: return l1 flag = 0 dummy = ListNode(0); p = dummy while l1 and l2: p.</description>
+    </item>
+    
+    <item>
+      <title>Android ROM sign</title>
+      <link>https://liuzheng.github.io/before2018/2016-02-21-android-rom-sign/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-02-21-android-rom-sign/</guid>
+      <description> Android 手记 参考：http://stackoverflow.com/questions/16316526/how-to-sign-android-rom-zip-file
+下载apk-zip-signing-tools.zip或者http://goo.gl/lRNlE8
+解压后在该文件目录下运行如下命令，当然各种指路径都是可以的
+java -Xmx1024m -jar signapk.jar -w testkey.x509.pem testkey.pk8 my_rom.zip my_signed_rom.zip  分离驱动和内核（暂时未验证是否有效） 参考：http://forum.ubuntu.org.cn/viewtopic.php?t=450939
+提取驱动 驱动提取很好办，在/system/vendor/modules里面，那一堆.ko文件就是。另外可能还需要固件，在/system/vendor/firmware里面。
+提取内核: 工具下载，本地地址,http://dl.linux-sunxi.org/users/arete74/tools.tar.gz
+通过命令 split_bootimg.pl ../boot.img 来得到一个boot.img-kernel的文件，将它转换成可以从卡上引导的镜像：
+mkimage -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n &amp;quot;Linux 2.6&amp;quot; -d boot.img-kernel uImage  tip:对于 Mac 来说，mkimage 命令可以这样安装brew install u-boot-tools
+注意： 可能一些驱动在ramdisk里面，分离内核之后有个boot.img-ramdisk.gz的文件，两次解压，就可以看到里面有一些安卓启动的脚本，还有一个/system/目录，这个目录下也可能有驱动，如果有就一并提取出来。
+gunzip boot.img-ramdisk.gz 7z x boot.img-ramdisk  </description>
+    </item>
+    
+    <item>
+      <title>Angular change interpolateProvider</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-07-angular-change-interpolateprovider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-07-angular-change-interpolateprovider/</guid>
+      <description>修改Angular的标识符，避免和Django冲突
+xxx.config(function($interpolateProvider){ $interpolateProvider.startSymbol(&#39;{[{&#39;); $interpolateProvider.endSymbol(&#39;}]}&#39;); })  </description>
+    </item>
+    
+    <item>
+      <title>AngularJS做网站的一些想法</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-21-angularjstip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-21-angularjstip/</guid>
+      <description>页面速度 由于撰写此类网站需要用到大量js代码，而且一般都是外链，故网站相应有时候相当慢。所以我觉得应该在首页尽可能少的使用js生成的页面，将css放入head，使得能迅速加载出用户可视的页面，让用户先看一会儿，让js飞一会儿，时间应该够。努力让用户初次就看到页面看一会儿，给js时间</description>
+    </item>
+    
+    <item>
+      <title>Angular使用总结</title>
+      <link>https://liuzheng.github.io/before2018/2016-05-02-angular2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-05-02-angular2/</guid>
+      <description> 为什么想到用Angular 之前室友在他的项目中使用了Angular，并且觉得很赞，我呢一直没有项目需求来使用Angular，恰逢Jumpserver开发组打算重构整个项目，故而决定使用Angular来作为前端js框架。
+学习曲线 对于有过Angularjs的项目经验的我来说，个人心理感觉其实这个应该没有太大问题，Angularjs本身就是可以说是为后端开发人员设计的前端框架，但是据说学习曲线很陡，我并没啥感觉，觉得还是比较好理解的，也很比较容易掌握。对于Angular来说，我有Python语言的背景觉得这语言设计的真是有些反人类啊。
+import {Component} from &#39;angular2/core&#39;;  天晓得为什么要这么设计
+from &#39;angular2/core&#39; import {Component}  这样不是很通俗也很能让IDE智能补全么。。。
+其他部分到还好，据说Dart更像Java，不过这个对于外界（google内部是用Dart的）来说，ts更易推广，我就没花精力去看Dart了，后期有时间再弄弄吧。
+背景知识 http://angularjs.cn/A1er
+https://gf-rd.gitbooks.io/angular-2-step-by-step/content/
+语法清单 https://segmentfault.com/a/1190000004071388
+单元测试 https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.mnwfhbm6k
+集合 https://segmentfault.com/a/1190000003761054
+这些简单的学习我就懒的帖了，网上都有~
+技术想法 </description>
+    </item>
+    
+    <item>
+      <title>Ansible Inventory</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-06-ansible-inventory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-06-ansible-inventory/</guid>
+      <description>参考：http://docs.ansible.com/intro_inventory.html
+由于实习要求我学习Ansible，故而开始看，今天遇到的问题是hosts的分组
+我一直都是比较奇葩的，所以就把服务器分组就折腾的各种“优雅”
+遇到的问题是未对官方文档详细查看，仅仅看了中文文档。
+这里是一份 /etc/ansible/hosts 的样本
+mail.example.com [webservers] foo.example.com bar.example.com [dbservers] one.example.com two.example.com three.example.com  对于我来说，想做到的就是像盗梦空间里那样的各种嵌套，由于不熟练，以为分组仅仅是多加一个中括号而已，故而出现了连接问题
+我是这样干的，/etc/ansible/hosts
+[AAA] IP1 [BBB] IP2 [CCC] AAA BBB $ ansible CCC -m ping CCC | FAILED =&amp;gt; SSH encountered an unknown error during the connection. We recommend you re-run the command using -vvvv, which will enable SSH debugging output to help diagnose the issue  这里就出问题了，原因就是分组他有特殊的规则，必须后面加上:children，想想也对，符合逻辑，不然会出不知道的bug
+[AAA] IP1 [BBB] IP2 [CCC：children] AAA BBB  奇葩的我当然还没结束</description>
+    </item>
+    
+    <item>
+      <title>Ansible 开篇</title>
+      <link>https://liuzheng.github.io/before2018/2015-04-08-ansible1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-04-08-ansible1/</guid>
+      <description>最近实习使用的是一个工具之一就是Ansible，在此记录一些日常tip，以供访客借鉴，欢迎指正
+Ansible简介 这里我就不多废话，就简单摘抄几个字吧。
+官方的title是“Ansible is Simple IT Automation”——简单的自动化IT工具。这个工具的目标有这么几项：让我们自动化部署APP；自动化管理配置项；自动化的持续交付；自动化的（AWS）云服务管理。  下面这是摘自36氪的一段介绍，很详细：
+AnsibleWorks成立于2012年，由自动化工具Cobbler及Func的开发者Michael DeHaan创建。其Ansible平台是一个开源的配置及计算机管理平台。可实现多节点的软件部署，执行特定任务并进行配置管理。 Ansible跟其他IT自动化技术的区别在于其关注点并非配置管理、应用部署或IT流程工作流，而是提供一个统一的界面来协调所有的IT自动化功能，因此Ansible的系统更加易用，部署更快。受管理的节点无需安装额外的远程控制软件，由平台通过SSH（Secure SHell）对其进行管理，因此十分方便。其模块支持JSON等标准输出格式，可采用任何编程语言重写。 Ansible可以让用户避免编写脚本或代码来管理应用，同时还能搭建工作流实现IT任务的自动化执行。IT自动化可以降低技术门槛及对传统IT的依赖，从而加快项目的交付速度。  !(图片来源于：http://ju.outofmemory.cn/entry/67581)[http://noops.me/wp-content/uploads/2014/03/16.png]
+安装 虽然很多包管理提供了ansible的安装，但是由于仅仅需要一台机器安装ansible，所以我推荐使用pip安装，一般pip上都是最新的。
+环境准备
+sudo apt-get install python-dev python-setuptools sshpass sudo easy_install pip  解压并cd到相应目录
+sudo pip install ansible sudo mkdir /etc/ansible sudo touche /etc/ansible/hosts  参考：
+http://mageedu.blog.51cto.com/4265610/1412028
+http://ju.outofmemory.cn/entry/67581</description>
+    </item>
+    
+    <item>
+      <title>Apache Config 记录</title>
+      <link>https://liuzheng.github.io/before2018/2014-5-18-apacheconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-5-18-apacheconfig/</guid>
+      <description>ServerTokens OS　在44行 修改为：ServerTokens Prod （在出现错误页的时候不显示服务器操作系统的名称） KeepAlive Off 在76行 修改为：KeepAlive On （允许程序性联机） MaxKeepAliveRequests 100 在83行 修改为：MaxKeepAliveRequests 1000 （增加同时连接数） Options Indexes FollowSymLinks　在331行 修改为：Options Includes ExecCGI FollowSymLinks（允许服务器执行CGI及SSI，禁止列出目录） DirectoryIndex index.html index.html.var 在402行 修改为：DirectoryIndex index.html index.htm Default.html Default.htm Options Indexes MultiViews FollowSymLinks 在554行 修改为 Options MultiViews FollowSymLinks（不在浏览器上显示树状目录结构） ServerSignature On　在536行 修改为：ServerSignature Off （在错误页中不显示Apache的版本） #AddHandler cgi-script .cgi　在796行 修改为：AddHandler cgi-script .cgi .pl （允许扩展名为.pl的CGI脚本运行） index.php Default.php index.html.var （设置默认首页文件，增加index.php）</description>
+    </item>
+    
+    <item>
+      <title>BCM4312网卡安装</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-16-bcm4312/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-16-bcm4312/</guid>
+      <description>【转】http://forum.ubuntu.org.cn/viewtopic.php?f=165&amp;amp;t=375476
+Debian squeeze的基本系统和Ubuntu的不太一样。Ubuntu中已经集成了GCC编译环境（至少在Ubuntu10.04中是这样的），而Debian squeeze中没有。因此在Debian squeeze中安装BCM4312网卡驱动，需要先安装GCC编译环境。本文主要参考BCM4312官方文档。
+写在这里主要为了方便以后再次安装BCM4312驱动，同时也希望对Debian新手有点帮助。
+附： BCM4312官方驱动和文档地址：http://www.broadcom.com/support/802.11/linux_sta.php 一个32位的，一个64位的，还有一个是官方文档。
+一、安装GCC编译环境 根据官方文档在Ubuntu中的提示，稍微修改了下（linux-headers-generic改为linux-headers-uname -r ，添加了个gcc）。其实在Ubuntu是不用自己安装，已经有了这个环境。 代码:
+#apt-get install build-essential linux-headers-`uname -r` gcc  二、编译BCM4312驱动 将下载好的驱动hybrid-portsrc_x86_32-v5_100_82_112.tar.gz（32位）或hybrid-portsrc_x86_64-v5_100_82_112.tar.gz（64位）。以下以64位为例，假设hybrid-portsrc_x86_64-v5_100_82_112.tar.gz包就在当前目录下。
+1、新建一个临时目录bcm4312，把hybrid-portsrc_x86_64-v5_100_82_112.tar.gz解压到该目录下。 代码:
+# mkdir bcm4312 # cd bcm4312 #tar xzf ../hybrid-portsrc_x86_64-v5_100_82_112.tar.gz  2、编译驱动。官方提示make clean为可选，我倒是觉得真没有这个必要，如果该目录以前编译过的话，make clean倒是不要省的好。 代码: # make # make clean
+三、加载BCM4312驱动 1、删除之前的无线网卡驱动。 查看原系统中的无线网卡驱动，如果有的话，把他们卸载掉，并阻止这些驱动再次加载，我的Debian squeeze只有b43和ssb，没有bcma。 注意：只是这四个里面的，不要阻止wl加载，因为该驱动名称最后也是wl。 引用:
+# lsmod | grep &amp;quot;b43\|ssb\|bcma\|wl&amp;quot; rmmod b43 rmmod ssb # echo &amp;quot;blacklist ssb&amp;quot; &amp;gt;&amp;gt; /etc/modprobe.d/blacklist.conf # echo &amp;quot;blacklist b43&amp;quot; &amp;gt;&amp;gt; /etc/modprobe.</description>
+    </item>
+    
+    <item>
+      <title>CentOS6 Nginx 502 proxy_pass</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-27-centos6-nginx-502-proxy_pass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-27-centos6-nginx-502-proxy_pass/</guid>
+      <description>困扰一天了。。。
+SELinxu在这台服务器上居然开了
+查看SELinux状态： 1、/usr/sbin/sestatus -v ##如果SELinux status参数为enabled即为开启状态
+SELinux status: enabled
+2、getenforce ##也可以用这个命令检查
+Nginx做反代啊什么各种502
+临时 setsebool -P httpd_can_network_connect 1  永久 修改/etc/selinux/config 文件
+将SELINUX=enforcing改为SELINUX=disabled
+有时候iptables也会来凑热闹 chkconfig --level 12345 iptables off chkconfig --level 12345 ip6tables off service iptables stop service ip6tables stop  参考
+http://stackoverflow.com/questions/25995060/nginx-cannot-connect-to-jenkins-on-centos-7
+http://www.cnblogs.com/xiangxiaodong/</description>
+    </item>
+    
+    <item>
+      <title>CentOS6 x64 Hadoop编译</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-07-centos6_x64_hadoop_warnning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-07-centos6_x64_hadoop_warnning/</guid>
+      <description>由于各种“偷懒”，架设hadoop集群的时候按照正常步骤安装，最近发现日志里 总有一堆的java报错，通过各方帖子了解是hadoop官方默认的是32位，而我这里 使用的是64位的centos6。好吧，编译了要
+编译环境安装 yum install cmake lzo-devel zlib-devel gcc autoconf automake libtool ncurses-devel openssl-devel gcc-c++  maven 配置 wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz  解压，并cd到/usr/local/目录
+对解压的文件在/usr/local/目录下做软连接
+在/etc/profile后追加
+export MAVEN_HOME=/usr/local/maven export PATH=$MAVEN_HOME/bin:$PATH  source一下
+# mvn -v Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-15T01:29:23+08:00) Maven home: /usr/local/maven Java version: 1.7.0_71, vendor: Oracle Corporation Java home: /opt/jdk1.7.0_71/jre Default locale: en_US, platform encoding: UTF-8 OS name: &amp;quot;linux&amp;quot;, version: &amp;quot;2.6.32-504.3.3.el6.x86_64&amp;quot;, arch: &amp;quot;amd64&amp;quot;, family: &amp;quot;unix&amp;quot;  protoc 安装 需要gcc-c++ 在网站 http://code.</description>
+    </item>
+    
+    <item>
+      <title>CentOS6 升级到 7</title>
+      <link>https://liuzheng.github.io/before2018/2014-9-27-centos6upgradeto7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-9-27-centos6upgradeto7/</guid>
+      <description>CentOS 7 已经发布了，很多情况不允许重装系统，我这里就写一下 CentOS6 升级到 7 的过程以及注意点吧。
+安装 CentOS 6 由于没有 CentOS 6 的实体机玩，我就装个 VirtualBox
+VirtualBox 配置的机器如下
+安装都是基本默认配置，未做特殊修改，仅仅设置磁盘大小为18GB
+CentOS 版本为 CentOS-6.4-x86_64
+准备升级 首先修改upgrade.repo
+# vim /etc/yum.repos.d/upgrade.repo  加入，注：这里baseurl我在163的源里木有看到有upg目录，so，使用原版的
+[upgrade] name=upgrade baseurl=http://dev.centos.org/centos/6/upg/x86_64/ enabled=1 gpgcheck=0  安装升级软件
+# yum -y install preupgrade-assistant-contents redhat-upgrade-tool preupgrade-assistant  运行检查命令，以保证升级前所有软件都ok
+# preupg  如出现各种包依赖什么关系，请自行 Google ，无法在此对所有情况一一做叙述
+好了，现在使用 repo 文件升级,发出以下命令来导入GPG密钥。注：我这里使用的是 163 的源
+# rpm --import http://mirrors.163.com/centos/7.0.1406/os/x86_64/RPM-GPG-KEY-CentOS-7  根据手册页,使用以下命令升级CentOS 6;这将从互联网下载的包。
+# redhat-upgrade-tool --network 7.0 --instrepo http://mirrors.163.com/centos/7.0.1406/os/x86_64/  出来这个结果，看看英文吧，就是说不推荐，存在风险啥啥的</description>
+    </item>
+    
+    <item>
+      <title>CentOS6 安装Python2.7 及 pip记录</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-24-centos6-python-pip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-24-centos6-python-pip/</guid>
+      <description>实验室机器是 Centos6 yum完全不能升级成Python2.7，so 这几日 看了一些Python升级的东西。
+CentOS切记不能自己编译，内部依赖实在太多！！！ epel !!! epel是标配大家都懂的，这里就顺手加一下，以后查起来便利。
+sudo rpm -ivh http://download.fedora.redhat.com/pub/epel/6/x86_64/epel-release-6-5.noarch.rpm  安装SCL 这个可以提供如下几个版本的更新
+yum install centos-release-SCL  官方原话
+Currently, the following collections are available for CentOS 6.5 and later (package name in parenthesis):
+Ruby 1.9.3 (ruby193) Python 2.7 (python27) Python 3.3 (python33) PHP 5.4 (php54) Perl 5.16.3 (perl516) Node.js 0.10 (nodejs010) MariaDB 5.5 (mariadb55) MySQL 5.5 (mysql55) PostgreSQL 9.2 (postgresql92)  安装python2.7 我这里就安装python27所有的东西了
+sudo yum install python27-python*  如下是即将安装的包</description>
+    </item>
+    
+    <item>
+      <title>Chicken Soup</title>
+      <link>https://liuzheng.github.io/before2018/2015-12-01-chicken-soup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-12-01-chicken-soup/</guid>
+      <description>准备做鸡汤喝，最近炒鸡想喝~ 教程容后整理贴出
+ok, 下面开始鸡汤教程。
+今天去安亭菜场买了只鸡，3斤多，老母鸡，生姜一只。
+杀完，洗干净，鸡头和鸡胗用盐搓一下，内脏和鸡头鸡脚我是先放到凉水里煮了一下，煮出来一些比较腥的水，俗话说应该是汆一下。
+鸡架我是由卖鸡的人帮忙剪成大块，我自己用剪刀根据关节剪小的。
+电饭煲开启，倒满一半的水（我承认我比较土豪，用农夫山泉，上海的水真心太有味道了！！！），将生姜洗净切片放入，煮开。
+然后放入鸡块，倒入一瓶啤酒，我妈妈是倒半瓶，我只是倒的比较开心，不知不觉倒完了。
+接下来就是煮了。。。
+自始至终电饭煲都是用快速煮的模式，我觉得那样火力比较大。
+等快吃的时候加盐。总共煮的时间大概一个多小时。
+最后结果，鸡肉相当酥软，盐也适量，鸡汤永远是不够的。。。</description>
+    </item>
+    
+    <item>
+      <title>DOM 双向绑定</title>
+      <link>https://liuzheng.github.io/before2018/2016-01-19-dom-data-binding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-01-19-dom-data-binding/</guid>
+      <description>因为觉得AngularJS太重了，一般都会想尝试重新造轮子，先做一些基础调查吧。
+http://www.html-js.com/article/A-day-to-learn-JavaScript-using-the-native-JavaScript-data-binding
+ps: 上面链接的讨论圆点功能不错考虑后期加上^_^!
+http://www.jianshu.com/p/ee014d86cd3f
+https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md
+AngularJS是脏值检测，想着用原生办法解决，试试吧，如果不用jQuery的话。
+http://www.zhuowenli.com/frontend/easy-two-way-data-binding-in-javascript.html
+这篇文章讲的比较细致
+但是对于操作上需要使用set函数，太麻烦了。
+其实想想jquery 80，90 kb，angularjs1.x 123kb，加起来就是200kb。 按照手机10kb/s就是20秒，但是大多都是牛逼的手机吧，应该两秒内可以下完，但是，哎哎哎，为什么要考虑手机呢。。。我也就是自己想重新造个轮子。。。不过200kb确实似乎有点耗时间啊&amp;gt;_&amp;lt;
+再贴一篇：http://www.ituring.com.cn/article/48463
+囫囵吞枣的了解了大概，估计过两天就忘了。。。
+大致原理就是通过html的自定义属性绑定DOM标签，加上$watch （突然想到了硬件上的watchdog，一直觉得当时老师说喂狗，让狗叫很萌啊。。。）
+找到了前端乱炖的那个圆点了，叫tips.js，不知道LICENSE是如何，觉得可能需要自己重写一个，那个真的好好玩啊</description>
+    </item>
+    
+    <item>
+      <title>Dell 服务器 SAS硬盘热插拔识别问题解决</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-29-dellhotdisk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-29-dellhotdisk/</guid>
+      <description>前日BOSS将硬盘取下倒腾了一下，然后插回服务器，一切看似如此淡定。
+昨日收到小伙伴的报告，说hadoop无法启动。下面就是解决的详细过程。
+首先验证他说的
+$ bin/stop-all.sh $ bin/start-all.sh
+然后在浏览器上查看信息，发现果真宕了，好吧，相信他的话。
+Safe mode is ON. The reported blocks is only 0 but the threshold is 0.9990 and the total blocks ****. Safe mode will be turned off automatically. **** files and directories, **** blocks = **** total. Heap Size is **** GB / **** GB (*%)
+然后到节点服务器上查看运行情况
+$ jps
+呵呵，少了DataNode，手动加上看看
+$ hadoop-daemon.sh start DataNode Error: Could not find or load main class DataNode</description>
+    </item>
+    
+    <item>
+      <title>Fxxk AWS Elasticsearch service</title>
+      <link>https://liuzheng.github.io/before2018/2017-05-25-fxxk-aws-elasticsearch-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2017-05-25-fxxk-aws-elasticsearch-service/</guid>
+      <description>AWS Elasticsearch I admmit AWS have awsome services in his provide. But the Elasticsearch service is not the one.
+It cost too much money!
+You can find the cost list at here: https://aws.amazon.com/elasticsearch-service/pricing/
+Here have a limit Volume size must be an integer between 10 and 100/512/1536.
+So, that cost too much when I have more than 1TB data.
+And it have limit in the Elasticsearch&amp;rsquo;s version, you know a new version about Elasticsearch will wait so long time until aws support.</description>
+    </item>
+    
+    <item>
+      <title>Gentoo集群架设（1）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster1/</guid>
+      <description>gentoo install 编译内核省略
+以下是最初使用的方法 passwd /etc/init.d/sshd start fdisk /dev/sda 300M 4G mkfs.ext4 /dev/sda1 mkfs.ext4 /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 scp portage-*.tar.bz2 root@192.168.1.133:/mnt/gentoo/ scp stage3-*.tar.bz2 root@192.168.1.133:/mnt/gentoo/ tar jxf stage3-*.tar.bz2 tar jxf portage-*.tar.bz2 -C /mnt/gentoo/usr mount /dev/sda3 /mnt/gentoo mkdir /mnt/gentoo/boot mount /dev/sda3 /mnt/gentoo mount /dev/sda1 /mnt/gentoo/boot mount -t proc none /mnt/gentoo/proc mount -o bind /dev /mnt/gentoo/dev cp -L /etc/resolv.conf /mnt/gentoo/etc/ chroot /mnt/gentoo /bin/bash emerge --sync --quiet cd usr/src/linux make menuconfig rsync -azIHP --exclude=src/* --exclude=portage/distfiles/* -e ssh /usr/ root@192.</description>
+    </item>
+    
+    <item>
+      <title>Gentoo集群架设（2）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster2/</guid>
+      <description>主要使用到的是distcc这个分布式编译软件
+# emerge distcc  注意必须在每一台机器上都安装该软件，并采用相同配置
+# vim /etc/portage/make.conf MAKEOPTS=&amp;quot;-jN -lM&amp;quot; FEATURES=&amp;quot;distcc&amp;quot;  这里N参数大家都应该清楚，是cpu个数，这里强调一下是所有机器的cpu数，官方是这样叙述的
+A common strategy is to set N as twice the number of total (local + remote) CPUs + 1 and M as number of local CPUs.
+两倍的cpu个数然后还要加一，我觉得还是安小的来（两倍的cpu数还要小一点），毕竟都分布式编译了，保证系统稳定，我是这么认为的
+M参数是本地的cpu参数，是为了防止分布失败时不至于线程数过多拖垮系统，注意M前面是L，不要看着像一来填一了
+你可以使用
+# /usr/bin/distcc-config --set-hosts &amp;quot;Host1IP Host2IP Host3IP Host4IP&amp;quot;  来设定机器数
+也可以在make.conf里添加这条
+DISTCC_HOSTS=&amp;quot;Host1IP,Host2IP,Host3IP,Host4IP&amp;quot;  据说越前面的越会被用到
+启动并添加开机启动
+# rc-update add distccd default # /etc/init.d/distccd start  好了，可以配置ssh了
+通过ssh-keygen等一系列操作将集群可以通过无密码进行访问，这点从略
+对于蛋疼的SA来说，端口啥啥的总要改改，官方也给了教程
+# ssh-keygen -b 2048 -t rsa -f /var/tmp/portage/.</description>
+    </item>
+    
+    <item>
+      <title>Gentoo集群架设（3）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster3/</guid>
+      <description>前文已架设完毕gentoo的分布式编译集群，系统维护不可能每台机器都编译一次或者手动拷贝软件
+故配置gentoo buildhost来分发二进制包
+首先安装vsftpd
+emerge -av vsftpd  添加vsftpd自启动
+rc-update add vsftpd default  新建/home/ftp/gentoo
+修改/home/ftp/gentoo文件夹777权限
+mount --bind /usr/portage/packages /home/ftp/gentoo/ vim /etc/local.d/mount.start中添加“mount --bind /usr/portage/packages /home/ftp/gentoo/”  修改 /etc/vsftpd/vsftpd.conf，安自己需要配置，不赘述</description>
+    </item>
+    
+    <item>
+      <title>Git设置goagent代理</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</guid>
+      <description>git代理
+git config --global http.proxy 127.0.0.1:8087 git config --global https.proxy 127.0.0.1:8087 git config --global http.sslCAinfo GoAgent/CA.crt  取消代理
+git config --global http.proxy &amp;quot;&amp;quot; git config --global https.proxy &amp;quot;&amp;quot; git config --global http.sslCAinfo &amp;quot;&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Google HTML/CSS Style Guide</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-21-google-htmlcss-style-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-21-google-htmlcss-style-guide/</guid>
+      <description>参译：https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+今天在写HTML代码时稍稍反省了一下代码风格，所以决定抽空学习一下Google的代码风格标准。
+一般风格规则 http/https协议 对于http和https协议，建议使用双斜杠代替
+对于HTML代码：
+&amp;lt;!-- 不建议使用 --&amp;gt; &amp;lt;script src=&amp;quot;http://www.google.com/js/gweb/analytics/autotrack.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;!-- 建议使用 --&amp;gt; &amp;lt;script src=&amp;quot;//www.google.com/js/gweb/analytics/autotrack.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  对于CSS代码：
+/* 不建议使用 */ .example { background: url(http://www.google.com/images/example); } /* 建议使用 */ .example { background: url(//www.google.com/images/example); }  一般格式规则 缩进 不建议使用TAB或者混合TAB &amp;amp; 空格作为缩进，建议使用两个空格作为缩进：
+对于HTML代码：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Fantastic &amp;lt;li&amp;gt;Great &amp;lt;/ul&amp;gt;  对于CSS代码：
+.example { color: blue; }  大小写 建议仅使用小写：包括HTML元素名称、属性、属性值（text/CDATA除外），CSS选择器、属性和属性值（不含字符串）
+对于HTML代码：
+&amp;lt;!-- 不建议使用 --&amp;gt; &amp;lt;A HREF=&amp;quot;/&amp;quot;&amp;gt;Home&amp;lt;/A&amp;gt; &amp;lt;!-- 建议使用 --&amp;gt; &amp;lt;img src=&amp;quot;google.png&amp;quot; alt=&amp;quot;Google&amp;quot;&amp;gt;  对于CSS代码：</description>
+    </item>
+    
+    <item>
+      <title>Google突破</title>
+      <link>https://liuzheng.github.io/before2018/2014-6-9-fxxkgfw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-6-9-fxxkgfw/</guid>
+      <description>下文是本人午睡中，口水流到键盘里造成键盘电路故障所产生的文字，本人对此不拥有各种权利和义务。
+由于大家都懂的原因，好吧，Google成为了纠结的问题
+由于长期使用某哥的VPN，我木有多大问题，周围小伙伴就蛋疼了。应各种小伙伴要求，我就无聊的对大长城做了一下了解，并单纯对Google搜索引擎做技术上的加速和你懂的。
+https://smarthosts.googlecode.com/svn/trunk/hosts
+我这里写了一个脚本(WIN, Unix</description>
+    </item>
+    
+    <item>
+      <title>HBase 单机运行出的神奇的问题</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-15-hbase-single/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-15-hbase-single/</guid>
+      <description>困扰一周的问题！！！已经有人提交过这个了 https://issues.apache.org/jira/browse/HBASE-3487
+regionserver.HRegionServer: No master found; retry  这个错误我是百思不得其解！
+解决方法，修改 $HBASE_HOME/conf/regionservers , 里面要保证三行以上吧
+又死了，原因暂时又不懂了。。。。
+出错原因
+由于实验室环境条件限制，暂时无法使用多机进行hadoop配置，我就腾出一台服务器。。。
+所以regionservers我这里只配了一个，这就是坑爹所在。容后查文档研究。。。
+应该是xxx选举所致</description>
+    </item>
+    
+    <item>
+      <title>Hadoop 64 fix</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-20-hadoop-64-fix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-20-hadoop-64-fix/</guid>
+      <description>http://blog.csdn.net/sunflower_cao/article/details/38513839
+解决办法一： hadoop@master~: sudo gedit ~/.bash_profile 然后输入如下内容并保存：
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  解决办法二： 打开$HADOOP_HOME/etc/hadoop/hadoop-env.sh文件，输入如下内容并保存
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  解决办法三： 打开$HADOOP_HOME/etc/hadoop/yarn-env.sh，在任意位置输入如下内容
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  最后在运行$HADOOP_HOME/sbin/start-all.sh</description>
+    </item>
+    
+    <item>
+      <title>Hadoop with Python 遇到的问题</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</guid>
+      <description>昨天使用了 Python 折腾　Hadoop ，遇到一个神经的问题，纠结了一整天
+使用
+hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar -mapper map.py -reducer reduce.py -input /data/*.txt -output /output  命令时，一直提示我如下错误
+java.io.IOException: Cannot run program &amp;quot;/home/liuzheng/map.py&amp;quot;: error=2, No such file or directory at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047) at org.apache.hadoop.streaming.PipeMapRed.configure(PipeMapRed.java:209) at org.apache.hadoop.streaming.PipeMapper.configure(PipeMapper.java:66) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:38) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426) at org.</description>
+    </item>
+    
+    <item>
+      <title>KVM &#43; VNC (ubuntu)</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-20-play-kvm---vnc-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-20-play-kvm---vnc-ubuntu/</guid>
+      <description>之前有进行过ubuntu server的KVM安装，不过似乎没有记录下来&amp;hellip;
+安装gnome-core 个人一直喜欢GNOME做为桌面系统，在此用vnc的时候也希望默认桌面系统是自己熟悉的，如喜欢其他桌面系统相应安装相关桌面系统的包。
+sudo apt-get install gnome-core  安装vnc vnc安装也是一条命令的事情。。。
+sudo apt-get install vnc4server  至此你就可以使用命令vncserver来创建你的密码，一切结束后就可以使用vnc相关连接工具进行使用了，我个人使用的是chrome的插件，https://chrome.google.com/webstore/detail/iabmpiboiopbgfabjmgeedhcmjenhbla
+当然这样还是不够的，没有对vnc默认桌面进行配置
+vim .vnc/xstartup  在此我注解掉所有原始配置，添加下文
+unset SESSION_MANAGER metacity &amp;amp; x-terminal-emulator -geometry 800x600+10+10 -ls -title &amp;quot;$VNCDESKTOP Desktop&amp;quot; &amp;amp; gnome-settings-daemon &amp;amp; gnome-panel &amp;amp;  安装KVM及virt管理软件 sudo apt-get install kvm qemu sudo apt-get install virtinst python-libvirt virt-viewer virt-manager  配置桥接网卡 sudo apt-get install bridge-utils  通过ifconfig命令我们可以发现网卡多了一个virbr0，这个是装完KVM后自己生成的虚拟网卡
+增加一个虚拟网卡br0，让这个网卡和em1进行桥接
+sudo vim /etc/networks/interfaces  在其后追加如下内容
+auto tap0 iface tap0 inet manual up ifconfig $IFACE 0.</description>
+    </item>
+    
+    <item>
+      <title>Leap second</title>
+      <link>https://liuzheng.github.io/before2018/2015-07-01-leap-second/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-07-01-leap-second/</guid>
+      <description>今天经历了闰秒，好像很牛逼的样子。不过我胆子小，关了ntp服务。
+据说是kernel crash，kernel version 2.6.18-164.e15之后的版本解决了这个问题，所以我还是希望运维人员掌握kernel权限，但是实际情况是木有。。。
+不过还是得摘录一下群内的解决方案和问题。
+这是群内某人的实况截图
+高亮处其实是kernel的信息，下面的ntpd才是正真的ntp服务的log
+CPU在过闰秒后100% service ntpd stop date -s &amp;quot;`date`&amp;quot; service ntpd restart  部分人是由于ntp server开了，然后似乎是开了Java进程，不过我觉得还是用了有bug的kernel，能运维掌控kernel多好。。。
+据说是闰秒过后，系统本该调用 clock_was_set ，但是bug 的kernel没有调用
+我觉得此文日后绝对用不到了，还是mark一下，以后查完kernel版本就淡定的let it go吧！</description>
+    </item>
+    
+    <item>
+      <title>MATLAB PageRank小结</title>
+      <link>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</guid>
+      <description>从网上找到 Page-Rank-Matlab-Code 提及 MATLAB 的 PageRank 代码，使用 profile viewer 发现有一段 for 效率极低
+源代码如下
+function p=PageRank(L,d) % return PageRank vector % % input: % L = Link Matrix (=rotated adjacency matrix) % d = constant parameter % % Example from Kardi Teknomo&#39;s Page Rank tutorial % is given as input and output of this function. % Read the full tutorial for more explanation. % % (c) 2012 Kardi Teknomo % http://people.revoledu.com/kardi/tutorial/ %%%%%%%%%%%%%%%%%%%%%%% if nargin&amp;lt;1 L=[1 1 1 1 1 1; 0 1 1 1 1 1; 0 0 1 1 1 1; 0 0 0 1 1 1; 0 0 0 0 1 1; 0 0 0 0 0 1;]; end if nargin&amp;lt;2, d=0.</description>
+    </item>
+    
+    <item>
+      <title>Mac docker-manchine 问题</title>
+      <link>https://liuzheng.github.io/before2018/2015-11-22-mac-docker-manchine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-11-22-mac-docker-manchine/</guid>
+      <description>最近卸载了原先的 boot2docker 用上了 docker 1.9.0 感觉很高大上有木有！！！
+但是问题来了，运行 docker-machine create --driver virtualbox default 是 OK 的。
+docker-machine env default export DOCKER_TLS_VERIFY=&amp;quot;1&amp;quot; export DOCKER_HOST=&amp;quot;tcp://192.168.99.101:2376&amp;quot; export DOCKER_CERT_PATH=&amp;quot;/Users/liuzheng/.docker/machine/machines/default&amp;quot; export DOCKER_MACHINE_NAME=&amp;quot;default&amp;quot; # Run this command to configure your shell: # eval &amp;quot;$(docker-machine env default)&amp;quot;  都是 ok 的
+那么就运行 eval &amp;quot;$(docker-machine env default)&amp;quot;咯~
+接下来就跟鬼一样了。。。尼玛为什么之后直接运行 docker 会报错！
+The server probably has client authentication (--tlsverify) enabled. Please check your TLS client certification settings: Get https://192.168.99.101:2376/v1.21/images/json: remote error: bad certificate  唉。。。这有多麻烦啊！！！</description>
+    </item>
+    
+    <item>
+      <title>Mac使用</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-03-mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-03-mac/</guid>
+      <description>修改主机名：
+sudo scutil --set HostName MyHostName  安装brew来更新各种软件
+http://linfan.info/blog/2012/02/27/colorful-terminal-in-mac/
+https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+export LC_ALL=&amp;quot;en_US.UTF-8&amp;quot; export CLICOLOR=&amp;quot;xterm-color256&amp;quot; export LSCOLORS=&amp;quot;gxfxcxdxbxegedabagacad&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Median of Two Sorted Arrays</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-27-median-of-two-sorted-arrays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-27-median-of-two-sorted-arrays/</guid>
+      <description>这题https://oj.leetcode.com/problems/median-of-two-sorted-arrays/
+C=sorted(A+B) l = len(C) if l%2==0: return float(C[l/2-1]+C[l/2])/2 else: return C[l/2]  Runtime: 133 ms</description>
+    </item>
+    
+    <item>
+      <title>Nginx 1.9.0 make（小白勿看）</title>
+      <link>https://liuzheng.github.io/before2018/2015-04-29-nginx-190-make/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-04-29-nginx-190-make/</guid>
+      <description>今天看朋友圈看到Nginx出来1.9.0，好像很高大上的样子
+觉得还是尝试编译一下会比较开心，比较软件还是自己编译的用的舒心。
+下载解压略过。。。。
+首先先看一下有哪些模块吧
+./configure --help --help print this message --prefix=PATH set installation prefix --sbin-path=PATH set nginx binary pathname --conf-path=PATH set nginx.conf pathname --error-log-path=PATH set error log pathname --pid-path=PATH set nginx.pid pathname --lock-path=PATH set nginx.lock pathname --user=USER set non-privileged user for worker processes --group=GROUP set non-privileged group for worker processes --build=NAME set build name --builddir=DIR set build directory --with-select_module enable select module --without-select_module disable select module --with-poll_module enable poll module --without-poll_module disable poll module --with-threads enable thread pool support --with-file-aio enable file AIO support --with-ipv6 enable IPv6 support --with-http_ssl_module enable ngx_http_ssl_module --with-http_spdy_module enable ngx_http_spdy_module --with-http_realip_module enable ngx_http_realip_module --with-http_addition_module enable ngx_http_addition_module --with-http_xslt_module enable ngx_http_xslt_module --with-http_image_filter_module enable ngx_http_image_filter_module --with-http_geoip_module enable ngx_http_geoip_module --with-http_sub_module enable ngx_http_sub_module --with-http_dav_module enable ngx_http_dav_module --with-http_flv_module enable ngx_http_flv_module --with-http_mp4_module enable ngx_http_mp4_module --with-http_gunzip_module enable ngx_http_gunzip_module --with-http_gzip_static_module enable ngx_http_gzip_static_module --with-http_auth_request_module enable ngx_http_auth_request_module --with-http_random_index_module enable ngx_http_random_index_module --with-http_secure_link_module enable ngx_http_secure_link_module --with-http_degradation_module enable ngx_http_degradation_module --with-http_stub_status_module enable ngx_http_stub_status_module --without-http_charset_module disable ngx_http_charset_module --without-http_gzip_module disable ngx_http_gzip_module --without-http_ssi_module disable ngx_http_ssi_module --without-http_userid_module disable ngx_http_userid_module --without-http_access_module disable ngx_http_access_module --without-http_auth_basic_module disable ngx_http_auth_basic_module --without-http_autoindex_module disable ngx_http_autoindex_module --without-http_geo_module disable ngx_http_geo_module --without-http_map_module disable ngx_http_map_module --without-http_split_clients_module disable ngx_http_split_clients_module --without-http_referer_module disable ngx_http_referer_module --without-http_rewrite_module disable ngx_http_rewrite_module --without-http_proxy_module disable ngx_http_proxy_module --without-http_fastcgi_module disable ngx_http_fastcgi_module --without-http_uwsgi_module disable ngx_http_uwsgi_module --without-http_scgi_module disable ngx_http_scgi_module --without-http_memcached_module disable ngx_http_memcached_module --without-http_limit_conn_module disable ngx_http_limit_conn_module --without-http_limit_req_module disable ngx_http_limit_req_module --without-http_empty_gif_module disable ngx_http_empty_gif_module --without-http_browser_module disable ngx_http_browser_module --without-http_upstream_hash_module disable ngx_http_upstream_hash_module --without-http_upstream_ip_hash_module disable ngx_http_upstream_ip_hash_module --without-http_upstream_least_conn_module disable ngx_http_upstream_least_conn_module --without-http_upstream_keepalive_module disable ngx_http_upstream_keepalive_module --without-http_upstream_zone_module disable ngx_http_upstream_zone_module --with-http_perl_module enable ngx_http_perl_module --with-perl_modules_path=PATH set Perl modules path --with-perl=PATH set perl binary pathname --http-log-path=PATH set http access log pathname --http-client-body-temp-path=PATH set path to store http client request body temporary files --http-proxy-temp-path=PATH set path to store http proxy temporary files --http-fastcgi-temp-path=PATH set path to store http fastcgi temporary files --http-uwsgi-temp-path=PATH set path to store http uwsgi temporary files --http-scgi-temp-path=PATH set path to store http scgi temporary files --without-http disable HTTP server --without-http-cache disable HTTP cache --with-mail enable POP3/IMAP4/SMTP proxy module --with-mail_ssl_module enable ngx_mail_ssl_module --without-mail_pop3_module disable ngx_mail_pop3_module --without-mail_imap_module disable ngx_mail_imap_module --without-mail_smtp_module disable ngx_mail_smtp_module --with-stream enable TCP proxy module --with-stream_ssl_module enable ngx_stream_ssl_module --without-stream_upstream_hash_module disable ngx_stream_upstream_hash_module --without-stream_upstream_least_conn_module disable ngx_stream_upstream_least_conn_module --without-stream_upstream_zone_module disable ngx_stream_upstream_zone_module --with-google_perftools_module enable ngx_google_perftools_module --with-cpp_test_module enable ngx_cpp_test_module --add-module=PATH enable an external module --with-cc=PATH set C compiler pathname --with-cpp=PATH set C preprocessor pathname --with-cc-opt=OPTIONS set additional C compiler options --with-ld-opt=OPTIONS set additional linker options --with-cpu-opt=CPU build for the specified CPU, valid values: pentium, pentiumpro, pentium3, pentium4, athlon, opteron, sparc32, sparc64, ppc64 --without-pcre disable PCRE library usage --with-pcre force PCRE library usage --with-pcre=DIR set path to PCRE library sources --with-pcre-opt=OPTIONS set additional build options for PCRE --with-pcre-jit build PCRE with JIT compilation support --with-md5=DIR set path to md5 library sources --with-md5-opt=OPTIONS set additional build options for md5 --with-md5-asm use md5 assembler sources --with-sha1=DIR set path to sha1 library sources --with-sha1-opt=OPTIONS set additional build options for sha1 --with-sha1-asm use sha1 assembler sources --with-zlib=DIR set path to zlib library sources --with-zlib-opt=OPTIONS set additional build options for zlib --with-zlib-asm=CPU use zlib assembler sources optimized for the specified CPU, valid values: pentium, pentiumpro --with-libatomic force libatomic_ops library usage --with-libatomic=DIR set path to libatomic_ops library sources --with-openssl=DIR set path to OpenSSL library sources --with-openssl-opt=OPTIONS set additional build options for OpenSSL --with-debug enable debug logging  以上需要解释么？？？</description>
+    </item>
+    
+    <item>
+      <title>OpenDrive</title>
+      <link>https://liuzheng.github.io/before2018/2015-03-20-opendrive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-03-20-opendrive/</guid>
+      <description>OK , today I just choose OpenDrive to my person music Web Drive.
+I have not test so mush , hope it&amp;rsquo;s good
+Welcome hifi.ilz.me( just coding not finished until 2015-03-20)</description>
+    </item>
+    
+    <item>
+      <title>Python, Hbase, Thrift</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-21-python-hbase-thrift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-21-python-hbase-thrift/</guid>
+      <description>使用 Python 对 Hbase 做操作初期配置 首先下载 thrift 用来生成 python hbase 包
+https://thrift.apache.org/download
+下载 Hbase 源码包
+http://www.apache.org/dyn/closer.cgi/hbase/
+Windows 篇 http://apache.fayea.com/apache-mirror/thrift/0.9.1/thrift-0.9.1.exe
+将其拷贝到默认 PATH 路径下，若喜欢安文件分类，手动加PATH吧，我懒。。。直接加到Git/bin下面
+找到 Hbase 源码文件中 hbase.thrift 。当然，你会发现上级目录有一个thrift2，其对比我在该链接(Thrift介绍与应用（三）—hbase的thrift接口)[http://blog.csdn.net/guxch/article/details/12163047]找到了他们的不同，深入了解的话可以细看。
+cd 到刚才找到的文件，运行
+thrift --gen py hbase.thrift  会生成 gen-py 文件夹，将其内部的 hbase 复制到 $PYTHON/Lib\site-packages 下即可 import 了
+Ubuntu 篇 安装必要的包
+sudo apt-get install python-dev automake libtool flex bison pkg-config g++  安装boost
+sudo apt-get install libboost-test-dev  cd 到 thrift 文件夹，运行
+./configure --without-ruby --without-php --without-cpp  我就要一个 Python ， 运行结果如下</description>
+    </item>
+    
+    <item>
+      <title>Ruby for windows Install</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-07-ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-07-ruby/</guid>
+      <description>安装 Ruby 环境和 DevKit 首先到 rubyInstaller 官网下载，目前最新的版本分别是 Ruby 2.0.0-p451 和 DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
+双击打开 Ruby 进行安装，选择你所喜欢的安装位置进行安装，我选择的是 C:\Ruby200。
+然后安装 DevKit ，将其解压到你所喜欢的位置，我选择的是 C:\Ruby200\devkit\ 。
+DevKit 安装 cd C:\Ruby200\devkit\ ruby dk.rb init ruby dk.rb install  更换 gem 的源  gem sources -l gem sources --remove https://rubygems.org/ gem sources -a http://ruby.taobao.org/ gem update  完成之后安装 jekyll ： gem install jekyll  安装rdiscount，这个是用来解析Markdown标记的解析包。
+gem install rdiscount  参考链接 http://blog.segmentfault.com/skyinlayer/1190000000406011
+http://blog.jsfor.com/skill/2013/09/07/jekyll-local-structures-notes/</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu add ppa Error</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-03-ubuntu-add-ppa-error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-03-ubuntu-add-ppa-error/</guid>
+      <description>参考http://askubuntu.com/questions/212132/i-cant-add-ppa-repository-behind-the-proxy
+sudo add-apt-repository ppa:gnome3-team/gnome3 Cannot add PPA: &#39;ppa:gnome3-team/gnome3&#39;.  该问题是由于是使用代理上网导致的
+export http_proxy=http://username:password@host:port/ export https_proxy=https://username:password@host:port/  并且在 /etc/sudoers 末尾追加 Defaults env_keep=&amp;quot;https_proxy&amp;quot;
+之后再运行
+sudo -E add-apt-repository ppa:gnome3-team/gnome3  </description>
+    </item>
+    
+    <item>
+      <title>Valid Number</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-26-valid-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-26-valid-number/</guid>
+      <description>今天做了这题https://oj.leetcode.com/problems/valid-number/
+感觉是作弊么。。。。python 还是屌
+try: float(s) return True except: return False  OK 试试不使用try玩
+唉，试了字符判断，各种不够优雅
+除去前后空白，将字符处理成简单符号，要判断的情况有以下几种：
+- n - sn - dn - nd - nen - ndn - snd - nen - sdn - nden - sndn - nesn - snen - dnen - sdnen - ndnen - ndesn - snden - dnesn - snesn - sdnesn - sndnen - ndnesn s=s.strip() S=&#39; &#39; for i in s: if i==&#39;-&#39; or i==&#39;+&#39;: S=S+&#39;s&#39; elif i==&#39;.</description>
+    </item>
+    
+    <item>
+      <title>Win7 修复 MBR</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-10-fixmbr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-10-fixmbr/</guid>
+      <description> 在光驱插入win7安装盘或者用USB启动（win7支持USB直接启动安装）； 选择完语言选项后，进入下一步，选择底下的系统修复而不是继续安装； 自动搜索完已经安装的系统后，进入下一步； 不要让Windows自动修复，没用的，进入命令提示符模式； 先输入命令bootrec /fixmbr 回车，再输入命令bootrec /fixboot 回车； 重启系统即可重新恢复Win7启动模式。  </description>
+    </item>
+    
+    <item>
+      <title>Windows 和 Linux共存时时间不一致</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</guid>
+      <description>让Windows把硬件时间当作UTC，与Linux/Unix/Mac保持一致。
+在 注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+下中添加一项数据类型为REG_DWORD，名称为RealTimeIsUniversal，值设为1 的键值。
+或者在windows下运行下列代码
+@echo off color 0a Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 echo. echo 已让Windows识别存贮在主板CMOS内的时间为格林威治标准时间（GMT）,即系统根据CMOS时间和设置的时区来确定当前系统的时间。 echo. pause  </description>
+    </item>
+    
+    <item>
+      <title>[转]CentOS 5 centos 6下安装Axel插件加速yum下载</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-22-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-22-centos/</guid>
+      <description>http://blog.csdn.net/jiedushi/article/details/7406704
+1 下载axel插件的rpm包
+下载地址 http://pkgs.repoforge.org/axel/
+如果为centos 5 64位系统的话 使用http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm
+如果为centos 6 64位系统 使用 http://pkgs.repoforge.org/axel/axel-2.4-1.el6.rf.x86_64.rpm
+2 安装rpm 包 rpm -ivh http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm
+3 下载配置文件axelget.conf与axelget.py到yum里：
+cd /etc/yum/pluginconf.d/ wget http://cnfreesoft.googlecode.com/svn/trunk/axelget/axelget.conf cd /usr/lib/yum-plugins/ wget http://cnfreesoft.googlecode.com/svn/trunk/axelget/axelget.py  最后确认 /etc/yum.conf中plugins=1
+4 测试并安装yum-fastestmirror插件：
+yum install -y yum-fastestmirror  注：axel插件也可以当独立下载工具来使用。当成独立下载工具使用时，适用于绝大部分Linux发行版。
+使用参数如下：
+一般使用：axel url（下载文件地址）；
+限速使用：加上 -s 参数，如 -s 10240，即每秒下载的字节数，这里是 10 Kb；
+限制连接数：加上 -n 参数，如 -n 5，即打开 5 个连接。
+我通常是 axel -a -n 6 URL
+wget http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm rpm -ivh axel-2.4-1.el5.rf.x86_64.rpm cd /etc/yum/pluginconf.</description>
+    </item>
+    
+    <item>
+      <title>[转]KVM Disk Performance Optimization</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-21-kvm-disk-performance-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-21-kvm-disk-performance-optimization/</guid>
+      <description>转: http://www.pubyun.com/blog/cloud/kvm%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/
+KVM磁盘性能优化  发表于2013 年 2 月 16 日由refactor *  磁盘性能是虚拟技术中的一个瓶颈，虚拟机由于经过封装以后，磁盘有所下降，尤其要对磁盘性能进行优化。
+优化要点：
+1、在母机（host）上，设置磁盘调度器为 deadline，有两种方法
+– 在启动的时候，加入参数（需要重新启动）： elevator=deadline
+– 或者实时调整参数（不需要重新启动，但是下次启动时丢失）： for f in /sys/block/sd*/queue/scheduler; do echo “deadline” &amp;gt; $f; done
+2、使用 virtio，一定注意，否则导致磁盘性能严重下降
+3、在虚拟机（VM）上，设置磁盘调度器为 noop，有两种方法
+– 在启动的时候，加入参数（需要重新启动）： elevator=noop
+– 或者实时调整参数（不需要重新启动，但是下次启动时丢失）： for f in /sys/block/sd*/queue/scheduler; do echo “noop” &amp;gt; $f; done
+4、尽量使用 LVM 作为虚拟机的磁盘，qcow2会带来额外的负担，从而导致IO性能下降
+5、注意虚拟机内的 virtio驱动程序一定是最新的，特别是windows虚拟机 参考： http://serverfault.com/questions/360718/kvm-low-io-performance
+以下转自：http://www.hengtianyun.com/download-show-id-11.html
+ virtio  virtio是KVM的半虚拟化机制,用以提高IO性能,使用virtio可以显著提高KVM性能。大部分的linux都已经集成virtio驱动，windows则因没有集成virtio驱动所以需要手动安装。
+ 使用writeback缓存选项  针对客户机块设备的缓存,drive有一个子选项cache来设置缓存模式。两个主要的选项为writeback和writethrough,man手册是这样说的
+By default, writethrough caching is used for all block device.</description>
+    </item>
+    
+    <item>
+      <title>[转]Network manager的L2TP VPN插件，可选支持IPSec</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-14-ubuntu-l2tp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-14-ubuntu-l2tp/</guid>
+      <description>转自：</description>
+    </item>
+    
+    <item>
+      <title>[转]QUIC</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-18-quic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-18-quic/</guid>
+      <description>http://tonghs.com/2014/06/09/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%94%A8-Chrome-%E6%B5%8F%E8%A7%88%E5%99%A8-%E8%80%8C%E7%A2%B0%E5%B7%A7%E5%8F%88%E7%94%A8-Google-%E6%90%9C%E7%B4%A2/ 如果你用 Chrome 浏览器，而碰巧又用 Google 搜索
+据说：在 Chrome 浏览器中打开「实验性功能」页面（chrome://flags/），启用「实验性 QUIC 协议」和「经由实验性 QUIC 协议发出的 HTTPS 请求」，重启浏览器后可以正常登陆 Google 相关服务。// 我就是手抖。
+经过实践，可以打开Google搜索了。
+对于这次大面积的封锁行动，大家仍旧保持沉默，但对错自在人心。</description>
+    </item>
+    
+    <item>
+      <title>[转]linux中matlab的中文乱码问题</title>
+      <link>https://liuzheng.github.io/before2018/2011-08-15-matlablm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2011-08-15-matlablm/</guid>
+      <description>将系统的jre拷贝到matlab去 。
+sudo mv $MATLAB/sys/java/jre/glnx86/jre $MATLAB/sys/java/jre/glnx86/jre.default sudo cp -R /usr/lib/jvm/java-6-sun-1.6.0.13/jre $MATLAB/sys/java/jre/glnx86  或者采取以下方法
+出自gosman的博客(http://gosman.blogbus.com)
+由于Linux下Matlab的图形界面是用Java写的，所以只要搞定Java的中文显示就行了。
+1、我Matlab2007a的JRE目录为：/opt/matlab/sys/java/jre/glnx86/jre1.5.0 请根据自己的安装目录和版本确定JRE的目录；
+2、 $ cd /opt/matlab/sys/java/jre/glnx86/jre1.5.0/lib/fonts/；
+3、建立目录fallback: $ mkdir fallback；
+4、把字体复制或链接到fallback目录：
+$ cp /media/disk/WINDOWS/Fonts/simsun.ttc fallback/ 我用的是Windows XP的simsun字体，你也可以用别的支持中文的字体；  5、进入fallback目录，执行 mkfontscale 命令；
+6、将上一步生成的文件添加到 lib/fonts/fonts.dir文件中，可用以下命令完成，当然也可以用编辑器复制粘贴：
+$ cat fallback/fonts.scale &amp;gt;&amp;gt; fonts.dir (注意fonts.dir应该设为可写)  7、至此Matlab的Java环境中文支持安装完了，接下来配置Matlab;
+8、进入Matlab，选择 菜单 File&amp;gt;&amp;gt;Preferences&amp;gt;&amp;gt;Fonts 选择SimSun字体就行了；
+9、如果没有相应的（我的是SimSun）字体，请把fallback下的字体加上可读属性：$ chmod a+r fallback/*
+10、至此Matlab应该可以正常显示中文了。
+有时运行matlab后，只有一个外框能正确显示，其它的都是一片白。同时转载过来见到的解决办法
+办法1：在matlab安装目录下的bin/matlab文件中（一堆注释后面）添加： export AWT_TOOLKIT=MToolkit  该方法可以解决显示问题，但会经常出现无法输入的问题。比如调用plot函数后，command窗口就
+无法输入新字符了，只能通过依次点击Current Directory 和 Workspace解决。。依次点击后就可以
+继续输入字符了。
+方法2：安装sun-java6-jre。具体方法为 sudo apt-get install sun-java6-jre  然后在matlab安装目录下的bin/matlab文件中（一堆注释后面）添加：</description>
+    </item>
+    
+    <item>
+      <title>[转]【tools】SQLMAP注入工具手册</title>
+      <link>https://liuzheng.github.io/before2018/2015-08-18-sql-injection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-08-18-sql-injection/</guid>
+      <description>转自:http://sh4dow.lofter.com/post/395c80_121497d
+基本的注入步骤： sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --dbs #查询所有数据库 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --current-db #获取当前数据库名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --current-user #获取当前用户名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; --tables #获取表名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; -T &amp;quot;table_name&amp;quot; --columns #获取列名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; -T &amp;quot;table_name&amp;quot; -C &amp;quot;column_name&amp;quot; --dump #获取字段内容  注入请求选项使用：
+sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; #get注入 sqlmap -u &amp;quot;http://url/news&amp;quot; --date &amp;quot;id=1&amp;quot; #post注入 sqlmap -u &amp;quot;http://url/news&amp;quot; --cookie &amp;quot;id=1&amp;quot; #cookie注入  结合BurpSuite拦截的POST表单注入： 浏览器打开目标地址 http://testasp.vulnweb.com/Login.asp
+配置burp代理(127.0.0.1:8080)以拦截请求
+点击login表单的submit按钮
+如下图，这时候Burp会拦截到了我们的登录POST请求</description>
+    </item>
+    
+    <item>
+      <title>[转]一些教育自己的话</title>
+      <link>https://liuzheng.github.io/before2018/2014-6-2-goodlife/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-6-2-goodlife/</guid>
+      <description>1.去别人家里，不要坐在人家的床上 。
+2.在酒桌上与别人碰杯，自己的杯子一定要低于对方的，特别是对方是长辈或领导 。
+3.晴带雨伞，饱带干粮&amp;mdash;未雨绸缪总是好的。
+ 如果问别人话，别人不回答你，不要死着脸皮不停的问。
+ 吃饭的时候尽量不要发出声音。
+ 捡东西或者穿鞋时候要蹲下去，不要弯腰撅屁股。
+ 别人批评你的时候，即使他是错的，也不要先辨驳，等大家都平静下来再解释 。
+  8.做事情要适可而止,无论是狂吃喜欢的食物还是闹脾气 。
+9.到朋友家吃完饭,要主动帮忙洗碗清理桌子&amp;mdash;&amp;ndash;主人做饭已经很辛苦了,不能事后还让主人清理。
+10.生活中会遇见各式各样的人,你不可能与每个人都合拍,但是有一点是四海皆准的:你如何对待别人,别人也会如何对待你 。
+11.待客不得不大，持家不得不小 。
+12.把拳头收回来是为了更有力的还击
+13.人活在这个世上，首先要学会一个“忍”字。
+14.任何时候对任何人不要轻易告诉对方你的秘密 。
+15.钱不是靠攒的，会花才会赚 。
+16.学无止境，不仅仅是学书本知识，更要学会怎么待人处事，社会远比你想象的要复杂 。
+17.不要跟同事议论上司或其他同事的是非，你的无心之言很可能成为别人打击你的证据。
+18.做事情，做好了是你的本分，做的不好就是你失职 。
+19.只有错买，没有错卖。不要只顾着贪小便宜。
+20.有时候孤单是正常的，不要害怕，要自己调剂
+21.有真正的朋友，但不知你有没有福气遇到。不管有没有遇到，都不要否认它。不要算计别人，尤其不要算计自己喜欢的人。对自己喜欢的人，不要使用手段去得到 。
+22.最勇敢的事情是认清了生活的真相之后依旧热爱生活。不要害怕欺骗，但要知道世界上存在欺骗 。
+23.借钱的时候，心里要有个底，就是要想着这个钱是回不来的。所以借出去的钱永远要在自己能承受的损失范围之内。可以承受的数字以内，即使回不来，也是心里早准备好的。自己不能承受损失的数目，就不能借。
+24.最好的朋友之间，除非他穷的吃不了饭了，否则最好不要有经济往来。许多可贵的友谊都败坏在钱上。
+25.君子可寓意于物，但不可留意于物 。
+26.出门在外能忍则忍，退一步海阔天空。
+27.擦桌子的时候要往自己的方向抹 。
+28.打电话接电话第一句话一定要是 喂，您好；挂电话的时候等别人先挂。
+29.一次不忠 百次不容。
+30.不随地吐痰扔东西，如果没有垃圾箱，就拎回家扔垃圾筒里。
+31.多看书对心灵有益,你会看到一个更广阔的世界 。
+32.是你去适应社会,不是社会来适应你。
+33.不要让别人知道自己的真实想法,要笑在人前笑,要哭一个人躲起来哭。
+34.走路手不要插在口袋里。
+35.简单的事情复杂做，复杂的事情简单做 。
+36.机会只留给有准备的人，天上不会掉馅饼。
+37.不管什么条件下，仔细刷牙，特别是晚上 。
+38.早上一定要吃早餐，没有早餐喝杯水也一定要 。
+39.少说别人是非，把自己管牢 。
+40.你是无价之宝 。
+41.女生，和男孩子出去要自己买单 。</description>
+    </item>
+    
+    <item>
+      <title>[转]你值得拥有 —— 25 个 Linux 性能监控工具</title>
+      <link>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</guid>
+      <description>原文：http://linoxide.com/monitoring-2/linux-performance-monitoring-tools/作者： Adrian Dinu
+译文：LCTT http://linux.cn/article-4481-1.html 译者： andyxue
+一段时间以来，我们在网上向读者介绍了如何为Linux以及类Linux操作系统配置多种不同的性能监控工具。在这篇文章中我们将罗列一系列使用最频繁的性能监控工具，并对介绍到的每一个工具提供了相应的简介链接，大致将其划分为两类，基于命令行的和提供图形化接口的。
+基于命令行的性能监控工具 1. dstat - 多类型资源统计工具 该命令整合了vmstat，iostat和ifstat三种命令。同时增加了新的特性和功能可以让你能及时看到各种的资源使用情况，从而能够使你对比和整合不同的资源使用情况。通过不同颜色和区块布局的界面帮助你能够更加清晰容易的获取信息。它也支持将信息数据导出到cvs格式文件中，从而用其他应用程序打开，或者导入到数据库中。你可以用该命令来监控cpu，内存和网络状态随着时间的变化。
+##　2. atop - 相比top更好的ASCII码体验 这个使用ASCII码显示方式的命令行工具是一个显示所有进程活动的性能监控工具。它可以展示每日的系统日志以进行长期的进程活动分析，并高亮显示过载的系统使用资源。它包含了CPU，内存，交换空间，磁盘和网络层的度量指标。所有这些功能只需在终端运行atop即可。
+# atop  当然你也可以使用交互界面来显示数据并进行排序。 3. Nmon - 类Unix系统的性能监控 Nmon是Nigel&amp;rsquo;s Monitor缩写，它最早开发用来作为AIX的系统监控工具。如果使用在线模式，可以使用光标键在屏幕上操作实时显示在终端上的监控信息。使用捕捉模式能够将数据保存为CSV格式，方便进一步的处理和图形化展示。 4. slabtop - 显示内核slab缓存信息 这个应用能够显示缓存分配器是如何管理Linux内核中缓存的不同类型的对象。这个命令类似于top命令，区别是它的重点是实时显示内核slab缓存信息。它能够显示按照不同排序条件来排序显示缓存列表。它同时也能够显示一个slab层信息的统计信息的题头。举例如下：
+# slabtop --sort=a # slabtop -s b # slabtop -s c # slabtop -s l # slabtop -s v # slabtop -s n # slabtop -s o  5. sar - 性能监控和瓶颈检查 sar 命令可以将操作系统上所选的累积活动计数器内容信息输出到标准输出上。其基于计数值和时间间隔参数的审计系统，会按照指定的时间间隔输出指定次数的监控信息。如果时间间隔参数为设置为0，那么sar命令将会显示系统从开机到当时时刻的平均统计信息。有用的命令如下：</description>
+    </item>
+    
+    <item>
+      <title>[转]关于I2C和SPI总线协议</title>
+      <link>https://liuzheng.github.io/before2018/2014-5-26-iicspi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-5-26-iicspi/</guid>
+      <description>转自：http://blog.csdn.net/ce123_zhouwei/article/details/6878547
+IICvs SPI 现今，在低端数字通信应用领域，我们随处可见IIC (Inter-Integrated Circuit) 和 SPI (Serial Peripheral Interface)的身影。原因是这两种通信协议非常适合近距离低速芯片间通信。Philips（for IIC）和Motorola（for SPI） 出于不同背景和市场需求制定了这两种标准通信协议。
+IIC 开发于1982年，当时是为了给电视机内的CPU和外围芯片提供更简易的互联方式。电视机是最早的嵌入式系统之一，而最初的嵌入系统是使用内存映射（memory-mapped I/O）的方式来互联微控制器和外围设备的。要实现内存映射，设备必须并联入微控制器的数据线和地址线，这种方式在连接多个外设时需大量线路和额外地址解码芯片，很不方便并且成本高。
+为了节省微控制器的引脚和和额外的逻辑芯片，使印刷电路板更简单，成本更低，位于荷兰的Philips实验室开发了 ‘Inter-Integrated Circuit’，IIC 或 IIC ，一种只使用二根线接连所有外围芯片的总线协议。最初的标准定义总线速度为100kbps。经历几次修订，主要是1995年的400kbps，1998的3.4Mbps。
+有迹象表明，SPI总线首次推出是在1979年，Motorola公司将SPI总线集成在他们第一支改自68000微处理器的微控制器芯片上。SPI总线是微控制器四线的外部总线（相对于内部总线）。与IIC不同，SPI没有明文标准，只是一种事实标准，对通信操作的实现只作一般的抽象描述，芯片厂商与驱动开发者通过data sheets和application notes沟通实现上的细节。
+SPI 对于有经验的数字电子工程师来说，用SPI互联两支数字设备是相当直观的。SPI是种四根信号线协议（如图）：
+§ SCLK: Serial Clock (output from master);
+§ MOSI; SIMO: Master Output, Slave Input(output from master);
+§ MISO; SOMI: Master Input, Slave Output(output from slave);
+§ SS: Slave Select (active low, outputfrom master).
+SPI是［单主设备（ single-master ）］通信协议，这意味着总线中的只有一支中心设备能发起通信。当SPI主设备想读/写［从设备］时，它首先拉低［从设备］对应的SS线（SS是低电平有效），接着开始发送工作脉冲到时钟线上，在相应的脉冲时间上，［主设备］把信号发到MOSI实现“写”，同时可对MISO采样而实现“读”，如下图：
+SPI有四种操作模式——模式0、模式1、模式2和模式3，它们的区别是定义了在时钟脉冲的哪条边沿转换（toggles）输出信号，哪条边沿采样输入信号，还有时钟脉冲的稳定电平值（就是时钟信号无效时是高还是低）。每种模式由一对参数刻画，它们称为时钟极（clock polarity）CPOL与时钟期（clock phase）CPHA。
+［主从设备］必须使用相同的工作参数——SCLK、CPOL 和 CPHA，才能正常工作。如果有多个［从设备］，并且它们使用了不同的工作参数，那么［主设备］必须在读写不同［从设备］间重新配置这些参数。以上SPI总线协议的主要内容。SPI不规定最大传输速率，没有地址方案；SPI也没规定通信应答机制，没有规定流控制规则。事实上，SPI［主设备］甚至并不知道指定的［从设备］是否存在。这些通信控制都得通过SPI协议以外自行实现。例如，要用SPI连接一支［命令-响应控制型］解码芯片，则必须在SPI的基础上实现更高级的通信协议。SPI并不关心物理接口的电气特性，例如信号的标准电压。在最初，大多数SPI应用都是使用间断性时钟脉冲和以字节为单位传输数据的，但现在有很多变种实现了连续性时间脉冲和任意长度的数据帧。</description>
+    </item>
+    
+    <item>
+      <title>[转]利用 Zsync 更新已有的 Ubuntu ISO 镜像</title>
+      <link>https://liuzheng.github.io/before2018/2011-11-04-zsync3ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2011-11-04-zsync3ubuntu/</guid>
+      <description>转自：http://linuxtoy.org/archives/use-zsync-to-update-existing-iso-images.html
+撰文Yunkwan
+对！是升级 ISO 镜像，不是升级系统。从旧的镜像升级到新的镜像。可能有点迟了~大家都 Down 好了镜像~我现在才有心情和时间写 Blog 哦~由 Alpha 的 ISO 升到正式版都可以。呃~当然，估计由 Alpha 开始的话，下载量也与直接下载正式版区别不大~这么多人下载，速度当然会慢喇~用 Zsync 来升级镜像减少了下载量也是一个不错的方法哦~
+首先要安装 Zsync 喇~
+sudo aptitude install zsync  然后，就是把你原有的 ISO 镜像，重命名，无论是 Alpha，Beta，还是 RC，估计 daily-build 也可以哦~都重命名为正式版的名字：
+mv ubuntu-9.10-rc-desktop-i386.iso ubuntu-9.10-desktop-i386.iso  (当然，你不用命令行也可) 当然终端的工作目录要 cd 到原镜像所在目录~只要你找到发布镜像的地址，该镜像又有 *.zsync 的就可以了。
+命令使用：
+zsync *.zsync  (不是运行这个哦~ 这个是使用方法)
+然后，你使用以下的命令就可以升级 ISO 镜像了~ Zsync 会自动帮你搞定的~
+========================32 位桌面版=================================
+zsync http://mirrors.cat.pdx.edu/ubuntu-releases/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://ftp.usf.edu/pub/ubuntu-releases/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://mirror.as29550.net/releases.ubuntu.com/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://mirror.anl.gov/pub/ubuntu-iso/CDs-Ubuntu/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://mirrors.xmission.com/ubuntu-cd/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://ubuntu.osuosl.org/releases/9.10/ubuntu-9.10-desktop-i386.iso.zsync zsync http://ubuntu.inode.at/cdimage/karmic/ubuntu-9.10-desktop-i386.iso.zsync  ========================64 位桌面版=================================</description>
+    </item>
+    
+    <item>
+      <title>[转]各大银行信用卡指南</title>
+      <link>https://liuzheng.github.io/before2018/2014-7-11-creditcard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-7-11-creditcard/</guid>
+      <description>先申请4大行的信用卡.
+1.先否决中国银行,一年只能提一次额度,不管通过与否只有一年后才能再次申请.(捷径:20万存3个月,到期后网点申请白金卡,下卡5万,得先和理财经理沟通好,保证必须下卡) BUG:首卡下卡以后,如果申请临时额度成功,可以马上申请第二张卡,下来的固定额度是你首卡的固定+临时的总和,也就是把临时额度变成了固定额度.
+2.农业银行,免息期56天,首次提额半年,后面3个月提一次,提的额度没有上限,值得拥有.
+养农业银行信用卡绝对不能干的事情:不能ATM取现,记住了.
+3.工商银行:3月提一次,你有能力消费1个星期也给你提,运气好额度可以翻好几倍. 免息56天, 分期手续费所有银行最低.溢缴款取现免费,看清楚最后面的一句话.
+没有工商银行的信用卡,你就是个门外汉.
+商友卡浙江免费转账1万笔每年,到期后去网点续签或者网银0元直接购买,理论永远汇款免费,信用卡还款利器,什么超级网银都败北.
+没有命门,和农业银行不一样.
+许多人下卡1分,1元的额度
+脱普捷径:刷贡献星.方法具体就不透露了.关键字:步步为赢（工行的理财产品，买了赎，赎了再买）.有个10万半月就到6星了,就可以申请白金了. 现在工行开始看日均存款和季均存款了.所以办卡是越早越好.
+提示:6星了不能马上申请白金,刷出来的星星申请白金小心工商银行查你,查到你2年不可能申请了,所以申请个金卡就可以了.
+网申不通过过几个月再申请,天天申请小心进灰名单,小黑屋6月&amp;ndash;2年不等,期间不能再申请工商银行任何信用卡.
+4.建设银行:6月提一次,每次50%&amp;ndash;60%之间,普通卡和金卡一个等级,上限10万封顶.溢缴款取现免费.
+白金卡20万封顶.
+捷径:本人亲测,2张卡分别刷卡,分别提额,这样就是3月提一次,半年就可以提100%了.
+你如果刷卡地方多,也可以申请3张,4张,理论等同上面.
+提示:建设银行喜欢小额度,次数多,实体,偶尔分期.建设银行提永久秘籍:点击建设银行信用卡网页,左上角进入我的信用卡,再点击右上角的在线客服.
+不太好连接,多连接几次,连接通了要求客服提永久,客服一般拒绝,因为2013年6月20日以后建行规定不允许客户主动提永久额度, 这样你就可以软磨硬泡,多说几句好话.
+本人亲测,永久额度通过在线客服提了35%的永久.然后客服电话提,当天提了3次,累计提了76%固定额度. 2013年10.9日开始,建行下发文件,不允许客户自己通过客服申请提高固定额度,何时自己可以提等有消息了会更新.
+建行可以短信提临时额度,编辑短信“CCTE#卡号后四位#想要增加的额度”到95533
+比如我有一张卡号后四位是1234的卡，现在永久额度1万,想要调到3万,可以编辑 &amp;ldquo;ccte#1234#20000&amp;rdquo;到95533
+用卡正常的情况下,临时可以是你现在固定额度的2倍.
+补充免息期由50天增加到80天方法,大部分银行都适用:比如你账单日是5号,到4号的时候打客服电话,把账单日更改为3号,这样你的下期账单日就是80天以后. 补充有损80天延长到110天方法:账单出来以后办理账单分期,平安银行最低可以分2期,其他银行3期.
+建设银行一年可以更改一次,其他支持更改的还有:平安银行,光大银行,民生银行,交通银行,招商银行,兴业银行,工商银行,中国银行,中信银行,华夏银行,浦发银行,邮政储蓄银行.
+平安银行和招商银行可以间隔半年更改一次,光大白金卡可以2个月修改一次账单日,人间极品啊. 兴业银行一年可以修改2次,不限间隔时间.
+工商银行2张信用卡可以设置成不同的账单日.
+广发银行只有白金卡可以更改,其他卡种一律是你的生日为账单日.
+不支持更改的银行:农业银行.
+3万额度申请白金卡,1.5万可以尝试申请世界白金卡.建设银行命门,亲测:千万不能把额度用完,不管你是TX还是分期,建设银行会算当期平均使用率,超过80%就是高危人群.账单日前一天全部还进去也没有用,系统会监测到的. 还有还款最好全部一次性还,别账单2万,今天还2000,明天还3000,这样是建设银行的第二大命门.
+所有银行提额必杀技,建设银行尤其有用:刷美金.不管多少,有能力的海淘,什么都没有的去香港红十字会或联合国难民署,单笔10港币,折合人民币8块,这个8块你如果还不舍得,那恭喜你,你是半毛不拔的铁公鸡,老老实实刷超市吧.
+这样视你本身条件和刷卡次数,额度,快的话1年基本可以到10万.慢的2年10万也有的.
+然后去以卡办卡吧,除4大行许多银行以卡办卡的额度不会低于4大行要求其他银行信用卡使用半年或一年以上,除了招商银行不支持以卡办卡.
+这个时候问题又出现了,小银行普通卡金卡额度都不会过10万.
+不要紧,方法还是有的.
+你以卡办卡,先申请白金卡,然后再申请金卡,然后额度调平,OK,10万的卡到手了.
+白金卡一般有效期5年,你可以先不销卡,许多银行销卡以后你的额度就没有10万了.
+先放着白金卡,5年以后在销卡就可以了.
+注意:兴业银行的信用卡种类很多，但级别基本分四级，普卡、睿白金、悠白金、标准白金，分别对应0、500、900和2600的年费。睿白金的首年年费可以用核卡后2个月内2000积分抵掉，悠白金首年15w积分，标准白金130万。
+绝大部分白金信用卡都是核卡即收年费，兴业的卡里面，只有标准白金（水滴版），不是一下卡就收的，是唯一一张开通才收年费的卡.
+交通银行白金需要邀请,不让自己申请.
+补充交通银行金卡和普卡提额方法:刷够免年费的次数,放着就不要去用了.
+交通银行越用越不提额,冷冻半年后提额的机会大大滴.
+中信银行要申请2000年费的那一款白金.
+民生银行豪白才是10万额度起步,年费3600元,标准白5万起步,没有年费. 有一款香格里拉白金卡6.5万起步,积分自动转换成香格里拉酒店积分.这个比较容易申请,某段时间3万其他**就可以以卡办卡,现在这个漏洞堵了.
+民生银行不能申请通宝白金,这个没有免息期的.申请了通宝白金,再申请其他白金,一律拒绝.
+民生银行提额秘籍:曲线法,蛇年快来的时候系统升级了,现在好像不行了. 广发银行特点:分期可以不占额度,方法相应版块可以搜索.据说可以分期7次.比如你现在额度2万,玩到最后可以有14万的额度. 招商银行提额方法:固定额度3个月可以提一次.
+招商银行秘籍:可以在网银里现金分期试试看,如果可分期金额大于目前可用余额,分个2千3期就可以了,手续费57元,许多5万额度以下的卡,用卡正常的情况下,马上会提2倍的永久额度,现金分期方法6万额度到顶.最终固定额度=最大现金分期金额+已使用额度（不包括分期付款部分）
+平安银行有10%的隐藏超限额度,提额捷径:平安商城提额大法,这里就不说明了,有需要的自己去相应版块.目前这个方法成功的机会不多.但是还是可以试试看.
+补充:你的信用卡使用情况各个银行会给你画一个园形饼,哪块蛋糕成色过大银行都不喜欢,合理分配,合理使用. 账单日前还款,有一个好处,平均6个月资金使用率会好看一些,审批信用卡这个也是关键因素.
+重点的重点:你申请信用卡的时候,银行会看你全部银行的信用卡负债率,不是看你的银行出来的账单,是看你的实时负债率,人民银行有一个系统,可以看见你每家银行当前的欠款,不要以为你账单日前全部还清负债率就是零了,现在已经过时了. 负债率高的可以存钱进去把负债率控制在50%以下,然后同时突击申请多家银行,等下来以后再让钱出来,计算好时间,资金占用基本不会超过一个月.
+亲测:实时负债率95%的时候申请平安银行,无征信拒,还款后负债率控制在50%以内,按你目前其他行最高额度下卡.同时申请兴业银行,都说兴业很难申请,负债率下来以后,无征信批卡,呵呵.
+提示:养的卡额度上去后,信报里的额度起码延迟1个月更新,保险起见,先去人民银行打份信报看额度有没有更新. 北京银行的网银里可以查看个人信报的详细版本,比自己去人民银行打的简略版本细致多了,有网点的可以申请借记卡,并且开通网银即可查询. 看完这些,你大概也懂了七八成的,那我就推荐一家适合大家,可以以卡办卡的,可以养到几十万的银行.
+这个银行固定额度用完普卡和金卡还可以超限10%,白金卡还可以超限30%</description>
+    </item>
+    
+    <item>
+      <title>[转]孩子9歲前 父母別做的7件事</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-09-parantscantdo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-09-parantscantdo/</guid>
+      <description>转自：http://m.parenting.com.tw/article/article.action?id=5054875
+潛能開發、培養外語基礎……許多父母積極為孩子打造一條順利的學習之路，但日本 PHP 研究所卻提醒，孩子9歲前，有7件父母不該做的事：
+一，過度重視早期教育，卻沒有配合腦部發展的階段。
+二，脫口說出「你很糟耶」、「為什麼這點事都做不好」等否定評論。
+三，輕忽健康飲食的重要。
+四，總是幫孩子收拾妥當，孩子無法藉由收拾培養自立能力。
+五，對孩子過度保護，孩子缺乏接受挑戰的積極度。
+六，忽略孩子也有自己的步調，總是催促「快一點」。
+七，只重視自己孩子的幸福，少了對其他小孩的關懷。
+在孩子的成長路上，父母不一定要當嚴厲的教練，也可是熱情加油的啦啦隊長。</description>
+    </item>
+    
+    <item>
+      <title>[转]怎样花两年去面试一个人</title>
+      <link>https://liuzheng.github.io/before2018/2012-06-23-audition1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2012-06-23-audition1/</guid>
+      <description>原帖：http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/
+Joel Spolsky曾经感叹：招聘难，难于上青天（此处笔者稍加演绎:)）。他有两个辛辣但不乏洞察力的断言：真正的牛人也许一辈子就投大概4次简历，这些家伙一毕业就被好公司抢走了，并且他们的雇主会给他们不赖的待遇，所以他们也不想挪窝。（刚刚去世的Dennis Ritchie就是这样一个人）而“人才”市场上能找到的大多都不是什么人才。招到这帮人轻则费钱重则把你公司搞挂。
+（当我把这篇文章给邹欣老师review的时候，他说了另外两点：1. 最好的人也许不投简历，就决定去哪里了。所以要在他们做决定前找到他们。2. 比较差的会投很多次简历，找不到工作的时间越多，投的简历越多，给整个pool 带来很多噪音，top10%的简历也许根本不算全部人的top10%。）
+诚然，也许没有哪个行业像IT行业这样，无形资产占据公司的绝大多数资产。拒坊间传言比尔·盖茨就曾经说过类似这样的话：只要允许我带走100个人我可以再造一个微软。这话没搜到原版出处，但是从一个侧面反映了IT公司当中智力资产所占的比例之重。
+所以一个自然的推论就是，招聘也许是一个公司决策当中最最重要的一个环节。Joel Spolsky把他在这方面的观察，体会和洞见集结成了一本小册子《Smart and Gets Things Done》，开篇就挑战“产品是公司成败的关键”这个传统观念，他认为创造最适合工程师生活的环境，留下最优秀的人才才是最先最重要的一步，接下来好的产品是水到渠成的事情。国内iapp4me.com创始人郝培强正是这个理念，所以他在微博上说：
+我们是小公司，工资开的不高，也不招太多的人，但是电脑都是iMac27，iMac21，Macbook pro15，基本上比很多大公司都好多了。软件没盗版，刚才photoshop的正版我也收了。中午管饭，公司备伞。哈哈。节日假正常放，从不加班，早晨11点上班，下午6点下班。我是有资格说某些大公司的员工苦逼的。
+事实上，米国找个人尚且难成这样，搞得Joel还费心费力写本书语重心长地劝企业们要善待好工程师，国内找个人更是难上加难，国内高质量问答社区知乎创始人周源就曾经在知乎上分享他呕心沥血的招人历程，看完真是让人慨叹这年头找个靠谱的人多不容易（这条知乎问答还有很多精彩的跟帖）：
+其实从 08 年到现在，我一直想这事能不能有点窍门，或者是实用的方法，结论是几乎没有。我用过的大家都用的方法：
+ 在水木上发贴子（有点效果） 在蓝色理想上发贴子（无效） 在技术邮件组里发贴子（无效） 买 51job/智联 最便宜的服务（有点效果） 给所有可以想到的人打电话，请他们推荐（无效） 给所有和你讨论过创业，喝过点小酒的人打电话（无效） 约前同事私下谈（有效）  我用过的大家可能没有用的方法：
+ 上 twitter，看 XXX 的 follower，一个一个看，看他们的 twitter，博客，Google Reader 分享，想办法搞到邮件，联系，半夜电话骚扰。 上豆瓣，前端后端挑几本重量级的书，去找想看，看过，正在看这本书的人，一个一个看，看他们的活动，博客，Google Reader 分享，想办法搞到邮件，联系，半夜电话骚扰。 找同事，问他们都看什么技术博客，想办法搞到邮件，联系，半夜电话骚扰。  正是这样的不容易，才有不少公司走内部培养的办法，这里的逻辑是：一上来就招到靠谱的人太难了，但找一块靠谱的璞玉然后雕琢雕琢相对就简单很多。这倒是个办法，但这样做的人难免就陷入了纠结：培养好了，人跑了怎么办。这也不能怪招聘的公司，的确是人之常情。其实解决的办法也很简单，培养的时候进行适当引导，让员工发挥自己的主动学习能力，这样不但人得到更多成长，公司也不会觉得投入太多患得患失。所谓师傅领进门修行在个人。
+但是，这仍然还是没有解决根本的问题，就是招聘真的很困难。应聘者固然觉得自己是在“海投”，大海捞针一般。而招聘者何尝不也是这种大海捞针的感觉。这就好比两个人谈恋爱，都想和对方好上，但是偏偏就聊不到一块去。
+招聘真的很困难。以至于招聘者每年需要绞尽脑汁出新笔试题，以免往年的笔试题早就被人背熟了。出题很费脑子，要出的不太简单也不太难，能够滤掉绝大多数滥竽充数的但又要保证不因题目不公平而滤掉真正有能力的，要考虑审题人的时间成本就只能大多数用选择题，而选择题又是可以猜答案的（极少有人会在选了答案之后还敢在空白的地方写为什么选某答案的原因的）。更悲催的是，有些题目出的连公司的员工们自己都会做错（真的是员工们做错了吗？还是题目本身就出错了？）
+笔试完了之后如果还没有被鄙视就要进入面试环节，姑且不说笔试题的种种弊端，就说面试环节，短短几个小时的面试（大多数公司也许连几个小时的面试时间都没有），既需要全面考察基本知识，又要考察编程素养，还要考察（也许最重要的）性格心态。再然后还有一项根本没法考察但却占据程序员相当一部分工作时间的：debug能力。面试官不但得找准问题，不因对方一题答对而妄下结论，也不因一题打错而就扼杀机会，还要以管窥豹，从一朵花看到整个世界，从面试人的举止言谈，分析问题的方式，甚至写程序的笔迹来观察这个人的性格，做事的方式和心态，简直是要面试官具备心理分析师的水准才行。
+这厢要招人的雇主苦不堪言，那边找工作的人也是一团乱麻。绝大多数应届生直到毕业也不清楚他们想要去的公司到底需要什么样的能力，或者说，他们到底需要具备什么样的能力才能在应聘季节拥有自己的选择权。中国虽然本科教育环境差，但是同样有很多的人在本科希望整点东西出来，他们有一腔的激情和抱负，有强大的动力，但就是不知道自己需要掌握哪些技能才能满足雇主的要求，求告无门，整年整年苦闷的像没头苍蝇一样乱撞（我就收到过很多次这样的来信，他们往往很想学点东西，但又不知道哪些重要哪些不重要，到底该学到什么程度，不知道导致不确定，不确定导致[决策瘫痪](http://www.amazon.com/Paradox-Choice-Why-More-Less/dp/0060005696/)，干脆嘛也不动，荒废时间）。
+什么叫熟练？什么又叫精通？那么扎实呢？两年的YY经验又意味着什么？能这么简单的量化吗？同样是两年的“实践”有的人能真的学到点东西，有的人也许近似一无所得。那么实习呢？很多人都一定要在简历上弄个实习经验，这个又能说明多少问题呢？大作业呢？得奖呢？有一次我面试一位同学，据简历说编译原理课的大作业得了一等奖，可我一问什么是递归下降，就傻眼了。
+这个现实的结果就是，现在绝大多数应届简历而言，也许最具信息量的部分不是“精通XXX，熟悉YYY，掌握ZZZ”，不是“在UUU实习过”，也不是这个项目那个作业，反倒是越来越被认为不重要的一项：毕业学校。毕业学校本不应该是最具信息量的，它之所以最具信息量只是源于一个悲剧的事实：简历上其他条目实在信息量太少了。所以靠谱的面试者往往学会了无视简历上华而不实的内容，只相信面试的时候亲眼所见，扫两眼简历也就罢了，最后还得自己捋起袖子慢慢面。而应聘者也许也知道招聘的也不会细细纠简历上的条目，所以什么词也都敢往上捅，反正先过了HR筛简历这关再说。从经济学角度来讲，应聘者的这种策略是正确的，没有代价（因为目前似乎没有公司会去给已经申请过的人做一个诚信数据库），但至少有可能会带来巨大的收益。应聘成了博彩。而博彩式的应聘给招聘公司带来了巨大的筛选压力。简历成了摆设。
+那么招聘这个关系里面的第三者——学校——所处的位置呢？学校更关心的是毕业率和就业率，这似乎是件好事，有这个为目标，那么老师们似乎应该努力让自己的学生多学点东西。可惜就业的质量似乎不是最重要的指标，此其一。其二老师本身大多数没有丰富的业界经验，根本不知道企业整整需要的人才是什么样的，可能花了精力，但却培养不出雇主真正需要的人。另一方面，老师所起的作用很多时候甚至是一个负面的作用，例如布置大作业表面上看上去是培养学生的能力，我们姑且不说抄袭，假设每个人都做了，那么大作业本身能够衡量多少东西呢？能否衡量代码质量，能否衡量团队协作能力？能否衡量交流能力？考虑到大作业用到的东西往往都是书里面现成的，大作业甚至不能衡量学习能力。而学习能力简直算是这个行业最重要的能力没有之一了。
+所以，简而言之，如果把人才培养/招聘这件事情本身类比做一个项目，那么这整个项目迄今为止就是一个巨大的失败。为什么这么说呢：
+ 和需求严重脱节：作为人才需求方的雇主的需求到底是什么？绝大多数应聘者都没搞清。更严重的是，这却一点都不是应聘者的错。因为雇主是stakeholder，是雇主自己的责任得去说清楚需求是什么。结果应聘者实现的不是雇主想要的，雇主想要的应聘者没有实现。 应聘者雇来培训自己的人根本不管事：学生交了学费，就相当于雇老师来培训自己，可培训者根本也不了解（或不关心）他的客户们的需求。这里，学生是需求方，老师则是实现方。弄清需求的职责在后者，可后者也弄不清。 学生自己也弄不清：学生自己既是需求方（需要特定技能），也是实现方。可他们自己也弄不清需求到底是什么。  以上三点还不是最严重的，最严重的在下面：
+ 明白需求是什么的也不知道怎么实现：怎么去培养现代IT企业真正需要的人才？特别地，实战能力怎么培养？代码素养怎么培养？协作沟通能力怎么培养？学习能力怎么培养？就算这些都知道怎么培养，又怎么给在象牙塔里头，离催命之日还遥遥无期的学生提供足够的动力呢？而学生自己就算知道该学哪些技能，又怎么知道具体怎么着手？什么是最有效率的学习方法？又如何让自己保持学习的热情？  以上这些问题，就是当下人才培养/招聘的惨淡现状。简而言之，在雇主和学生之间，横梗着一条巨大的鸿沟，两头都很着急，两头都有动力，但就是没有方法，君住长江头妾住长江尾。像微软谷歌这样的，干脆和高校合作，直接插手本科或硕士的教育，从而保证到时有足够强的候选，某种程度上，这的确是根本解决之道，可一来这代价太大了，非一般企业承受得起，二来这影响面也太小了。
+ 这一切，也许将在未来的5年发生根本的变化。*  《Switch: How to Change Things When Change Is Hard》（中译《瞬变》）里面指出，表面上看来非常困难的改变，也许是因为根本就没有抓住要害。在书中作者通过大量案例分析和心理学研究，雄辩地指出以下几点促成改变的关键之处：</description>
+    </item>
+    
+    <item>
+      <title>[转]桥网络配置</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-21-kvm-bridge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-21-kvm-bridge/</guid>
+      <description>转：http://blog.csdn.net/cybertan/article/details/8160102
+在QEMU/KVM的网络使用中，网桥（bridge）模式可以让客户机和宿主机共享一个物理网络设备连接网络，客户机有自己的独立IP地址，可以直接连接与宿主机一模一样的网络，客户机可以访问外部网络，外部网络也可以直接访问客户机（就像访问普通物理主机一样）。即使宿主机只有一个网卡设备，使用bridge的方式也可知让多个客户机与宿主机共享网络设备，其使用非常方便，其应用也非常广泛。
+在qemu-kvm的命令行中，关于bridge模式的网络参数如下：
+-net tap[,vlan=n][,name=str][,fd=h][,ifname=name][,script=file][,downscript=dfile][,helper=helper][,sndbuf=nbytes][,vnet_hdr=on|off][,vhost=on|off][,vhostfd=h][,vhostforce=on|off]  该配置表示连接宿主机的TAP网络接口到n号VLAN中，并使用file和dfile两个脚本在启动客户机时配置网络和在关闭客户机时取消网络配置。
+tap参数，表明使用TAP设备。TAP是虚拟网络设备，它仿真了一个数据链路层设备（ISO七层网络结构的第二层），它像以太网的数据帧一样处理第二层数据报。而TUN 与TAP类似，也是一种虚拟网络设备，它是对网络层设备的仿真。TAP被用于创建一个网络桥，而TUN与路由相关。
+vlan=n 设置该设备VLAN编号，默认值为0。
+name=name 设置名称，在QEMU monior中可能用到，一般由系统自动分配即可。
+fd=h 连接到现在已经打开着的TAP接口的文件描述符，一般来说不要设置该选项，而是让QEMU会自动创建一个TAP接口。当使用了fd=h的选项后，ifname、script、downscript、helper、vnet_hdr等选项都不可使用了（不能与fd选项同时出现在命令行中）。
+ifname=name 设置在宿主机中添加的TAP虚拟设备的名称（如tap1、tap5等等），不设置这个参数时，QEMU会根据系统中目前的情况，产生一个TAP接口的名称。
+script=file 设置宿主机在启动客户机时自动执行的网络配置脚本。如果不指定，其默认值为&amp;rdquo;/etc/qemu-ifu&amp;rdquo;”这个脚本，可指定自己的脚本路径以取代默认值；如果不需要执行脚本，则设置为&amp;rdquo;script=no&amp;rdquo;。
+downscript=dfile 设置宿主机在客户机关闭时自动执行的网络配置脚本。如果不设置，其默认值为&amp;rdquo;/etc/qemu-ifdown&amp;rdquo;；若客户机关闭时宿主机不需要执行脚本，则设置为&amp;rdquo;downscript=no&amp;rdquo;。
+helper=helper 设置启动客户机时在宿主机中运行的辅助程序，包括去建立一个TAP虚拟设备，它的默认值为/usr/local/libexec/qemu-bridge-helper，一般不用自定义，采用默认值即可。
+sndbuf=nbytes 限制TAP设备的发送缓冲区大小为n字节，当需要流量进行流量控制时可以设置该选项。其默认值为&amp;rdquo;sndbuf=0&amp;rdquo;，即不限制发送缓冲区的大小。
+其余几个选项都是与virtio相关的，这里暂不做过多的介绍。
+上面介绍了使用TAP设备的一些选项，接下来通过在宿主机中执行如下几个步骤来实现网桥方式的网络配置。
+（1）要是用bridge模式的网络配置，首先需要安装两个RPM包，即：bridge-utils和tunctl，它们提供所需的brctl、tunctl命令行工具。可以用yum工具安装它们，如下：
+[root@jay-linux ~]# yum install bridge-utils tunctl  （2）查看tun模块是否加载，如下：
+[root@jay-linux ~]# lsmod | grep tun tun 12197 2  如果tun模块没有加载，则运行&amp;rdquo;modprobe tun&amp;rdquo;命令来加载即可；当然，如果已经将tun编译到内核（可查看内核config文件中是否有&amp;rdquo;CONFIG_TUN=y&amp;rdquo;选项），则不需要加载了；而如果内核完全没有配置TUN模块，则需要重新编译内核才行了。
+（3）检查/dev/net/tun的权限，需要让当前用户拥有可读可写的权限。
+[root@jay-linux ~]# ll /dev/net/tun  crw-rw-rw- 1 root root 10, 200 Jul 20 16:23 /dev/net/tun
+（4）建立一个bridge，并将其绑定到一个可以正常工作的网络接口上，并让bridge成为连接本机与外部网络的接口。主要的配置命令如下面命令行所示。
+[root@jay-linux ~]# brctl addbr br0 #添加br0这个bridge [root@jay-linux ~]# brctl addbr br0 eth0 #将br0与eth0绑定起来 [root@jay-linux ~]# brctl stp br0 on #将br0加入到STP协议中 [root@jay-linux ~]# dhclient br0 #将br0的网络配置好 [root@jay-linux ~]# route #参看路由表是否正常配置 Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 192.</description>
+    </item>
+    
+    <item>
+      <title>[转]王小波经典语录</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-24-wangxiaobo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-24-wangxiaobo/</guid>
+      <description>转：http://www.lz13.cn/jingdianyulu/4199.html
+1、这个世界自始至终只有两种人：一种是像我这样的人，一种是不像我这样的人。
+2、我认为每个人都是有本质的。像我的本质就是流氓，土匪。如果放到合适的地方就大放光彩，可是在城市里做个市民。在学校里做个教员就很不合适了。
+3、这辈子我干什么都可以，就是不能做一个一无所能，就能明辨是非的人。
+4、当一切开始以后，这个世界上再也没有什么让我害怕的事情了。
+5、我想要从梦里醒来，就要想出自己什么时候睡着了，方能跳出梦境，这是唯一的途径。
+6、一个人只拥有此生此世是不够的,他还应该拥有诗意的世界。
+7、不幸的是,每个人都有自己的命运,你别无选择,假如能够选择,我也不愿生活在此时此地。
+8、智慧本身就是好的。有一天我们都会死去，追求智慧的道路还会有人在走着。死掉以后的事我看不到，但在我活着的时候，想到这件事，心里就很高兴。
+9、一切都在不可避免的走向庸俗。
+10、活下去的诀窍是：保持愚蠢，又不能知道自己有多蠢。
+11、在很穷的时候，用到自己偷来的东西，感觉妙不可言！
+12、走在天上，走在寂静里，而阴茎倒挂下来。
+13、井底之蛙也拥有一片天空。
+14、孤独，寂静，在两条竹篱笆之中，篱笆上开满了紫色的牵牛花，在每个花蕊上，都落了一只蓝蜻蜓。
+15、我呀，坚信每一个人看到的世界都不该是眼前的世界。眼前的世界无非是些吃喝拉撒睡，难道这就够了吗？还有，我看见有人在制造一些污辱人们智慧的粗糙的东西就愤怒，看见人们在鼓吹动物性的狂欢就要发狂。我总以为，有过雨果的博爱，萧伯纳的智慧，罗曼罗兰又把什么是美说得那么清楚，人无论如何也不该再是愚昧的了。肉麻的东西无论如何也不应该被赞美了。人们没有一点深沉的智慧无论如何也不成了。
+16、我认为低智、偏执、思想贫乏是最大的邪恶。当然我不想把这个标准推荐给别人，但我认为，聪明、达观、多知的人，比之别样的人更堪信任。
+17、李卫公年轻时很有本事，（经典语录www.lz13.cn）所以找不到工作，只好去做流氓。
+18、我反对愚蠢，不是反对天生就笨的人，这种人只是极少数，而且这种人渴望变的聪明。在这个世界上，大多数愚蠢的人都含有假装和弄假成真的成分。
+19、照我的看法，每个人的本性都是好吃懒作，好色贪淫，假如你克勤克俭，守身如玉，这就犯了矫饰之罪，比好吃懒作好色贪淫更可恶。
+20、念书就是为考大学,考大学就是为读博士,读博士就是为以后主管工程,主管工程就是为贪污公款。
+21、我引用昆德拉这句话（人类一思考，上帝就发笑），被领导听见了，他就说：一定要把该上帝批倒批臭！
+22、我说：“妖妖，你看那水银灯的灯光像什么？大团的蒲公英浮在街道的河流上，吞吐着柔软的针一样的光。”
+妖妖说：“好，那么我们在人行道上走呢？这昏黄的路灯呢？”
+我抬头看看路灯，它把昏黄的灯光隔着雾蒙蒙的雾气一直投向地面。
+我说：“我们好像在池塘的水底。从一个月亮走向另一个月亮。”
+妖妖忽然大惊小怪地叫起来：“陈辉，你是诗人呢！你有真正的诗人气质!”
+23、会唱歌的人一定要唱自己的歌,不会唱歌的人,全世界的歌对他都没有用。
+24、反熵，不是我们的人，就是奸党。
+25、趋利避害是人类的共性,可大家都追求这样一个过程,最终就会挤在低处,像蛆一样熙熙攘攘。
+26、梦具有一种荒诞的真实性，而真实有一种真实的荒诞性。
+27、生活是天籁,需要凝神静听。
+28、强忍悲痛，活在这个世上。
+29、似水流年才是一个人的一切，其余的全是片刻的欢娱和不幸。
+30、一个人活在世上就是为了忍受一切摧残，想通了这点，任何事情都能泰然处之。
+31、虽然岁月如流，什么都会过去，但总有些东西发生了就不能抹煞。
+32、小时候我对生活的看法是这样的：不管何时何地，我们都在参加一种游戏，按照游戏的规则得到高分者为胜，别的目的是没有的。具体而言，这个看法常常是对的，除了臭气弥漫的时期。比方说，上学就是在老师手里得高分，上场就是在裁判手里得高分，到了美国，这个分数就是挣钱；
+33、鸡多不生蛋，女人多了瞎捣乱。
+34、有一个公开的秘密想必你也知道了：大多数女权主义哲学家，不管她叫菊兰也好，淑芬也罢，净是些易装癖的男人，穿着高领毛衣来掩饰喉结，裙子底下是一双海船大小的高跟鞋，身上洒了过量的香水，放起屁来声动如雷；搞得大街上的收费厕所都立起了牌子：哲学家免入。
+35、假如我要写什么，我根本就不管他格调不格调，正如谈恋爱时我绝不从爱祖国开始谈起。
+36、好的文字有着水晶般的光辉，仿佛来自星星。
+37、当一切都“开始了”以后，这世界上再没有什么可怕的事。我现在只是有点怕死。等死了以后不怕了。
+38、每个人的贱都是天生的，永远不可改变。你越想掩饰自己的贱，就会更贱。唯一的逃脱办法就是承认自己的贱并设法喜欢这一点。
+39、人的一切痛苦,本质上都是对自己的无能的愤怒。
+40、我对自己的要求很低：我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我愿，我的一生就算成功。
+41、对一位知识分子来说，成为思维的精英，比成为道德精英更为重要。
+42、我们的生活有这么多的障碍，真他妈的有意思，这种逻辑就叫做黑色幽默。
+43、很不幸的是，任何一种负面的生活都能产生很多烂七八糟的细节，使它变得蛮有趣的；人就在这种有趣中沉沦下去，从根本上忘记了这种生活需要改进。
+44、人在写作时，总是孤身一人。作品实际上是个人的独白，是一些发出的信。我觉得自己太缺少与人交流的机会——我相信，这是写严肃文学的人共同的体会。但是这个世界上除了有自己，还有别人；除了身边的人，还有整个人类。写作的意义，就在于与人交流。因为这个缘故，我一直在写。
+45、在冥想中长大以后，我开始喜欢诗。我读过很多诗，其中有一些是真正的好诗。好诗描述过的事情各不相同，韵律也变化无常，但是都有一点相同的东西。它有一种水晶般的光辉，好像来自星星……真希望能永远读下去，打破这个寂寞的大海。我希望自己能写这样的诗。我希望自己也是一颗星星。
+46、人生就是一个缓慢被锤骟的过程。
+47、智慧本身就是好的。有一天我们都会死去，追求智慧的道路还会有人在走着。死掉以后的事我看不到。但在我活着的时候，想到这件事，心里就很高兴。</description>
+    </item>
+    
+    <item>
+      <title>[转]现在上大学有用吗？看后你就明白了</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-14-universityusage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-14-universityusage/</guid>
+      <description>转自：http://t66y.com/htm_data/7/1501/1343457.html 上大学当然是有用的，不然为什么每年大家都挤破了头上大学，但大学到底有什么用？
+有句很经典的话形容大学四年：大一不知道自己不知道，大二知道自己不知道，大三不知道自己知道， 大四知道自己知道。毕业后，你就会想念大学的好处。
+作为过来人，笔者以为，上大学至少给了你以下10大用处：
+一、同学 你的大学同学及朋友，将是你人生当中的宝贵财富。可以说，你的同学对你的重要性，仅次于你的亲人。 无论何时何地，你都有可能获得来自同学的友情、帮助与安慰。很多大公司的崛起，都是一帮同学共同努力的结果。 很多人的一生的成功，都是因为一个志趣相同的优秀同学。
+甚至你可能还会收获爱情，收获你的另一半，而爱情，是人生中与事业同等的两件大事之一，其重要性不言而谕。
+即使你大学时没收获爱情，你的大学也很重要。哪个青年人找对象会不考虑对方的学历呢？
+我的想法 大学应注重交际，平淡分数的重要性，我在大学算是非常充实的，我当然不看中成绩，我喜欢交友， 认识各种不同圈子里的人，但到了研究生阶段，我却一改之前的作风，宅，不去进行各种社交活动。 我有我自己的分析原因，本科阶段人们都比较乐于奉献或者说喜欢玩，大家凑一起各种疯。 研究生阶段我暮然的发现大家将自己的圈子限定在了女朋友和老朋友，而对其他人的冷漠态度让我心寒。 故此我也安安静静的玩自己的计算机。
+各个时期人们的想法是不同的，并不要强求别人和你一样。我研一的时候曾硬生生的拉了几个人玩， 但是结果便是不欢，人们还是喜欢自己。这也是能理解的，毕竟每个人有着不同的目标。
+二、你自己 大学四年，和一帮与你差不多优秀的、比你更优秀的或是不如你优秀的人在一起，使你加深了对自己的真正了解。
+你了解到，你其实并不是那么牛逼，因为有人比你更牛逼，虽然你曾经认为自己很牛逼。 当然你也可能了解到你并不是那么无能，因为有人比你更无能。
+由于大学环境的宽松，你可以做自己喜欢做的事情，而不是象中学生那样只知道学习。你了解了自己究竟喜欢什么， 讨厌什么。你了解了自己擅长做什么，不擅长做什么。你了解了自己的优点和缺点。
+你对自己的了解逐渐接近真实。你不再狂妄自大，也不再妄自菲薄。
+这就是成熟。
+我的想法 我一向苛求自己，希望能做的更好，学习各种新鲜的东西。我曾切身的感受到研究生阶段大家对我的感觉就是对自己要求太高了， 进而他们觉得我这人对其他人应该也是这样的，不好处，没人乐意累，听别人唠叨。是的，我曾和本科好友Han讨论过， 对方并不觉得我这人难处，我的随和他明白，只是人们没有那么多时间去了解一个人罢了，就想当然， 我也不便解释过多，想和我处的人自然看的出来的。
+如果说本科生阶段是从无知到认识自己的转变的话，那么研究生阶段就是对自己的再认识，以及对知识的扩充。 曾经听到过这样一句话，本科生是掌握基础知识，研究生阶段是透彻某一方向的知识，而博士生是博学而透彻知识。 怎耐中国的学术就这屌样，写过那些水水的数模论文我一直觉得着东西很难用到生活中啊。。。 因此选择了这行计算机，希望能做点有用且好玩的事情。
+三、修养 你见过暴发户吗？
+很多暴发户虽然挣了很多钱，可以他们身上却散发着庸俗、铜臭与粗鲁。这正是因为他们没上过大学， 即使一身名牌、百般妆扮，也不能掩盖本身人文素养的缺失。
+大学四年，你一直和有知识、有文化的人在一起，看音乐会，看画展，参加社团，读各种书籍，你的文化修养、 艺术修养、人文素养、道德修养都在不断地加深。在人文素养方面，你要大大超过那些没上过大学的人。
+如果你有了钱，你可能会选择艺术享受比如听音乐会、看话剧甚至是艺术收藏，这是高层次的精神享受。 而缺乏人文修养的人可能会去大吃大喝、购买奢侈品，甚至是黄、赌、毒，这是低层次的感官享受。
+你可能不如暴发户有钱，但你的人生质量是另一个层次。
+我并没有看不起有钱人的意思，实际上，很多暴发户后悔没有好好读过书，很多富翁都对知识分子非常尊重， 甚至是羡慕。他们经常通过附庸风雅来显示自己是有品味的，甚至要想尽办法给自己搞个大学文凭。
+你在艳羡暴发户们腰缠万贯的同时，殊不知他们也在艳羡你的知识与品味。
+我的想法 修养这个是通过生活积累的，不过也需要正确的导向。中学时我的良师便对我说：净口，修身，齐家，治国，平天下。
+他当时看到了别人没看到的我的光芒，别人只看到了我的锋芒。。。太露。。。要藏！
+因此我也静心去思考着自己的人生，思考着改变能改变的，不能改变的努力改变。
+也曾很文艺的看过一些文学著作，可惜现在只留下一丝文学的感觉，不是文人啊。
+努力向这能改变自己命运的方向前进，也发现单单的丰实自己并不能改变自己的命运，还是搞技术的好阿！
+四、独立思考能力 大学环境比较宽松，有大量的时间可以自由安排，这锻炼了你的独立性。这种锻炼是必要的，因为你早晚要独立生活。 当然一开始你可能不适应，你会无所事事、浪费光阴，但这是提高独立能力的必经之路和代价，你由此认识到了光阴的可贵。
+你有了思考自己、思考社会的时间，你可以对各种社会问题给出自己的见解。如果不懂，你会上网、会去图书馆去了解相关知识。
+你不再人云亦云，你拥有独立思考能力，你会自己去判断对与错。
+你不再迷信权威，你知道了很多专家、教授不过是徒有其名，他们的言论其实不比你高明，甚至是胡说八道、 无耻谰言、屁话连篇。你知道了很多官员的话是假大虚空，他们道貌岸然的后面，是对财色与权势的追逐。
+你明白了社会与人性的复杂性、多面性，你更加理性了。
+你一般不会去违法犯罪，大部分暴力罪犯都是低学历的、没上过大学的人，这些人犯罪都缺乏技术含量。
+你即使犯罪，那也应该是高智商犯罪。
+我的想法 独立思考，这个是必须的啊！小学时曾在某处看到中国的教育就是造书架的过程，造好书架往上面摆书， 无意义！书架能摆的书就这么几本，不够！我就堆书。虽然会忘记，有时候堆的书会找不到，但是自认为能丰富阅历也是不错的。
+五、知识 虽然你可能经常逃课，虽然你可能多次挂科，虽然你经常在课堂上睡觉，但是实际上，你仍然获得了很多的知识。 你对你的专业，总会比那些没上过大学的人，了解的要多。如果你很认真，那么你收获颇丰，虽然你可能没有感觉到。 理工科的学生，更是学到了不少实实在在的东西。</description>
+    </item>
+    
+    <item>
+      <title>[转]给予买车族，准备按揭的一些建议</title>
+      <link>https://liuzheng.github.io/before2018/2015-4-18-car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-4-18-car/</guid>
+      <description>from:htm_data/7/1504/1449468.html 之前去F1看赛车，奔驰的一款车相当如我眼，好吧，应该会关注汽车一段时间吧
+关于贷款的一些行内规则
+日常生活中，我们的消费观念在改变，那么就少不了——贷款这个东西！从业贷款6年，给你们一些不必要付出的monery的建议! 一、车贷、 随着人们生活水平的提高，越来越多的家庭都选择了买车，那么汽车按揭贷款———分期付款业务就出现了。据我了解，目前80%的客户买车都是按揭贷款的。
+按揭：30%首付、70%贷款、这些你们都了解。接下来举个例子：手头有5万钱，接下来自己就会想买16万的车咯（16万x30%=4.8万).那肯定是错误滴，5万钱大概只能买10万的车。①、首付30%=3万。②、保险1200元交强险+10万x4.5=4500元商业险=5700元（这个按地方变化，出入不大）③税10万÷11.7=8547元、④、车商的费用2000元（有良商家）、⑤、担保公司3000元（按利息算,具体下面解释）。总：49247元。这还是不算银行利息的情况下需要付的钱。
+所以由此可以得知，当你需要买20万的车，基本需要准备10万的钱。
+接下来说下利息的计算。
+如果销售顾问说银行利息是几厘几厘那肯定是蒙你的，因为银行是按照点数收取利息的。
+央行现在三年贷款期限的利率8%上下浮动（各个银行浮动在20%内），所以最高9.6%。&amp;lt;贷款10万3年是最高9600元&amp;gt;。
+银行为了降低风险，则把风险转架到中介公司，那么新的行业的诞生（担保公司）。
+担保公司为了利润，可以浮动利率。（我见过最高20%多的。）那么减去9.6%。其余都是担保公司的。（部分可能给车商回扣。）
+一般担保公司给出的利率是14.5%，14500元、赚取5个点。5000元、14500元每月是388.8元利息，那销售顾问就会跟你说是3厘8的利息，这肯定是错的。当你还到19个月的时候，本金只剩5万，但是利息还是388.8元。（根据多年的经验，大概要乘以1.95左右），实际利息是7厘58.
+接下来说下车商（4S店）的盈利，服务费200、资料费200、保管费100、开卡费100、代办费500、公证费800、等等等、这一切都是虚的，可能你听上去是应该给的，他们提供服务了，呵呵，好的销售顾问肯定给你一翻洗脑。但是其实你可以一分都不用给，因为你贷款了，担保公司或金融公司直接把余款转给他们了，你首付也交了。相当于买件衣服，售价1000，你给了1000，当然可以开车走人。
+说说原因吧，现在因为4S店之间的竞价，为了留住你，他们的车的价格可能已经亏了，所以只能靠这些拉些利润回来！
+基本汽车按揭的常识就这些了，下面就说下如何避免这些“钱规则”！
+壹：比价
+看中了哪款车之后，不要急于付定金，很可能结果定金都泡汤了，先看4S店，询问裸车报价，按揭的裸车报价，一次性付款的裸车报价。
+询问银行利率，直接问点数，不要问几厘，上面已经介绍了。之后记下，（一般销售顾问不会给你他给你计算的单子）。去另一家代理店去询问价格！再比较。
+贰：担保公司和金融公司
+询问帮您办理的是哪家担保公司或金融公司，在利息上比价，（也可以自己找，或问办过车贷朋友。） 叄：在比价之后，让担保公司或金融公司帮您办理贷款，等放款了和他一起去提车。（这样就少了车商的那笔费用，利息也肯定便宜）。 保险返点就不说了！毕竟和今天的主题无关！ 二、现金贷款 下次更新。。。。。。。。。。。。</description>
+    </item>
+    
+    <item>
+      <title>[转]西红柿遇上鸡蛋 只能“炒”在一起吗</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-08-eggtomato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-08-eggtomato/</guid>
+      <description>转自：http://blog.douguo.com/?p=6677
+当西红柿遇到鸡蛋，你会想到什么？
+“西红柿炒蛋”！的确，很多人的第一反应定是那酸酸甜甜的“西红柿炒蛋”。这不仅因为它简单易学，几乎人人都会，更因为它老少皆宜，营养丰富。
+其实，既然西红柿和鸡蛋如此合得来，那么，除了将二者炒在一起之外，你可曾想过其它新奇的组合呢？
+没错，有西红柿和鸡蛋，不一定只是西红柿炒蛋哦！眼下西红柿和鸡蛋玩出的各式新花样着实令人脑洞大开呢！不信你就瞧瞧！
+西红柿烤鸡蛋 ★用料
+西红柿2个、鸡蛋2个、盐、黑胡椒
+ 做法  1、备好食材，既然是西红柿和鸡蛋，当然要先隆重的请二位猪脚出场。
+2、西红柿洗干净，切掉顶端，用小刀沿边上划一圈，最后中间划十字，西红柿的果肉很快就被取了出来。
+3、依次弄好三个西红柿之后，将鸡蛋打到碗里，不要打散。
+4、用勺子分别舀一勺蛋清和蛋黄放入番茄盅，顶层撒上粗盐粒和黑胡椒粒。
+5、烤箱180度烤20分钟即可，美味无法阻挡。
+▲小贴士
+裹上锡纸是为了预防水分流失，个人更喜欢多汁的西红柿，其实不裹也蛮好吃的，外层焦焦的。
+嫩滑番茄蒸水蛋 ★用料
+西红柿100g、鸡蛋2个、水、油、生抽、葱花
+●做法
+1、番茄去皮切小，加少许水放入料理机打成汁后加热，鸡蛋充分打散。
+2、把番茄汁倒入蛋液里，边倒边搅拌。倒入碗里，撇去泡沫。记着番茄汁和蛋的比例是2:1。
+3、盖盖子或者保鲜膜，小火蒸到刚刚凝固。
+4、蛋液刚刚凝固时放入番茄片和葱花再蒸一分钟。
+5、淋上生抽和油即可食用。
+健康版西红柿炒鸡蛋 ★用料
+西红柿220克、鸡蛋2个、油、盐3克、小葱2根
+●做法
+1、西红柿洗净，鸡蛋准备。
+2、先把西红柿沿一圈3分之一处切开，再用小刀沿西红柿划一卷再用调羹把里面的肉挖出，切出倒三角呈花边状。
+3、取少许葱花。
+4、鸡蛋嗑入碗内加入挖出的西红柿肉，3克盐和葱花搅打均匀。
+5、微波炉专用锅内刷上油。
+6、先进微波炉一分钟把油熬出香味，再把番茄蛋液倒入锅内。
+7、进微波炉2分钟取出用筷子划散后再进微波炉一分钟后取出，把蛋加入西红柿壳内。
+8、盖上西红柿盖子，表面均匀的刷上油，进入200度预热的烤箱，中层烤10分钟即可。
+茄汁白煮蛋 ★用料
+西红柿、鸡蛋、酱油、盐
+●做法
+1、一只番茄一分为二，一半去皮切丁，另一半保留皮，入油锅煎到表皮发皱。
+2、加入茄丁开始做茄汁，茄汁做好撒上少许盐。
+3、一只白嫩嫩的水煮蛋，装盘，淋上少许酱油，来吃吧！
+番茄鸡蛋卷 ★用料
+鸡蛋3个、西红柿2个、番茄沙司1大勺、鱼露1勺、香葱1棵、白砂糖10克、大蒜5粒、柠檬汁
+●做法
+1、鸡蛋打散加入适量鱼露搅匀。
+2、锅里烧热油，舀上一大勺蛋液做鸡蛋饼，再将蛋饼切成长条状备用。
+3、将大蒜切碎，西红柿去皮切三角块。
+4、锅中烧热油爆香大蒜碎，放入西红柿块翻炒。
+5、滴入柠檬汁，再放盐和糖拌匀。
+6、加入番茄沙司煮沸开火盛出，挑大块西红柿块卷在切成条的蛋饼里。
+7、卷好的蛋卷摆在盘子里，再浇上一些番茄汁，撒上香葱碎。
+番茄蛋挞 ★用料
+番茄1个、鸡蛋1个、盐、水淀粉1小勺
+●做法
+1、1个鸡蛋加1小勺水淀粉，一小撮盐，搅打均匀。
+2、平底锅烧热，刷油，再用厨房纸吸去，小火，倒入蛋液，转动锅，让蛋液平铺在锅底，待定型后翻面，煎成蛋皮备用。
+3、把蛋挞模倒扣在蛋皮上，用锋利的小刀沿着蛋挞模周围刻一圈。
+4、把切好的蛋皮铺在蛋挞模里，为让蛋皮更服帖，可以竖着划一刀，再重叠好。
+5、番茄去蒂洗净，在顶部表皮划浅浅的十字刀。
+6、锅里烧开水，放入番茄，用热水浇在番茄上，直到表皮卷起，取出轻易就能撕去皮。
+7、番茄切碎，撒点盐拌匀。
+8、用勺子把番茄碎舀到蛋挞皮中，放到预热好的烤箱，200度10分钟左右，到蛋皮边缘上色即可。</description>
+    </item>
+    
+    <item>
+      <title>[转]记录bash的操作</title>
+      <link>https://liuzheng.github.io/before2018/2015-12-07-bash-log-history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-12-07-bash-log-history/</guid>
+      <description>转自：http://www.freeoa.net/osuport/sysec/simple-linux-sys-users-operate-manage-solution_1880.html
+当需要登录服务器的用户增加时，就必须知道运维人员、开发人员或者黑客在机器上进行了什么样的操作，或如果机器上的重要文件被删除了，你是否很想知道是谁在什么时候删的？
+本文将介绍这样的一种组合方案，来对用户登录后的行为进行跟踪和审计。
+bash 本身就有记录命令的功能，即 history。可以执行 history 命令显示你之前执行了什么命令。但history有其固有的缺陷，比如默认有大小限制、可轻易被人篡改或清空或不记录。而history分散在各机器上既无法保证其完整性也不方便审计，所以我们需要将其统一收集起来。
+方案基本思路 收集 history的思路比较简单，即将history写入文件并上传到服务端或者写入syslog，然后由 syslog实时的发到远程日志服务器，或将收集到的 history 进行后续处理则可以写入文件保存或者写入数据库供日后查询。而如何收集history，则可以从bash的现有功能或者源代码着手考虑。 主要有两种方法：
+一、script方法 将用户执行的命令，以及命令所产生的结果都重定向到具体文件中。 将下面的命令添加到/etc/profile中：
+exec /usr/bin/script -a -f -q /var/log/ops/`whoami`-`date +%Y%m%d%H%M`.log  创建日志目录：mkdir /var/log/operation/ -p
+用户登录时便会自动记录用户的操作记录了，用户通过当前主机SSH到其他服务器上面去也可以记录用户在那台机器上的操作日志。
+/usr/bin/script –a /var/log/operation/$USER.log 2&amp;gt;&amp;amp;1  有时在日志文件里不能一直看到命令行的输出，好像有丢失，不知何故。不推荐使用这种方法，&amp;rsquo;script&amp;rsquo;指令多年不再更新了，最新的手册页是2000年的。在用户登录后，它会开启另外一个进程(/usr/bin/script -a /var/log/operation/root.log 像这种形式的)，来监控用户的操作及其输出，当然从终端退出时要退出两次。
+当操作输出量很大时(像导入mysql数据库)时，对应的记录日志文件会变的很大，对事后查找反而又变得不方便了。
+exec /usr/bin/script -a -f -q /var/log/ops/`whoami`-`date +%Y%m%d%H%M`.log  You can set the PS4 variable, which is evaluated for every command being executed just before the execution if trace is on:</description>
+    </item>
+    
+    <item>
+      <title>[转]送给准备结婚拍结婚照一些建议</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-09-merriagekey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-09-merriagekey/</guid>
+      <description>转自：/htm_data/7/1309/957779.html
+第一
+首先选拍结婚照的店，这个就没有什么建议了就看各位爱好哪家，进去了老板会有样本啊什么的拿给你看，这个没多大用处，主要是看套餐价格表，1000多到8000多不等，关键就在这里了，好多事不提前讲好，等交了定金就迟了，开始不要还价，套餐内无非就是给什么尺寸的相框和照片，以及入相册的镜头等等，这里没经验的就非常吃亏了，首先就是小尺寸的相框能改成大的一定要该成大的，比如小狼我的套餐是4699的套餐最大的尺寸的就是42的一张，剩下的什么36的一张24的两张，这里我就跟老板说24的那么小要了也没用给换成34的行不行，我这磨了一会老板就答应了，假如狼友们的卧室比较大，可以把42的换成更大的也行，套餐内还有2本相册，一本12寸的一本16寸的我也是把12的换成20的了，反正这里众狼友们发挥潜能，能多要多要，还有相框的样式和做工材料相册的材料能换成好的都换成好的，主要这里你没有还价，一般不是过分要求都可以的除非你是1000的套餐改成8000的那种， 这个时候老板会让你交定金，然后说交了定金安排你明天就拍等等，这个时候你就可以砍价了
+第二
+砍价，等上面的步骤都搞好了就可以砍价了，首先你问老板，这个套餐最有优惠是多少，看看老板出的价，我这边老板直接说给我算4200，这个还价就要看各位的水平了，我是砍到了3000，当时没有成功，第二天去的时候谈成功了，各位狼友可以参考下这个比例4699的价格砍到3000中间是多大的水分啊
+第三
+去拍的时候准备，这里我就吃亏了一次，去了之后还有要花钱的地方，其实也可以省掉的，第一个就是准备乳贴，假如你没有带，去了肯定是要买的，还有假的指甲，这个看个人爱好，你要是喜欢可以自己准备好带过去，这两样可以省下200多块钱，还有袜子要准备2双一双白的一双黑的是最好，小狼我就悲剧了，穿的黑袜子过去，结果拍白纱的时候，好多照片效果都非常好，结果就是露个黑袜子出来，太不和谐了
+第四
+拍摄过程中，首先是选衣服，一般必须的要有的像白纱，晚礼服，短裙，大红，最好不要重复了，拍外景的时候一定要注意太阳光，狼友我就没有经验，内景都还好，外景被太阳光遮的眼睛都快没有了，
+第五
+选照片的时候还可以跟老板商量，相册里能多要几个镜头的，你可以说，哎呀老板，这几张我都好喜欢怎么办，能不能再加一张啊，一般都会答应的，但是老板说可以加钱加相册的千万别，除非你特喜欢， 好了，这次的经验也就这些，大概能省下2000多块钱吧，虽说不是多值钱，但是必竟能省一点是一点吗，我同学跟我是一家拍的选的5699的套餐，东西还没我的多，相册还没我的大，价钱是4800，比我的还贵，这就是开始不知道的结果，问我怎么知道呢，我也是俺妹妹带我去的，她帮我要的东西还的价钱，嘿嘿</description>
+    </item>
+    
+    <item>
+      <title>[转]颈椎病诊治与康复指南 2010 版</title>
+      <link>https://liuzheng.github.io/before2018/2016-01-08-cervical-spondylosis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-01-08-cervical-spondylosis/</guid>
+      <description>转自：http://orthop.dxy.cn/article/15105?trace=related
+第一部分 前言 颈椎病（Cervical Spondylosis）是一种常见病和多发病。
+第二届全国颈椎病专题座谈会（1992 年，青岛）明确了颈椎病定义 ：即颈椎椎间盘退行性改变及其继发病理改变累及其周围组织结构（神经根、脊髓、椎动脉、交感神经等），出现相应的临床表现。仅有颈椎的退行性改变而无临床表现者则称为颈椎退行性改变。随着现代从事低头工作方式人群增多，如电脑、空调的广泛使用，人们屈颈和遭受风寒湿的机会不断增加，造成颈椎病的患病率不断上升，且发病年龄有年轻化的趋势。
+第二部分 颈椎病的分型 根据受累组织和结构的不同，颈椎病分为 ：颈型（又称软组织型）、神经根型、脊髓型、交感型、椎动脉型、其他型（目前主要指食道压迫型）。如果两种以上类型同时存在，称为“混合型”
+一．颈型颈椎病： 颈型颈椎病是在颈部肌肉、韧带、关节囊急、慢性损伤，椎间盘退化变性，椎体不稳，小关节错位等的基础上，机体受风寒侵袭、感冒、疲劳、睡眠姿势不当或枕高不适宜，使颈椎过伸或过屈，颈项部某些肌肉、韧带、神经受到牵张或压迫所致。多在夜间或晨起时发病，有自然缓解和反复发作的倾向。30 ～ 40 岁女性多见。
+二．神经根型颈椎病 神经根型颈椎病是由于椎间盘退变、突出、节段性不稳定、骨质增生或骨赘形成等原因在椎管内或椎间孔处刺激和压迫颈神经根所致。在各型中发病率最高，约占 60 ～70％，是临床上最常见的类型。多为单侧、单根发病，但是也有双侧、多根发病者。多见于 30 ～50 岁者，一般起病缓慢，但是也有急性发病者。男性多于女性 1 倍。
+三. 脊髓型颈椎病 脊髓型颈椎病的发病率占颈椎病的 12 ～ 20％，由于可造成肢体瘫痪，因而致残率高。通常起病缓慢，以 40 ～ 60 岁的中年人为多。合并发育性颈椎管狭窄时，患者的平均发病年龄比无椎管狭窄者小。多数患者无颈部外伤史。
+四. 交感型颈椎病 由于椎间盘退变和节段性不稳定等因素，从而对颈椎周围的交感神经末梢造成刺激，产生交感神经功能紊乱。交感型颈椎病症状繁多，多数表现为交感神经兴奋症状，少数为交感神经抑制症状。由于椎动脉表面富含交感神经纤维，当交感神经功能紊乱时常常累及椎动脉，导致椎动脉的舒缩功能异常。因此交感型颈椎病在出现全身多个系统症状的同时，还常常伴有的椎 - 基底动脉系统供血不足的表现。
+五. 椎动脉型颈椎病 正常人当头向一侧歪曲或扭动时，其同侧的椎动脉受挤压、使椎动脉的血流减少，但是对侧的椎动脉可以代偿，从而保证椎 - 基底动脉血流不受太大的影响。当颈椎出现节段性不稳定和椎间隙狭窄时，可以造成椎动脉扭曲并受到挤压 ；椎体边缘以及钩椎关节等处的骨赘可以直接压迫椎动脉、或刺激椎动脉周围的交感神经纤维，使椎动脉痉挛而出现椎动脉血流瞬间变化，导致椎 - 基底供血不全而 出现症状，因此不伴有椎动脉系统以外的症状。
+第三部分 颈椎病的临床表现 一. 颈型颈椎病 1．颈项强直、疼痛，可有整个肩背疼痛发僵，不能作点头、仰头、及转头活动，呈斜颈姿势。需要转颈时，躯干必须同时转动，也可出现头晕的症状。
+2．少数患者可出现反射性肩臂手疼痛、胀麻，咳嗽或打喷嚏时症状不加重。
+3．临床检查 ：急性期颈椎活动绝对受限，颈椎各方向活动范围近于零度。颈椎旁肌、胸 1～胸 7 椎旁或斜方肌、胸锁乳头肌有压痛，冈上肌、冈下肌也可有压痛。如有继发性前斜角肌痉挛，可在胸锁乳头肌内侧，相当于颈 3～颈 6 横突水平，扪到痉挛的肌肉，稍用力压迫，即可出现肩、臂、手放射性疼痛。
+二. 神经根型颈椎病 1．颈痛和颈部发僵，常常是最早出现的症状。有些患者还有肩部及肩胛骨内侧缘疼痛。
+2．上肢放射性疼痛或麻木。这种疼痛和麻木沿着受累神经根的走行和支配区放射，具有特征性，因此称为根型疼痛。疼痛或麻木可以呈发作性、也可以呈持续性。有时症状的出现与缓解和患者颈部的位置和姿势有明显关系。颈部活动、咳嗽、喷嚏、用力及深呼吸等，可以造成症状的加重。
+3．患侧上肢感觉沉重、握力减退，有时出现持物坠落。可有血管运动神经的症状，如手部肿胀等。晚期可以出现肌肉萎缩。</description>
+    </item>
+    
+    <item>
+      <title>atoi</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-25-atoi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-25-atoi/</guid>
+      <description>今天选的是atoi，链接 https://oj.leetcode.com/problems/string-to-integer-atoi/
+下面是我的AC代码
+def atoi(self, str): if str==&#39;&#39;: return 0 if (str.find(&#39;- &#39;) &amp;gt;= 0) or (str.find(&#39;-+&#39;) &amp;gt;= 0) or (str.find(&#39;+-&#39;) &amp;gt;= 0) or (str.find(&#39;++&#39;) &amp;gt;= 0) or (str.find(&#39;--&#39;) &amp;gt;= 0): return 0 if str[0] == &#39;-&#39;: r=&#39;-0&#39; else: r=&#39;0&#39; result = 0 for i in str.split(&#39;-&#39;): for j in i.strip(): if j==&#39;+&#39;: continue try: int(j) r=r+j except: result = result + int(r) if result &amp;gt; 2147483647: return 2147483647 if result &amp;lt; -2147483648: return -2147483648 return result result = result + int(r) r=&#39;-0&#39; if result &amp;gt; 2147483647: return 2147483647 if result &amp;lt; -2147483648: return -2147483648 return result  题目是不难，规则比较坑爹</description>
+    </item>
+    
+    <item>
+      <title>awk inner var</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-31-awk-inner-var/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-31-awk-inner-var/</guid>
+      <description>ARGC FLENAME</description>
+    </item>
+    
+    <item>
+      <title>feel luck</title>
+      <link>https://liuzheng.github.io/before2018/2015-12-25-feel-luck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-12-25-feel-luck/</guid>
+      <description>submit https://www.zhihu.com/question/32039226，原贴在此，引发各种感想： 为什么有些大公司技术弱爆了？  
+今年年初，到一家互联网公司实习，该公司是国内行业龙头。
+不过技术和管理方面，却弱爆了。
+那里的程序员，每天都在看邮件，查问题工单。 这些问题，多半是他们设计不当，造成的。
+代码写的一团糟，全是复制粘贴，连作者都没改，大家普遍不写注释，也不格式化，代码歪歪扭扭。
+一个项目里，httpclient竟然出现了四种。 一种是该公司研发部写的， 一种是老版本的开源项目， 一种是新版本的开源项目， 还有一种是开发人员造的轮子。
+打接口请求响应日志，竟然不知道用拦截器。 打错误日志竟然不打上下文信息，每个人一种日志风格，千奇百怪。 许多重要的中间流程，居然不打日志。
+idea、eclipse、myeclipse的配置文件竟然全部传到项目里去了。
+该公司混了两年的程序员，跟快递公司做查询接口，竟然不知道加密运单号。
+所有服务间通讯，都没有设requestId，导致跟踪会话很困难。
+一个没什么qps的边缘接口，居然做消费者生产者+阻塞队列的异步模式。 显得你技术少是不是。 不知道异步会增加维护成本，提高测试难度吗？ 而且，任务队里没有考虑持久化，赶上发布，丢了好多任务。
+读取一个小小的xml和exc配置文件，居然用流式解析，没见过这么二逼的，真是醉了。
+做优化全靠拍脑门拍大腿，难道不会用excel分析日志，用jprofile扫项目？ 一个100以内的常数集合遍历，他也要写个优化算法进去，算法跟业务还搅在一起，一团乱麻。 每个人都在嚷嚷性能、算法、分布式计算……
+几乎没有文档，全靠从代码反推逻辑。
+有枚举他不用，非要在每个页面上，把枚举值挨个儿写死，知道后面改代码多么费劲吗？
+欺骗性的变量名，里面存储的是AES加密的，变量名后缀却写成了DES；里面存的是小写字母，却写成upperStr。 一个方法十几个参数，有三分之一是极其简略的缩写，注释肯定也没有的。 一个类写到三四千行是常事。
+开发自测，居然要把代码全丢到公共机器上，而且都是走svn，他们把svn当ftp用。 svn里面大量的无意义提交，一多半的提交连都编译不过去。 我看到有个应届生，改了两句话，马上提交，说是怕代码丢失。
+一个运行了两年的项目，spring的包扫描明显配错了，有些bean根本扫不进来，居然没有人发现。 一半的bean在spring管理下，另一半的bean他们自己写单例模式来实例化。
+他们用mysql来做审计系统，出报表，有个报表要跑8分钟。 原来是有人用字符串来存多值（逗号分隔），sql里写了like，导致没有利用到索引。 为什么不用pg，pg在sql编程方面，功能更丰富，更适合做统计，它本身就支持数组。
+程序员们都是得过且过的态度，怎么把代码灌进去，跑的通测试，就算交差了。
+为什么大型互联网公司，技术和管理这么差劲，是怎么形成的？ （这家公司是卖机票的，没有明确说出公司名字，是怕给自己惹麻烦）   我觉得最赞的回答是：   萧井陌
+楼主你好，我试着给你解释一下，希望你能满意。
+新手经常会有这样的想法——「这代码怎么这么烂？写的人干什么吃的？怎么能这样？为什么不按照书上说的做？」，这很正常，大家都年轻过，经历过这种阶段，我懂你心里的想法，所以也愿意详细地向你解释，这一切发生的原因是什么。
+你说「 不过技术和管理方面，却弱爆了。 那里的程序员，每天都在看邮件，查问题工单。 这些问题，多半是他们设计不当，造成的。 」
+你真的觉得『国内行业老大的互联网公司』会是技术和管理弱爆了的样子吗？ 你以为团队应该像永动机，但现实永远有各种摩擦、辐射、损耗。 内燃机的能量转化率，通常只有 30% - 50%，但是它却是驱动全世界运转的核心引擎，顺丰京东的快递小车、联通全国的高铁动车绿皮、瞬时直达的飞机……
+机器尚不能 100% 效率运转，何况是人呢？ 你说我们的程序员每天都在查看邮件、问题工单，你说这些问题多半是我们设计不当造成的，请问你有试过统计数据吗？你大概只是『感觉』如此吧？ 事实上，经过十几年的发展，我们内部的『效率改进团队』已经非常高效成熟，每月、每周、甚至每天都会有新的改进，现在的业务处理方式，不说全世界，我可以自豪地说在全国我们是领先的，甚至是遥遥领先，不然凭啥坐到了全国龙头老大的位置呢？ 所以啊，你只看到了程序员花在业务上的时间，没看到我们内部的『效率改进团队』为程序员们省掉的时间，我觉得我有必要站出来为默默付出的『效率改进团队』说几句。</description>
+    </item>
+    
+    <item>
+      <title>front-end idea</title>
+      <link>https://liuzheng.github.io/before2018/2015-12-26-front-end-idea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-12-26-front-end-idea/</guid>
+      <description>最近在码了一些东西，觉得自己差不多是个入门级别的前端了吧，突然萌生一个想法，既然要装B，写一个博客的皮肤？也算一种锻炼吧。
+反正大家在github上都是用jekyll来部署的，对吧~
+开项目，研究jekyll模板ing~</description>
+    </item>
+    
+    <item>
+      <title>gem ssl</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-12-gem-ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-12-gem-ssl/</guid>
+      <description>https://gist.github.com/luislavena/f064211759ee0f806c88
+玩gem的时候出现这个，我顺手贴一下吧，反正我成功了，如果你运行不成功，请看原帖是否有更新
+$ gem install github-pages ERROR: Could not find a valid gem &amp;lsquo;github-pages&amp;rsquo; (&amp;gt;= 0), here is why: Unable to download data from https://rubygems.org/ - SSL_connect retur ned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed ( https://rubygems.org/latest_specs.4.8.gz)
+找到gist
+SSL upgrades on rubygems.org and RubyInstaller versions UPDATE 2014-12-21: RubyGems 1.8.30, 2.0.15 and 2.2.3 have been released. It requires manual installation, please see instructions below.
+Hello,
+If you reached this page, means you&amp;rsquo;ve hit this SSL error when trying to pull updates from RubyGems:</description>
+    </item>
+    
+    <item>
+      <title>gitWithGoAgent</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-13-gitwithgoagent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-13-gitwithgoagent/</guid>
+      <description>找到.gitconfig隐藏目录，添加两行设置
+[http] proxy = http://127.0.0.1:8087 sslVerify = false sslCAinfo = $goagent/local/CA.crt [https] proxy = https://127.0.0.1:8087 sslVerify = false sslCAinfo = $goagent/local/CA.crt ssh-keygen -t rsa -P &#39;&#39; -f /root/.ssh/id_rsa  </description>
+    </item>
+    
+    <item>
+      <title>goagent&#43;docker</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-16-goagentdocker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-16-goagentdocker/</guid>
+      <description>参考：http://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html
+蛋疼了一下午，本来要写man ssh都delay 了。。。
+好吧，我比较偏执，docker pull一定要走官方，别人提供的服务我不相信（其实也没什么，主要探究一下你懂的技术）
+git clone 最新的goagent 代码，挂上梯子，上传，这里要确保你的goagent能work！
+当然咯，iplist么有时候大家懂的，需要用checkgoogleip跑一下，感谢@moonshawdo的工作。
+我这里是CentOS7的机器，上海教育网
+用参考链接的CentOS6的方案木有问题
+Install the ca-certificates package:
+yum install ca-certificates  Enable the dynamic CA configuration feature:
+update-ca-trust enable  Add it as a new file to /etc/pki/ca-trust/source/anchors/:
+cp /GoAgentPath/locale/CA.crt /etc/pki/ca-trust/source/anchors/  Use command:
+update-ca-trust extract  修改/etc/systemd/system/docker.service
+在Service里面添加一行
+Environment=&#39;HTTP_PROXY=http://127.0.0.1:8087/&#39;  然后reload
+systemctl daemon-reload  最后重启docker
+service doceker restart  至此，docker就能从goagent上番茄拉取数据咯！！！
+这种做服务环境的还是从官方弄的好，后门什么大家还是要考虑一下，从国内拉一遍后再从官方弄一下，确保hash值对就行</description>
+    </item>
+    
+    <item>
+      <title>kindle DXG恢复出厂设置及刷机装字体</title>
+      <link>https://liuzheng.github.io/before2018/2016-05-04-kindle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-05-04-kindle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>make keyboard</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-12-make-keyboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-12-make-keyboard/</guid>
+      <description>又蛋疼了，搜了一下单手机械键盘，搜到该帖 http://tieba.baidu.com/p/2646628267# ， 春心荡漾有木有！！！心想，自己学了这些个泛技术知识，应该足够做一个键盘了吧。春心荡漾！！！
+今天做完PPT后画一下键位布局，决定是左手键盘
+要准备的材料是洞洞板、茶轴（还是觉得茶轴舒适）、键帽，其他耗材都有好像，单片机用家里那块沉睡已久的51好了，或者买个MSP430，好像挺小巧的，普通的是4x4的矩阵键盘，16个键，不知道组合键怎么搞？？？
+想想还是有点小激动，看来月底得抽空回家哪些技术资料了，咩哈哈</description>
+    </item>
+    
+    <item>
+      <title>mysql slow log</title>
+      <link>https://liuzheng.github.io/before2018/2015-08-13-mysql-slow-log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-08-13-mysql-slow-log/</guid>
+      <description>上午MySQL日志打爆，同事之前已经设置slow_query_log 5 秒，经过排查，是某表未加index，并且 log_queries_not_using_indexes is ON
+故将该表加index
+使用ALTER TABLE语句创建索引。 语法如下：
+alter table table_name add index index_name (column_list) ; alter table table_name add unique (column_list) ; alter table table_name add primary key (column_list) ;  另一解决办法是将 log_queries_not_using_indexes set to OFF
+由于不想改各种表结构，两个都做了。。。
+参考https://dev.mysql.com/doc/refman/5.6/en/slow-query-log.html
+slow_query_log = 1 slow_query_log_file = /var/log/mysql/slow.log long_query_time = 10 log_queries_not_using_indexes = 1  </description>
+    </item>
+    
+    <item>
+      <title>phpmyadmin去除iframe限制</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-24-phpmyadmin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-24-phpmyadmin/</guid>
+      <description>无聊要将phpmyadmin页面嵌入到某页面iframe中，做成统一的控制台管理界面，在此记录一下对phpmyadmin源代码的一些操作
+修改 /usr/share/phpmyadmin/libraries/Header.class.php 461 行
+//&#39;X-Frame-Options: DENY&#39;  将其注释
+修改 /usr/share/phpmyadmin/js/cross_framing_protection.js
+/* vim: set expandtab sw=4 ts=4 sts=4: */ /** * Conditionally included if framing is not allowed */ //if(self == top) { document.documentElement.style.display = &#39;block&#39; ; //} else { // top.location = self.location ; //}  至此phpmyadmin可以在iframe内展示咯</description>
+    </item>
+    
+    <item>
+      <title>robotIdea</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-26-robotidea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-26-robotidea/</guid>
+      <description>刚想到的，其实我可以不用树莓派做摄像头主机，直接用小本加上之前买的无线网络摄像头做
+小本上做好路由和ftp服务就行了，主要还要加上电源和轮子，这个应该不难，电源一般36V，看看有没有匹配的电源适配器就行了</description>
+    </item>
+    
+    <item>
+      <title>shell变量</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-28-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-28-dailyshell/</guid>
+      <description>shell变量
+${varname:-word} 如varname存在且非null，则返回其值，否则返回word ${varname:=word} 如varname存在且非null，则返回其值，否则设置为word ${varname:?word} 如varname存在且非null，则返回其值，否则显示varname:word ${varname:+word} 如varname存在且非null，则返回word，否则返回null ${varname#key} 从头开始删除关键词，执行最短匹配 ${varname##key} 从头开始删除关键词，执行最长匹配 ${varname%key} 从尾开始删除关键词，执行最短匹配 ${varname%%key} 从尾开始删除关键词，执行最长匹配 ${varname/old/new} 将old替换为new，仅替换第一个出现的old ${varname//old/new} 将old替换为new，替换所有old  </description>
+    </item>
+    
+    <item>
+      <title>sqlmap 攻击日志分析及自动化解决想法</title>
+      <link>https://liuzheng.github.io/before2018/2016-01-20-sqlmap-log-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-01-20-sqlmap-log-analysis/</guid>
+      <description>以下内容高危，如你知道密码，请输入
+以下是我用sqlmap扫的日志，这是最简单的扫描记录 GET /?a=1 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=2904 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%22%28%27%27%28%22%28%27%29%28 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%208676%3D9977%20AND%20%289633%3D9633 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%203925%3D3925%20AND%20%289861%3D9861 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%20636%3D7258%20AND%20%285513%3D5513 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%204986%3D6711 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%203925%3D3925 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%203864%3D9683 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%20940%3D4505%20AND%20%28%27konc%27%3D%27konc HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%203925%3D3925%20AND%20%28%27FFCP%27%3D%27FFCP HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%207381%3D1001%20AND%20%28%27OLcv%27%3D%27OLcv HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%20AND%202327%3D9115%20AND%20%27Qlha%27%3D%27Qlha HTTP/1.1 sqlmap/0.</description>
+    </item>
+    
+    <item>
+      <title>twitter 面试题，水墙</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-26-twitter-watter-wall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-26-twitter-watter-wall/</guid>
+      <description>刚才看微信推荐说了一道twitter的面试题，题目链接http://blog.jobbole.com/50705
+题目中对方提到可以使用更有意思的一次遍历，我就提起兴趣了
+下面是我的代码，真的只用一次遍历哦！
+还是先不看代码吧。。。
+分析：
+这题相当容易想到微积分，然后就会死在积分求面积上，可是这是离散数学，且具体问题具体分析！
+问题是问水在什么情况下可以聚集？我反过来，水在那个短板会流掉？
+那么就容易分析了，左边最高墙开始计数，直到比左边最高墙高的墙计数完毕，所得坑中水归入总值中，得code1，思想就是算斜率，对比前后墙面高度进行情况判断。经过我再次回顾分析，发现如果出现多坑的情况，那么这货就废了，故思去考code2，暂时先去吃饭，不思考了。。。
+code1适用于题列中的一个坑的情况。
+昨天回去测试了别人的代码，哎，各种忧伤，效率和别人差4倍，还有bug。。。
+code1
+def twitter(list): trig = 0 sum = 0 tmp = 0 max = list[0] for i in list[1:]: rest = max - i if max &amp;lt; i: max = i if rest &amp;lt; 0: rest = 0 if trig == 1 and rest == 0: sum = sum + tmp tmp = 0 trig = 0 else: trig = 1 tmp = tmp + rest return sum if __name__ == &amp;quot;__main__&amp;quot;: list = [2,5,1,3,1,2,1,7,7,6] print twitter(list)  </description>
+    </item>
+    
+    <item>
+      <title>two sum</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-24-two-sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-24-two-sum/</guid>
+      <description>今天开始做leetcode！
+选题：Two Sum
+链接：https://oj.leetcode.com/problems/two-sum/
+写了个最短式（显然通不过，这里只记录下我的思考）
+for i in range(len(num)): if (target-num[i]) in num: return (i+1, num.index(target-num[i])+1)  python 还是很精简的！完成任务速度上还是杠杠的，可惜题目没有那么easy
+看到这么一长串input 又说time limite 我也是醉了。网上看到如下code
+dict = {} for i in xrange(len(num)): x = num[i] if target-x in dict: return (dict[target-x]+1, i+1) dict[x] = i  好吧，学习了 xrange 和 range 在效率上的差异，index人家是新建dict，我是全num找
+有人这样做：
+d = {n:pos for pos,n in enumerate(num) } for i,n in enumerate(num): if d.get(target-n): return (i+1, d[target-n]+1) return None  这样写呢，感觉比较优雅，但内存开销较前者大</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 下 Maple 乱码解决方案</title>
+      <link>https://liuzheng.github.io/before2018/2011-08-15-maplelm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2011-08-15-maplelm/</guid>
+      <description>第一步：在maple路径下寻找名称类似于 “jre.XXX_XXX_XXX”的文件夹，并记下其名称。 例如为“jre.IBM_INTEL_LINUX”；
+第二步：使用相应的权限打开 “$maple路径/bin/maple“； 例如：在中端中输入”sudo gedit /opt/maple/bin/maple “;
+第三步:在打开的文件中找到类似与一下内容的地方：
+&amp;quot;bin.IBM_INTEL_LINUX&amp;quot;) MAPLE_JRE_BIN =&amp;quot;$MAPLE/jre.IBM_INTEL_LINUX/bin/&amp;quot; JRE_ROOT =&amp;quot;$MAPLE/jre.IBM_INTEL_LINUX/lib&amp;quot; JRE_LIB1=&amp;quot;$JRE_ROOT/i386&amp;quot; JRE_LIB2=&amp;quot;$JRE_ROOT/i386/client&amp;quot; JRE_LIB3=&amp;quot;$JRE_ROOT/i386/native_threads&amp;quot;  将“ MAPLE_JRE_BIN“和” JRE_ROOT”改成 $jre路径 ; ps:由于木有装sun，故改成matlab的路径，依然可以用，不过下文中的$MATLAB_R2010b需要改的哦，改成MATLAB的目录 例如：
+&amp;quot;bin.IBM_INTEL_LINUX&amp;quot;) MAPLE_JRE_BIN=&amp;quot;$MATLAB_R2010b/sys/java/jre/glnx86/jre/bin/&amp;quot; JRE_ROOT=&amp;quot;$MATLAB_R2010b/sys/java/jre/glnx86/jre/lib/&amp;quot; JRE_LIB1=&amp;quot;$JRE_ROOT/i386&amp;quot; JRE_LIB2=&amp;quot;$JRE_ROOT/i386/client&amp;quot; JRE_LIB3=&amp;quot;$JRE_ROOT/i386/native_threads&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>ubuntu启动声卡不工作</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-06-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-06-dailyshell/</guid>
+      <description>蛋疼的发现ubuntu启动后木有声卡不工作了。。。
+sudo /sbin/alsa force-reload  </description>
+    </item>
+    
+    <item>
+      <title>~</title>
+      <link>https://liuzheng.github.io/before2018/2015-08-20-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-08-20-/</guid>
+      <description>mark 唉，忧桑的日子，可是人为什么要因为外在而或喜或悲，不以物喜，不以己悲。
+现在能给，能付出的太少，谁会在意我多一点呢？
+渴望和人沟通，社交，一个人过一天像过一年。。。刚听的歌词，唉，单身也没啥不好的，只是缺少了人诉说。
+继续写自己的代码，想这么多干什么！</description>
+    </item>
+    
+    <item>
+      <title>一个运维做馒头</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-13-makesteamedbread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-13-makesteamedbread/</guid>
+      <description>最近一周不断尝试做馒头，出发点很简单，体验一下生活，感受一下挥霍金钱背后的社会时间。
+作为一名运维，每天就是对着屏幕敲命令，最近在做一些开源项目的开发（Jumpserver）以及翻译工作（Ansible 官方文档中文）。
+日子就这么Coding，缺乏了生活的情趣吧（装什么。。。单身狗要什么情趣。。。）。程序猿的生活甚是简单而又欢乐，省略1w字，进入主题。
+材料准备：
+1.智能电饭煲，可以蒸！ 2.面粉 3.酵母 4.其他辅助道具  将面粉和酵母和匀整成和水泥那样的小山，中间掏个洞。同事告诉我的方案是酵母掺在水里，不过水的量我把握不住，就和面里吧，效果一样的。比例的话研究了一段时间，具体也不好说，相当于烧菜放盐的量吧，之前是以放味精的量来做和超量做，都不大好，建议还是偏多会比较松软，当然这得保证接下来的步骤没问题。一点点在洞里加水，加一点把面粉盖上包住它，然后把条状的面疙瘩往一边赶，继续掏洞倒一丢丢水，直到掏不了洞为止。详解：生成条状面疙瘩会将水包裹住，这个不说也知道。。。但是小面疙瘩比大块的面团的优势在于，面粉和水基本属于均匀的，并不存在奇点（说人话！某部分都是水或者都是面粉），这样后面的和面就轻松多了，并不需要在意和的均匀不均匀。然后，由于没经验的人控制不了水量，而往往结果就是水多了加面，然后再加面，经过我一周的测试，发现这种情况下水面比会比较接近完美，因为揉几下就会吃面，这点刚好是剩下的。 之后就慢慢将面疙瘩聚集起来，这个简单的。
+好啦，接下来就乖乖的揉半小时，这是体力活啊，我不能像面点师那样优雅的揉，我只能学那个揉面机，将面用拳头捶扁，然后对折，接着捶。。。。捶到面色细腻后我就把它摊扁放小盆里发酵，由于之前产生各种黏锅或者表面干或者放湿毛巾黏在毛巾上，正确的做法是在底层撒上一层面粉，湿毛巾盖在盆上，保证毛巾和面团不接壤。发酵么多发几分钟没事，通常会说40min，我就丢哪里接着看剧去了（这两天在看英伦魔法师 Jonathan Strange &amp;amp; Mr Norrell ），看完一集就够了。
+等完发酵看到面团萌萌哒就可以接下来揉几分钟了，揉到面团感觉有韧劲的时候，就可以考虑搓成馒头了。这个技术难度很低！
+变成一个个馒头后千万不能立即上锅蒸！！！也不能放过夜蒸！！！我必然被坑过。。。。
+要醒一段时间，简单理解就是再放一下。我是电饭煲里加热水，直接上笼，盒盖一段时间后开盖一下换气，顺便看看他醒了没，就是看看他有木有做好被蒸的准备！
+蒸30min。
+出锅！
+吃，花了3min吃完！
+总结，总共耗时2h，吃只花了3min，这就是时间成本，社会的价值体系就是让人各司其职，做到效益最大化，当然这些层面的东西我并不想了解太多。
+好了，下面是对运维馒头的解析！
+在整个技术周期中，运维是较销售之前的技术生产力，做馒头的过程中，这相当于上锅醒到蒸的过程，之前的工作相当于开发，递给顾客相当于销售。也就是说，运维的产品直接是给用户看的东西，何其重要！ 上锅相当于系统架构设计，没有一个好的架构方案，再好的馒头也会黏一起或者一锅只能蒸少量的，没有达到性能的最优化。一层层的锅和水（System），架子（Engine），纱布（Load Balance）相当于基础架构组成成分，而其摆放的位置和馒头的位置相当于架构方案。只有合理组成，前期做过充分的测试才能保证出锅的馒头既有卖相又好吃。前段时间去同学创业公司，聊了一阵他们是使用电饭煲来做馒头，用户却已经增长了若干倍，基础架构不敢动，导致性能加机器也没用，要有重构的决心！必然会浪费很多精力，若干年前的技术是能满足当时的需求，但是随着业务增长，这必然需要改变。最近也听到朋友说阿里对产品的做法是3年赶工，1年重构这3年的工作，这点我相当赞同，技术在这近5年中必然有更新，必然5年后的你技术更加浑厚（当然不离职转岗的情况下），不过还是得需要去做这些事情的，抗住压力，服务用户。</description>
+    </item>
+    
+    <item>
+      <title>今日vim插件收货</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-15-vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-15-vim/</guid>
+      <description>https://github.com/vgod/vimrc
+https://github.com/yangyangwithgnu/use_vim_as_ide
+https://github.com/tomasr/molokai
+http://www.vim.org/scripts/script.php?script_id=2771
+http://www.vim.org/scripts/script.php?script_id=1298
+http://www.vim.org/scripts/script.php?script_id=3139
+https://github.com/Lokaltog/vim-powerline</description>
+    </item>
+    
+    <item>
+      <title>你真的会开自动档车吗???</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-04-automatic-car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-04-automatic-car/</guid>
+      <description>from:/htm_data/7/1409/1228151.html
+你是不是觉得自动档车 简直就是&amp;rdquo;傻瓜&amp;rdquo;车 踩油门就走&amp;hellip;.. &amp;hellip;&amp;hellip;真方便~ 可你真的了解自动档车吗
+估计大部分童鞋在驾校学的都是手动挡车的驾驶吧 &amp;hellip;. 呵呵 为了你的爱车
+先看看下面几个问题
+ 踩刹车-打火-挂挡(P-到-D) 松开手刹 抬脚刹 给油&amp;ndash;起步  你觉得这样正确吗?
+ 等红灯时 踩刹车 &amp;hellip;.绿灯亮 松脚刹 给油-起步 或者 踩刹车-挂P档 &amp;hellip;.绿灯亮 挂D档 抬脚刹 给油-起步  你觉得这样正确吗?
+ 行驶中 一直踩住油门 加速深踩 减速松抬  你觉得这样正确吗?
+ 一D到底 从来不用限制挡 减速用刹车控制  你觉得这样正确吗?
+ 超车的时候 只需深踩油门就可以了  你觉得这样正确吗?
+ 行驶结束停车后 挂P档&amp;ndash;松开脚刹&amp;ndash;拉上手刹&amp;mdash;拔钥匙  你觉得这样正确吗?
+如果 你觉得以上几条 基本木有什么问题 你也是这样操作的 那可以肯定的告诉你 &amp;mdash;&amp;ndash;
+这样的驾驶习惯都是错误的 你还不了解自动档车车 该好好学学 否则
+你的爱车会因为你的那些坏习惯而折寿的
+正确的操作方法和习惯: (如果大家觉得有必要 偶就继续)
+好的 就应对上面的6点 说说正确的操作方法</description>
+    </item>
+    
+    <item>
+      <title>使用 gooreplacer block ad</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-21-ad-blok-with-gooreplacer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-21-ad-blok-with-gooreplacer/</guid>
+      <description>最近发现一个插件，gooreplacer
+这个插件理论上是重定向用的，不过我就把某些网址重定向一下，那么就大家懂的啦
+自行下载导入，Download link
+ad block 部分：
+cbjs.baidu.com ----&amp;gt; 127.0.0.1 bdimg.share.baidu.com ----&amp;gt; 127.0.0.1 x.jd.com ----&amp;gt; 127.0.0.1 pos.baidu.com ----&amp;gt; 127.0.0.1 media.info.client.xunlei.com ----&amp;gt; 127.0.0.1 shop.xunlei.com ----&amp;gt; 127.0.0.1 biz4.sandai.net ----&amp;gt; 127.0.0.1 biz5.sandai.net ----&amp;gt; 127.0.0.1 plugin.xl7.xunlei.com ----&amp;gt; 127.0.0.1 static.client.xunlei.com ----&amp;gt; 127.0.0.1 mslegalcopy.xl7.sandai.net ----&amp;gt; 127.0.0.1 questions.xl7.xunlei.com ----&amp;gt; 127.0.0.1 conf.mobile.sandai.net ----&amp;gt; 127.0.0.1 images.client.xunlei.com ----&amp;gt; 127.0.0.1 recommend.xunlei.com ----&amp;gt; 127.0.0.1 tagconf.sandai.net ----&amp;gt; 127.0.0.1 alarm.xl7.sandai.net ----&amp;gt; 127.0.0.1 res.stat.xunlei.com ----&amp;gt; 127.0.0.1 servers.youxi.xunlei.com ----&amp;gt; 127.0.0.1 atm.youku.com ----&amp;gt; 127.0.0.1 Fvid.atm.youku.com ----&amp;gt; 127.0.0.1 html.</description>
+    </item>
+    
+    <item>
+      <title>关于HoloLens我的想法</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-25-hololens/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-25-hololens/</guid>
+      <description>微软在windows10的发布会上意外发布了一款穿戴式设备：HoloLens。对其我只有各种惊讶， 原因是作为本科光学专业毕业的学渣，至少知道全息成像的成本有多少，技术难度有多少，成像质量各种呵呵。
+知呼上也同样有人对其做了分析http://www.zhihu.com/question/27723583，同时，经推上@goldengrape 提示，我也找到了，他也给我了关于HoleLens的专利https://www.google.com/patents/WO2014100182A1?cl=en。下载看了一下介绍的还是比较模糊，当然对于非光学专业的来说科普性足矣。 此文除了介绍使用了布拉格光栅，光纤传输的光信号的耦合，然后就没有其他更底层的介绍多光源的事情了。
+回忆本科物理实验 记得本科期间，系里一年一度的物理大实验，有回就是制作一个全息相片，并且使用激光进行再现的观察。
+依稀记得当时的室内环境要求是昏暗，光学可视角度并不大，呈现出的全息图像并不是全色彩（当时拍了一只小黄鸭，尼玛绿油油的全息照片）。有胶片了就可以洗照片，进而静态的图像可以通过胶卷连续曝光变成电影。可是全息摄影并不是这样，同一介质上可以存储相当多的底片，角度不同即可，那么做成全息电影就是将胶片转动。听起来很容易，可是做一个全息图片的步骤都很复杂，表说一组了。
+光纤传播 虽然光学传导可以使用光纤通信，那么问题来了，单模光纤并不可能去使用，只有多模光纤，那么就涉及到各种的多模计算，想想都觉得复杂！并且光纤传导的光波频段是有限制的，也就是说不能得到全彩的图像，或者用了昂贵的光纤，什么搀铒什么的，我反正已经忘记了，就是贵！所以我觉得微软应该不可能给民众那么贵的光纤，所以成像色泽也不必苛求了。物理原理放那边，全反射介质内外的折射率差要达到，这里入射角和光纤弯曲不考虑，相信这个应该可以做到光纤直，入射角可控。
+贴一下公式：
+$$ \theta=\arcsin\frac{n_1}{n_2} $$
+我想有些人可能忘记了高中物理知识，会说这个和光的颜色木有关系，里面木有 $\lambda$ 啊！
+同一介质对不同波长的光，具有不同的折射率[百度百科]
+我觉得微软可以解决的技术问题 成像形变 空间成像我觉得很容易就产生形变，但是通过二次修饰应该可以解决，方的就是方的
+双目视觉问题 这个也可以解决
+近视眼 这个是让很多人哭的东西啊，简单来说只要把焦点拉近就行
+续航和运算 这个应该也不用担心，全息图像通过硬件实现的化运算量其实不大的，想想最简单的显卡，没有独显的时候卡成狗，装个独显玩游戏再也不卡了。我倒是比较倾向这货的计算部分和手势识别语言识别放到异地台式机什么的，眼镜就一个显示屏的功能，这样续航应该会好很多。
+其他问题想到了再补充吧 其他成像技术 我之前一直也对这块非常感兴趣的，有一款实验室产品Aerial Burton，链接在这里http://burton-jp.com/en/index.htm，这个才是我真正感兴趣的产品。YouTube视频
+但是这货也有诸多缺点，看youtube视频后我相信我不说大家也能非常明显的感觉出问题，怎奈这种激光相干技术就是这么任性，受温度，空气成分，空气密度各种影响。
+科幻电影里的成像终究还是科幻电影，其电影定义就是忽略介质，或是无介质进行全息成像，但这在现今我所知道的光学领域来说不可能，总是要有介质的！上面那个介质是空气中的氧和氮，初音那个是丁达尔现象，HoloLens是护目镜。。。
+最后 我始终相信这几家大公司完全有实力完成这一系列技术难题，砸钱就行，如果国家给中科院光机砸足够的前只研究全息成像技术，我相信不难的，不过砸下去的钱么，这里我就不说了。。。
+最后，希望大家不要多HoloLens抱有过高的期待，期待它能看大片，追求极值的人可能对画质要吐血。
+以上均是个人观点，如有异议欢迎留言讨论</description>
+    </item>
+    
+    <item>
+      <title>创业的合伙、翻脸、分赃、散伙法则</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-18-entrepreneurship/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-18-entrepreneurship/</guid>
+      <description>[转]http://newshtml.iheima.com/2014/0810/144814.html
+i黑马注：创业，本就是九死一生。以下是作者总结的创业过程中可能遇到的的合伙、翻脸、分赃、散伙等法则。 评论容易，创业不易，且看且珍惜。但目前社会上你所能看到的都是九生一死，看到的都是乔布斯、雷布斯、 马布斯、周布斯、一个个成功的IPO都把企业家光环的一面无限放大，因此掩盖了大街小巷每一天都在破产都在倒闭都在痛哭的失败的人。
+因此，你的眼里，才是满眼成功，并用这类与你无关的成功来激励自己，这才是最可怕也是最可悲的。
+由此而成功跟你无关，要么是能力，要么是学识经历，别人能做好的那些事情，到你手上未必能做好， 换句话说，如果现在把阿里巴巴交给你，市值接近千亿了，到你手上，你可能一个月就会把它玩破产。 我再次提醒——有些成功，跟你无关。
+创业，其实不是为了发财，而是为了要去做一个事情，是一种生命体验的过程，而不是成功与否的过程。
+创业，首先能想到失败后会怎么样的，成事的机会反而更大。
+创业，从未思考过失败的创业者，基本上，前面没多远就是失败粪坑在等他了。
+如果你把创业看成一个灵感工程，那么恭喜你，你可以光荣地去死了。而如果你把创业看成一个系统工程， 它不是以发财为导向，而是以自己的生命升华“去完成一个事情”为导向，那么这样的创业者就有点意思了。
+创业，一个人很难成事。因此，必须合伙。 但是纵观整个世界文明史，所有形态的合伙(黑社会也好、革命同盟也好、古惑仔也好、政治家也好)， 到最后，基本上没有一个善始善终的，更惨烈的是，合伙打天下成功之后，在分果果、排座座的这个环节， 就发生了各种父子反目、夫妻结仇、兄弟残杀的血淋淋的事件。
+其实你细看二十四史，里面讲的就是各种合伙失败之后的自相残杀和革命成功之后相互杀戮的故事， 这故事如今还在延续。
+人，在打江山的时候，都可以归到人的这类别里;人，在分江山的时候，一定要分到畜生这类别里人，两看。 好的时候看一眼，不好的时候看一眼。然后就能分解出人类和畜类了。
+其实说白了，每个人都可能成为畜生，只是时间没到、利益没到、情绪没到而已。
+那么，为了不让自己因为创业而沦落为畜生。那就在合伙之前做好《避免沦落为畜生的各种规则》。
+人，一旦脱离规则，那么它就开始奔向畜生的道路了。
+人，在规则之内的人才可以称之为人，也始终是人。其余，不是。
+假如你们是三五八个人合伙——
+合伙创业天规第一条——《投名状法则》 1，出钱规则(各出多少?差额如何平衡?股权如何划分?)
+2，出力规则(如何分工，谁干什么?什么责任?)
+3，赚钱规则(赚谁的钱?用什么去赚?怎么个赚法?)
+4，执行规则(谁去执行?怎么执行?什么责任?)
+5，领导规则(谁来领导?资本领导?技术领导?销售领导?当赚钱的人和出钱的人不是同一个人时，谁当领导? 领导权多大?集体投票权多大?)
+6，罢免规则(领导出问题怎么办?战略出问题怎么办?哪些事件发生才可以启动罢免程序?)
+7，退出规则(为不把矛盾扩大化，如何退出?原股退出还是议价退出?损耗成本计算标准?)
+(以上这段，江湖上称之为《大圈帮合伙作案共事章程》)
+合伙创业天规第二条——《翻脸法则》 ( 提议、动议、附议、反对、弃权、表决的议事规则)
+1，战术失误处理规则(是换将还是换方法?)
+2，战略失误处理规则(是换帅还是换战略?)
+3，观点冲突处理规则(是投票平息还是专家平息?)
+4，人格冲突处理规则(是打架解决还是司法仲裁?)
+5，发生矛盾处理规则(是控制情绪还是找出问题?)
+6，矛盾升级处理规则(是团伙打架还是独立决斗?)
+7，撕破脸皮处理规则(是双双驱逐还是集体散伙?)
+8，相互动刀处理规则(快报案!)
+(以上为《翻脸前的议事规则》详细文件参考《罗伯特议事规则》)
+合伙创业天规第三条——《绝不合伙法则》 1，有诈骗经历的人不能与其合伙;
+2，说话不靠谱的人不能与其合伙;
+3，对父母不孝的人不能与其合伙;
+4，言语之间眉飞色舞的人不能与其合伙;
+5，参与帮派势力的人不与其合伙;
+6，太讲哥们义气的人不与其合伙;
+7，经常挑战社会规则和公共道德的人不与其合伙;
+8，斤斤计较的人不能与其合伙;
+9，喜欢抱怨的人不能与其合伙;
+10，喜欢多嘴播弄是非的人不要与其合伙;
+11，善于发现问题但从不主动解决问题的人不要与其合伙;
+12，推诿、善辩、否认的人不要与其合伙;
+13，有严重的极端政治倾向的人，不要与其合伙(玩什么都别玩政治，做生意，没人能玩得起政治)。
+(以上为《缘分考察器》，也可以用于相亲找男人环境)
+合伙创业天规第四条——《必须有一个法则》 1，最好有个年纪偏大但未必有钱的人;
+2，最好有个思维活跃敢于突破的人;
+3，最好有个沉稳扎实善于刹车的人;
+4，最好有个勤俭节约善计成本的人;
+5，最好有个口才不错说话靠谱的人;</description>
+    </item>
+    
+    <item>
+      <title>北京</title>
+      <link>https://liuzheng.github.io/before2018/2015-04-21-beijing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-04-21-beijing/</guid>
+      <description>女神的广告好多！
+前往机场地铁上，莫的就陷入了沉思，不知为何心情各种复杂。
+“梦想”是个很多人都有的东西，大多数人仅仅认为它是一个“梦”吧，想想而已。 但是梦想不是应该是追逐，去寻觅，去行动的东西么？
+曾听过男生在年薪百万前，不是去学会投资股票，不是去投资金融市场，而是学会投资自己。
+“百万”仅仅是一个数字而已，其实它并不代表什么，最多算是一座驿站，地铁途中一站。 生于驿站城市的我，懂得了“人生我只是一个过客”，思考过“我应该留下什么，拥有什么”。 流浪的人寻求的是一瓦的避雨，有的只是时间的一个过客，虽然会不约而同的在驿站相遇，却都有着不同的目的地。 有人追逐梦想，有人寻求安逸的生活。
+奔波的生活是很辛苦，有时候也没有人想起你的存在。 于我，感受更深吧，被人想起的时候感觉却是异常的冷漠。
+曾有很多人提醒我每日的奔波很累，其实作为当事人怎能不知，并不需要别人的提醒。 这点我觉得国外人的做法很好，并不会把已知的烦恼和别人重提，而是尽可能的想积极的方向。 生活已经很艰辛了，为什么不聊点积极的话题？
+我日常总喜欢去发现昌吉东路的花花草草，看着路途的油菜花由花骨朵变成怒放之后带来阵阵的花香，凋零时候的不屈。 当然也会有大白菜慢慢被冻伤，然后耷拉着。
+自然界是个神奇的世界，他公平的决定着四季，任性的选择阴晴，迷人的散发独有的气息。
+人生不过也就百年，曾努力宣誓要活过百年，仅是儿时对时间的怒吼，当然我现在也是这样想的！
+时间太公平了，他不接受我的贿赂。 多个时期的我，都问过时间，希望能将这珍贵的东西存起来，可惜他都不允！ 独自发呆的夜晚和白天，我思考着。。。 人生的选择权在我手里，我可以去争取过得潇洒自在！</description>
+    </item>
+    
+    <item>
+      <title>实验室集群重装Plan</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-14-linux-system-administrator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-14-linux-system-administrator/</guid>
+      <description> 准备开始对实验室的集群重装，今天先拉出一台机器做前期调试
+实验室机器是8台 Dell R720，每台机器挂有11块1T的SAS盘。
+现有机器运行着CentOS6.5，由于曾经恶劣的开发使用策略and历史遗留问题，导致后期开发使用存在着相当大的隐患，各种整理系统已经无法弥补。。。
+等待各种项目结束，终于快有机会整顿了。。。
+需求 实验室基本不会有多少运维的人，大家都只搞开发，还好机器能抗住这么折腾
+硬盘  硬盘热插拔：硬盘总有蛋疼的时候被人热插拔，原先的系统就会跪，卷标出错。。。每次都需要到Dell的BIOS里去调。。。蛋疼至极！
+ 硬盘新增：增加硬盘也停麻烦（对于不熟Linux的人来说），一直都木有一个文档什么给留下
+ 硬盘移除：服务器运行当然会存在硬盘跪的情况，对于原先的系统来说，操作没有手册。。。还是得写GUIDE留下。。。
+  系统  原先是CentOS6.x 被我一点点升级上来了，经讨论各个开发（主要是Spake组他们说CentOS7不支持某些包，Java这边我知道是木有问题的）决定保持CentOS6，使用6.5版本
+ 之前管理集群都是一台台机器敲命令，鉴于使用者敲的命令比较单一，我提供了pssh的解决方案，并写了一些pssh的简单命令，整顿后仍打算保留该功能，增加salt管理方法
+ 图形界面什么我最不喜欢了，怎耐各个开发者强烈要求保留图形界面功能。。。
+ 系统原先我打算是3台Ubuntu和5台CentOS，Ubuntu做开发，CentOS作为项目的稳定运行环境，稳定运行环境可以使用开发机的计算资源，开发机则独立，不知道能否征得其他人的同意。。。
+  环境  考虑使用Docker之类的容器来隔离应用
+ 为各个开发者提供独立的开发测试环境，不允许各开发者对系统做修改，之前发生过某人将Hadoop环境做修改导致博士无法正常开发。。。麻烦！
+ 由于Hadoop木有更多的权限管理机制，考虑使用多Hadoop环境来隔离开发环境和稳定运行环境
+ 期望能完成服务器运维的web化管理系统
+  </description>
+    </item>
+    
+    <item>
+      <title>微软2016年校招探星夏令营第二题：最多约数问题</title>
+      <link>https://liuzheng.github.io/before2018/2015-07-16-mstest2015july1problem2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-07-16-mstest2015july1problem2/</guid>
+      <description>表示对微软不感冒，然后呢也没关注，今天看到同学在玩这题，感觉很好玩，就玩玩哈。
+原题：http://hihocoder.com/contest/mstest2015july1/problem/2
+时间限制:10000ms
+单点时限:1000ms
+内存限制:256MB
+描述 Given an integer n, for all integers not larger than n, find the integer with the most divisors. If there is more than one integer with the same number of divisors, print the minimum one.
+输入 One line with an integer n.
+For 30% of the data, n ≤ 103
+For 100% of the data, n ≤ 1016
+输出 One line with an integer that is the answer.</description>
+    </item>
+    
+    <item>
+      <title>我与地坛</title>
+      <link>https://liuzheng.github.io/before2018/2015-04-26-ditan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-04-26-ditan/</guid>
+      <description>今天来到了地坛，感受着史铁生笔下的流光。
+时间对于文人来说，似乎可以永恒的停留在笔。万物生长着，一岁一枯荣，假如我回到20年前，景色依然不变。 景色静静的去等候那一刻被人欣赏的美丽，静静的去等待发现她美好的人出现。 我或许只能为她拍下照片，在那秋风萧瑟的日子里回味她曾经的美丽。
+很羡慕树木能静静的观察这个世界百年，记忆对于她们来说是那么永恒。 很羡慕树木能无忧的享受微风的吹拂，摇曳的枝桠是她们翩翩的舞姿。 很羡慕那简单的生活。
+静静的想，静静的思，静静的感受着大自然的馈赠！
+我不喜欢喧嚣，不喜欢嘈杂的世界。想起每个新生儿都会是用撕心裂肺的哭喊来表示她对这个世界的不悦，很好奇为什么人类出生时会哭？似乎其他生物并不是以哭喊来到这个世界的，难道你出世的一刻便知晓你将来将会遇到的悲伤和孤独？但希望你第一个表情是笑，因为世界多么美好！除去那些不开心的事情，都是令人开心愉悦的！不是么？ 抱歉我在这里使用诡辩论，但是人生的加减法是由你自己计算的。
+思考着人生，随想随写。
+4月果然是来北京溜达的好时节，一切都是北京最美好的时候。
+我愿在我记忆里留下你最美好的日子，那样，等我老了以后，等我只有一个人以后，我还能记得，回味那段美好。
+一切都好安静，我并不想我的人生有遗失的美好，享受我生命中为数不多的时光。
+曾有人说过要把生命当成最后一天来过，略略的消极，略略的无奈。
+我把生命当成生命最后第二天，我可以欢乐的过，因为我还能再活一天，而不是想着明天我就要离开。
+说到离开，其实我已经不知道时间的含义了，一切的一切都是静止的，我能记得每一个时间停留的瞬间，水滴的滑落，鸟儿的起飞。。。
+发呆确实很迷人，静静的想，静静的看，惊奇的发现一片叶子落下，也会发现蜘蛛快步的过着马路，哈哈。
+很多人不理解我为什么出门还戴着这么大一个耳机，纯粹装B啊，哈哈。其实你们并不知道，生活的幸福总会突然而至，比如现在，我可以静静的享受公园的美景，吞吐着清甜的空气，听着令无数人陶醉的乐曲。</description>
+    </item>
+    
+    <item>
+      <title>挂载 smb 盘</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-20-daily-shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-20-daily-shell/</guid>
+      <description>挂载 smb 盘时 mount -t 是 cifs ，不是 smbfs，被坑了一晚上。。。
+mount -t cifs //IP/share /tmp/mountPoint  今天开始准备把数据导出到hdfs里
+gunzip -c 20131003.log.gz | sed &#39;s/&amp;quot;&amp;quot; //&#39;|sed &#39;s/&amp;quot; &amp;quot;/&amp;quot;\t&amp;quot;/g&#39; | awk -F&amp;quot;\t&amp;quot; &#39;BEGIN{}{if($13!=&amp;quot;\&amp;quot;400\&amp;quot;&amp;quot; &amp;amp;&amp;amp; $13!=&amp;quot;\&amp;quot;403\&amp;quot;&amp;quot; &amp;amp;&amp;amp; $13!=&amp;quot;\&amp;quot;404\&amp;quot;&amp;quot;){print $0;}}END{}&#39; &amp;gt; /opt/yun/20131003.log.lz  </description>
+    </item>
+    
+    <item>
+      <title>搜索之道</title>
+      <link>https://liuzheng.github.io/before2018/2014-5-20-how2search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-5-20-how2search/</guid>
+      <description>前言 本文所叙述的一切都基于 Google Search ， 其他搜索引擎可能涉及但不具体拓展。
+这里一个重要的原因是谷歌的搜索引擎实在牛X ， 基本考虑的是用户有先的原则， 在我这么多年使用谷歌搜索引擎后， 相信Google已经讲我个人打上了 Tag 标签， 一个典型的范技术男， 在搜索相关东西（有时候我也不知道它居然和我之前了解的技术相关）， Google 总是将我想要的结果放在最前面， 以减少我翻页的次数。 我曾用同样的关键词在 chrome 隐私模式下搜索， 得到的结果差异略大。
+我在找一个东西 曾几何时，我突发奇想想找一个东西， 我便开始使用搜索引擎了， 那时我用最“丰富”的词语描绘我所想要找的东西，结果却不尽人意， 当时我弄错了一点， 计算机它不是人， 他无法理解（人类意义上的理解）我的话（或是我表述有问题。。。）， 它只能对词进行理解， 而句子就难度大了， 所以我的冗余词汇加大了错误搜索的概率， 同时也不经意间过滤掉了想要的结果。
+http://www.williamlong.info/archives/728.html http://www.iplaysoft.com/get-more-out-of-google.html http://www.mifengtd.cn/articles/5-tips-improve-search-results.html http://www.pc841.com/article/20120731-7509.html</description>
+    </item>
+    
+    <item>
+      <title>新年的感想和计划</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-13-newyear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-13-newyear/</guid>
+      <description> 之前一直想写这个东西，一直提不起“笔”，今天2014年是在公司实习的最后一天，想想可以写点什么东西吧。 实习的感觉相当不错，学习到了很多东西，并且感觉到依然有很多东西可以让我去学，去玩。 过去的一年里，感觉成长还是不够，虽然学了AngularJS和Django，这两个算是过了入门阶段了，其他技术都入门玩了一个hello word。 15年么打算好好的对自己，看F1，去北京QCon（外加北京其他地方逛逛），做一些比较任性的事情（这里追加了，进入HiFi坑，听交响乐），做些以前完全没想过的事情。 对于感情么，15年我应该没兴趣考虑了，这个东西对于我来说相当无缘啊。。。认识了两女生都是见光死，我就不说什么了。我也不去问，太麻烦了。 所以15年我还是放弃寻觅，也不为谁等待。把时间精力花在自己的事情上，尽可能的爱自己，对自己好。   $(document).ready(function(){ $(&#39;#love&#39;).hide(); })  </description>
+    </item>
+    
+    <item>
+      <title>某日志处理</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-14-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-14-dailyshell/</guid>
+      <description>cat 20131001.log | sed &amp;rsquo;s/&amp;ldquo;&amp;rdquo; //&amp;lsquo;|sed &amp;rsquo;s/&amp;rdquo; &amp;ldquo;/&amp;rdquo;\t&amp;rdquo;/g&amp;rsquo; | awk -F&amp;rdquo;\t&amp;rdquo; &amp;lsquo;BEGIN{}{if($13!=&amp;rdquo;\&amp;ldquo;400\&amp;ldquo;&amp;rdquo; &amp;amp;&amp;amp; $13!=&amp;rdquo;\&amp;ldquo;403\&amp;ldquo;&amp;rdquo; &amp;amp;&amp;amp; $13!=&amp;rdquo;\&amp;ldquo;404\&amp;ldquo;&amp;rdquo;){print $0;}}END{}&amp;rsquo; &amp;gt; 20131001.log.lz</description>
+    </item>
+    
+    <item>
+      <title>淘宝前端26个字母</title>
+      <link>https://liuzheng.github.io/before2018/2014-08-19-taobao26/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-08-19-taobao26/</guid>
+      <description>字母表 Angular; Backbone; Console; Dir; Express; Fork; Grunt; Haslayout; Iconfont; Jsonp; Kissy; Localstorage; Media query; Npm; Opacity; Prototype; Querystring; Referer; Seajs; Trim; Underscore; Vim; Worker; Xss; Yslow; Zepto;
+Angular 2014年暑假期间，系统学习了一下 AngularJS ，主要也就双向数据绑定为交互提供便利，通过当时的项目，我也发现了这货确实社区强大，各种插件都挺多的，想要的基本都有吧，虽然部分插件都存在兼容性bug，不过还是挺适合快速开发的。
+Console 只玩过Console.log，发现还是挺吊的，百度的那个console招聘采取的字节转化图片，之前木有想到过哈，各家稍微大一点的互联网公司玩console的风格确实有意思。不知道console里有木有游戏，这个估计也会很吊的。
+Express 这个是node的框架，没细玩（截止到现在）。迟点可能考虑完nodejs编些应用。
+Fork 这个是git的的么？fork分支，如果是那就轻轻松松了，算是git老用户。
+Grunt js整合工具，玩angular的时候顺带折腾node的时候试过，后来直接用windows自带的copy命令结合 uglifyjs 玩了，windows 写个bat，似乎还是容易点，当时需求没那么复杂
+copy AAA.js+BBB.js+CCC.js+DDD.js+EEE.js ZZZ.js /b uglifyjs ZZZ.js -m -o ZZZ.min.js  网上查了一下，据说和maven类似的js管理工具，好像很强大的样子，木有系统学过。。。
+Iconfont 现查。。。这货是阿里折腾图标库，好吧，不多说了
+Jsonp json格式么？angular就是玩这个，觉得这货不错，形式简单，kiss，不过以后考虑玩玩字节码传数据，好像很高端霸气上档次的样子。
+Localstorage HTML5的东西，之前玩过，后来没折腾了，感觉不错，不过需要HTML5支持，做离线化论坛可以考虑。之前在jh 坏坏的讨论过相关玩意儿。
+Npm 又是node的东西，包管理器吧，apt-get？emerge？yum？巴拉巴拉
+Vim 作为Linux用户这个不错的，这里应该说的是Vim的前端实现吧，自用chrome就装了Vimium
+其他 其他我就不是特别懂了，技能树以后再慢慢点吧</description>
+    </item>
+    
+    <item>
+      <title>玩坏console</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-21-console/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-21-console/</guid>
+      <description>好吧，发现了几个公司都在cosole里加了招聘信息，我也跟风瞅了一下。下列代码从百度网盘里扣出来的
+略去大量数据
+try { if (window.console &amp;amp;&amp;amp; window.console.log &amp;amp;&amp;amp; top === self) { console.log(&amp;quot;\n\n\n%c&amp;quot;, &#39;font-size:0;margin-top:20px;line-height:36px;padding-top:50px;padding-left:158px;background:url(&amp;quot;data:image/png;base64,...&amp;quot;);background-repeat:no-repeat;&#39;); console.log(&amp;quot;...&amp;quot;); console.log(&amp;quot;...&amp;quot;, &amp;quot;color:red&amp;quot;); } } catch (e) { }  这是另一份，感觉可以玩玩的，哈哈
+console.log(&amp;quot;%c &amp;quot;, &amp;quot;font-size:200px;background:url(http://png);&amp;quot;);  </description>
+    </item>
+    
+    <item>
+      <title>现代运维的坑</title>
+      <link>https://liuzheng.github.io/before2018/2016-07-05-ops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-07-05-ops/</guid>
+      <description>引言 最近发现各种软件工具越来越傻瓜化了，这是好事啊，任何软件都是直接下载即可安装，或者直接可以从源中获得，完全没有了当年调优配参数的感觉。。。
+表面上着看上去是好事啊，减轻了运维的负担，“降低”了运维的门槛，但是年纪稍长的运维就会发现各个进程之间直接产生了竞争系统资源的情况。
+在未对系统上跑的任务做合理分配（穷，机器少，都跑一台上了），包括分时分资源上，直接导致了某些高能业务某一时刻产生资源竞争。
+使用nice去初步限制优先级 参考此文http://www.webtag123.com/linux/47327.html
+通常linux下限制cpu使用有三种方法：  nice/renice : 调整进程使用cpu的优先级 cpulimit ：不修改进程的nice值，通过暂停进程一段时间，来限制cpu使用 cgroups :内核提供的机制，可以限制、记录、隔离一组进程所使用的cpu、内存、磁盘、网络等资源，是docker等容器的基础技术之一
+ 限制磁盘io ：  ionice : 调整io调度的优先级 cgroups
+ 这里只说nice和ionice，实际上nice和ionice只是改变优先级，并没有真正的限制</description>
+    </item>
+    
+    <item>
+      <title>百度网盘大文件下载</title>
+      <link>https://liuzheng.github.io/before2018/2017-04-01-baidupan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2017-04-01-baidupan/</guid>
+      <description>今天要下大文件(不是你们懂的大文件), 蛋疼的百度网盘限制了速度,尼玛烦.
+打开浏览器,使用调试模式, 选择手机客户端模拟, 下载该大文件,然后就会得到下载的 hash 链接, 使用 axel 下载,唉&amp;hellip; 程序员干嘛要伤害程序员呢???</description>
+    </item>
+    
+    <item>
+      <title>瞎掰掰</title>
+      <link>https://liuzheng.github.io/before2018/2015-04-01-xia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-04-01-xia/</guid>
+      <description>今天很是OK啊，在地铁上瞎掰掰，有位置的说。
+短泊车上修复了新装小本的乱码问题，小本还是很开心的跑着，虽然性能上不能和Mac比，Mac能买我小本4,5台的说。。。但是用起来感觉已经很舒畅了。拥有Mac一样的秒级启动，工作时间妥妥4小时（当然不是高能运算）。
+昨天839又涨了，还指望他奔7500就入手呢。。。继续围观。。。
+地铁上还是有位置舒坦，可以听音乐敲键盘。
+想去台湾啊，据说很美，人生就要去折腾撒。
+每天2小时地铁其实也挺无聊的。。。。</description>
+    </item>
+    
+    <item>
+      <title>第一篇博文</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-07-first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-07-first/</guid>
+      <description>安装 Ruby 环境和 DevKit 首先到 rubyInstaller 官网下载，目前最新的版本分别是 Ruby 2.0.0-p451 和 DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
+双击打开 Ruby 进行安装，选择你所喜欢的安装位置进行安装，我选择的是 C:\Ruby200。
+然后安装 DevKit ，将其解压到你所喜欢的位置，我选择的是 C:\Ruby200\devkit\ 。
+DevKit 安装 cd C:\Ruby200\devkit\ ruby dk.rb init ruby dk.rb install  更换 gem 的源  gem sources -l gem sources --remove https://rubygems.org/ gem sources -a http://ruby.taobao.org/ gem update  完成之后安装 jekyll ： gem install jekyll  安装rdiscount，这个是用来解析Markdown标记的解析包。
+gem install rdiscount  开始 Jekyll 旅程 git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io cd USERNAME.</description>
+    </item>
+    
+    <item>
+      <title>编译golang,给go get加进度条</title>
+      <link>https://liuzheng.github.io/before2018/2016-05-31-go-make/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-05-31-go-make/</guid>
+      <description>参考：http://life.leanote.com/post/%E8%AE%A9-go-get-%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6,http://www.jianshu.com/p/4f894d605e1a
+蛋疼的网络，不知道go get有没宕，在网上找到一篇加进度条的，然后编译也需要，顺带一起记录下
+首先先下载go1.4版本的，鸡生蛋蛋生鸡的问题。。。
+wget https://storage.googleapis.com/golang/go1.4.3.src.tar.gz tar zxvf go1.4.3.src.tar.gz  记住解压的地址啊，我是放在/opt/go1.4里的
+我是brew install go的，所以go的地址是在/usr/local/Cellar/go/1.6.1/libexec/src
+修改./cmd/go/vcs.go
+// vcsGit describes how to use Git. var vcsGit = &amp;amp;vcsCmd{ name: &amp;quot;Git&amp;quot;, cmd: &amp;quot;git&amp;quot;, createCmd: &amp;quot;clone {repo} {dir}&amp;quot;, // 此处修改为 clone --progress {repo} {dir} --depth 1 downloadCmd: &amp;quot;pull --ff-only&amp;quot; }  找到run1()方法, 在 cmd.Stderr = &amp;amp;buf 下添加两行, 如:
+var buf bytes.Buffer cmd.Stdout = &amp;amp;buf cmd.Stderr = &amp;amp;buf cmd.Stdout = os.Stdout // 重定向标准输出 cmd.Stderr = os.</description>
+    </item>
+    
+    <item>
+      <title>虾仁松花菜</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-09-xrshc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-09-xrshc/</guid>
+      <description>材料：松花菜、番茄、虾仁、盐、白糖
+做法：
+1、松花菜掰成小朵洗净，入沸水焯烫1分钟捞出；虾仁处理干净后，加入盐、料酒、蛋清和生粉作简单的上浆；番茄去皮切成丁；
+2、起油锅滑炒虾仁变色后出锅；下番茄丁煸炒，先加白糖，使番茄更容易起沙出味；
+3、倒入松花菜一起翻炒，加入半碗清水大火煮开，继续滚煮几分钟，使番茄味充分溶入汤汁中；加盐调味，最后倒入虾仁炒匀即可出锅。
+PS：松花菜很耐煮，多煮一会儿也不会影响其爽脆的口感；番茄尽量切得小一点，煸炒时用勺稍稍按压，汤水会更浓、味道更鲜；看似一道普通的家常菜，这样做出来非常好吃。</description>
+    </item>
+    
+    <item>
+      <title>读后感：《怕什么？人生本来就不确定》</title>
+      <link>https://liuzheng.github.io/before2018/2015-06-30-dont-be-afriad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-06-30-dont-be-afriad/</guid>
+      <description>许久没有写博文了，最近适逢亚马逊购书优惠，买了一摞闲书。
+神灵永远不会告诉你该如何去做，应对生活种种的周遭，答案不在别处，而是在我们自己的心里。这就是生活的真相！ 不能把求职、恋爱、加薪等希望，都寄托与参拜神灵，或者希望别人替自己做决定。事实上，自己才是自己的神！ 只有自己才能决定一会儿跟谁吃饭，下一次聚会穿什么，跟领导谈涨多少薪资。
+时光飞逝，有一天，当我们暮然回首时会发现，虽然认识之路蜿蜒曲折、荆棘丛生，我们遇到了不少风浪，但是那些风浪最后都归于平静，我们已经走了这么远的路，沿途有那么多美丽的风景。
+是啊，这风景很美，需驻足细细欣赏，平时走路时，我时常会喜欢看看周围的花花草草，可以毫不犹豫的多看几眼，细细欣赏它的美，即使会被当成白痴，我也乐在其中。
+印度是个神奇的国度，那里人们生活艰辛，但大家都保护好自己，来避免给别人带来麻烦。听说都市人有着统一的表情那就是面无表情，做了几个月的早晚高峰地铁，我也慢慢的观察着地铁上的行人，多是眉头紧锁，那笑容只为手机屏幕，似乎是愚蠢，简直就是愚蠢。那么美好的时光，与手机相伴。</description>
+    </item>
+    
+    <item>
+      <title>超市里的潜规则</title>
+      <link>https://liuzheng.github.io/before2018/2014-8-3-supermarket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-8-3-supermarket/</guid>
+      <description>超市里的潜规则！第一条就比较实用，每次去买牛奶，都要往深处扒拉…… 如今，超市已成为我们生活中不可缺少的一部分。不过你是否注意过，在超市琳琅满目的商品中，食品的摆放位置是暗藏很多秘密的。
+日前，美国一些杂志，将美国超市里暗藏的秘密一一揭开。有些与我国的情况十分相似。为此有记者专访了相关专家，对每个秘密都进行了分析与解释。
+秘密一：新鲜牛奶通常摆在最里面。 有记者走访了北京朝阳区、海淀区和昌平区的几家大型超市。在各大超市中，记者发现，在每家超市的牛奶、酸奶、袋装熟肉等食品货架上，人眼平视过去，最先看到的，摆在最外面的商品，生产日期几乎都不是最新的，反而越靠里摆放的生产日期越近，也就是说 “越新鲜”。
+专家解密：一些专家告诉记者，“如何摆放商品，是超市的一种营销策略，把商品按照不同位置摆放，很大程度上可以促进销售量。”通常，利润较大的物品，摆右边，因为大多数人习惯用右手，所以总喜欢拿右边的东西。一些不太新鲜的食品，通常也会摆放放在这个位置。
+生产日期靠前的牛奶、饮料等食品则摆在与顾客视线平行的位置。调查资料显示，放在与顾客眼睛视线平行位置的商品，可以增加70%的销量。这也是超市物品摆放的最佳位置，第二是齐腰的地方，第三是与膝盖平行的地方，这些位置摆放的商品利润都比较大。
+另外，国内某知名专家强烈建议，尽量不要买摆卖的食品。“这种买卖方式也叫做裸卖，超市里空气流通差，人又多，食物长时间暴露在空气中很不卫生，应尽量买袋装或有包装的食品。”
+去冷柜买东西，则要记住“好货沉底”的原则。 对于生活用品，要想选购性价比高的东西，应把目光投向货架的上层和底层部分。同时，还要留意超市入口，商家喜欢把便宜货摆在那里，可以去淘一些经济实用的生活用品。
+秘密二：早上8：00—9：00超市里人最少。 有关调查显示，这个时间，超市里的人流量最小，但蔬菜、鲜肉类食以及海鲜产品是最新鲜的。晚上8：00以后超市人最多，但很多食品，如蔬菜、海产品、豆制品等都不新鲜了，开始打折促销。
+专家解密：散装的新鲜肉食都是早上上架，蔬菜也是最新鲜的，此时购买这两种食品性价比最高。但水果却不能保证，因为很多水果都要存放两三天，每天在水果表面淋点水，就会让它看起来依然很新鲜。
+对于晚上超市的打折促销活动，一些专家表示，天上不会掉馅饼，对于食品而言，只要是打折促销的肯定不新鲜，尤其是熟肉和豆制品，一定要慎重购买。
+秘密三：用灯光让食物更“新鲜”。 我们到超市里会发现，那里摆放的各种肉类，都红嫩新鲜，各种蔬菜都翠绿无比。等买回家再看，就不是这么回事了。
+专家解密：原来，超市里特意选用粉红色的灯光照射肉类，会显得格外鲜嫩；选用绿色的灯光照射蔬菜，会显得更绿。
+另外，专家提醒，不少熟食在暖色光的照射下显得像刚出锅似得，其实不然。
+秘密四：买一赠一有猫腻。 消费者购物时并不注意自己不需要的商品价格，商家根据这种消费习惯，提高价格后再附赠品。
+比如一瓶洗发水本来应该20元，现在买一瓶洗发水赠送一块价格2元钱的肥皂，但超市实际已悄悄地将洗发水的价格提高到22元。买洗发水的顾客白得一块肥皂，肯定就会觉得很划算。
+专家解密：某著名公司多年的促销经验认为，折扣标志可增加销量的23%，“特别是促销食品，基本上都是一个新的搭一个旧的卖。”为避免被捆绑促销吸引，建议消费者购物时把注意力应放在你想购买的东西上，而不是和它捆绑销售或附赠的物品上。
+秘密五：当天没有卖完的散装肉食返回厂家，由厂家进行再处理、再销售。 调查中，记者发现，在一些超市里，偶尔会出现这样的现象：熟食柜台里出售的食物，上面标注的日期竟然还没有到。
+专家解密：“标有当日生产日期的熟肉，其实并不新鲜。举个例子，今天买的香肠里可能会掺杂前几天没有卖完的香肠。”而且专家提醒说，熟食的包装层数越多越不新鲜。一般情况下，很多熟食如肉类和肠类都用保鲜膜包装，包了一层的，说明东西还比较新鲜，层数越多，越能掩盖其不新鲜的一面，而且很多都是因为食品失水，才导致包装袋滑落，所以只能多包几层。
+另外，最好不要买降价、促销的熟食和豆制品。超市散装熟食应小心购买。
+秘密六：超市特价商品并不便宜。 例如，一袋零售价3.3元的饼干，三连包销售时标明特价10元。不经常购物，不熟悉商品价格的顾客往往一见特价就购买，难免上当。
+专家解密：超市在促销的时候，都会推出一些特价商品，很多人认为特价商品就是价格便宜的商品。商家正是利用人们这种认识上的误区，将一些正常价格的东西甚至是高价的东西，标成特价出售。
+看过“超市里不能说的秘密” 后，大家是不是学到了不少东西？下面我们接着来揭秘12条超市的“偷天陷阱”，诸多秘密，就隐藏在眼前超市的购物架上。某公司对各个超市货架进行调查，来揭露食品工业不为人知的秘密，他们掠夺我们的期望、金钱，最重要的是健康。运用下面的饮食“清单”，让那些食品公司败在他们自己的游戏中吧。
+1、脱脂并不代表真健康 如果你想了解食品工业的内幕，那么，就去超市的糖果区走一遭吧。那里，你一定还会看到“脱脂”的字样。虽然这是真的，然而，这些不含卡路里的垃圾食品几乎全部是用糖及加工后的碳水化合物制成的。
+我们这里要说的是，那些商品制造商把顾客当成傻子。而超市也是以这一点作为他们的营销战略。举个例子吧，就拿前面提到的“脱脂”糖果来说，制造商所希望的是，当顾客看到“脱脂”，就会把这当成是“健康”、“不会发胖”的食品，从而就全然忘了这些食品中含有的糖分。这是一种分散注意力的策略：食品公司的广告只会展示他们想让你注意到的那一面，而超市里的糖果区仅仅只是个开始。
+2、数字也能骗人 在一瓶低糖花茶的瓶子上，你会在包装的含量表里看到这样的字样：“含糖量低于4％”。而在蜜茶的包装上，只表明了含有白砂糖，并没有表明含量多少，这可不会为你的健康带来多少好处，尤其是那些患有糖尿病的人。
+3、乳业不会让你知道，所谓的半脂芝士其实不存在 那么乳业所谓的半脂芝士到底是什么样的食品呢？当你了解了以后，你就会为所付的钱大感失望：每100克原味芝士片含脂肪26克，能量1300千焦，而半脂芝士片含脂肪12克，能量1049千焦。为什么不在营养表上标注卡路里的含量呢，实际上，全脂和半脂芝士卡路里含量不会相差太多。那么，你打算消化多少克的卡路里呢？
+##　4、食品公司不会让你知道“对心脏有益”的麦片，糖分含量并不少
+在中国，一些麦片的包装上打着世界心脏联盟的标语，而美国版的包装自豪地在他们的包装箱上，打着美国心脏协会的标语，但是，从标语下面的一行字我们可以得知，公司只是达到了美国心脏协会（AHA）规定的“饱和脂肪和胆固醇的食物标准”。因此，就算它的产品中含糖量严重超标，也仍然可以合格。食品工业不会让你知道，食品公司是要付钱才能得到AHA对其产品的认可。
+##　5、藏匿在货架上的反式脂肪酸食品
+在超市的过道里，充斥着各种各样危害健康的反式脂肪酸类食品。最糟糕的点心是袋式爆米花，每份含有6克反式脂肪酸，一袋实际上是三人份的，因此吃下它就相当于消耗掉18克反式脂肪酸，而人体最多每天能承受2克反式脂肪酸量。购买球状的膨化食品之前，仔细研究它的营养成分表。
+6、食品公司不会让你知道他们所谓的“高钙食品”，其真实含义是什么 毫无疑问，在超市的任何一样食品商标上，你都能看到这样的标语：该产品是含有一种或多种维他命或矿物质的优质补充剂。但是你需要知道的是：所谓的某种维他命或矿物质的优质补充剂，其每一份中所含有的营养物质只是每日需求量的10%。
+拿某三层高钙梳打饼干举例来说，其标签上写着：“高钙”二字，每100克饼干含钙300毫克。而同一公司旗下的苏打饼干，并没有打出高钙的字样，每100克含钙量却达320毫克，下一次购买这些所谓高含量食品之前，考虑清楚是否值得你掏出钱包。
+7、饮料制造商不会让你知道，饮用的瓶装绿茶其实并不像你想象的那么健康 绿茶中的多元酚类（Polyphenol）称为儿茶素，它是一种可以对抗疾病的有益于健康的抗氧化剂。可是，货架上的绿茶几乎没有产品标注儿茶素含量。
+8、不是标记“不添加蔗糖”就不用担心糖尿病 食品公司不会让你知道不是标记“不添加蔗糖”就不用担心糖尿病。研究发现，麦片中含有的碳水化合物会比蔗糖更快地提升血糖。在某麦片的包装上明明白白地写着“不添加蔗糖”，可是它的营养表上，每100克产品碳水化合物的含量高达76.8克。
+9、食品工业不会让你知道，食品添加剂会损伤你的肾 研究人员发现，食品中的色素和防腐剂与儿童多动症之间有一定的关系。很多包装食品中都普遍存在包括黄色5号、黄色6号、红色40号及苯甲酸钠的添加剂。但是，造成多动症的原因究竟是这些化学物质的组合物，还是其中单一的一种，研究者还不清楚。彩虹糖里含有黄色5号、黄色6号、红色40号色素，而一些软饮料中则含有苯甲酸钠。
+10、食品公司不会让你知道限制卡路里的包装，实际是“敲诈”顾客 2007年的一项研究发现，不管是大包装还是多包装的曲奇或薯片，其重量都是一样的。这就是关键点：人们买到的曲奇和薯片重量都是一样的。学会自制当然是自己的问题，但是这里却隐藏着更大的秘密：食品公司会以双倍的价钱，卖给你同样重量的零食。在收款台付款之前，想想是不是值得你掏出钱包。
+11、肉类加工业不会让你知道瘦肉中的钠含量更高 原因是：肥肉在被切掉的同时，肉汁也随之流失掉了。因此，为了使肉看起来多汁饱满，一些商贩就会向猪肉、牛肉等肉中注入水、盐，以及其他一些可以增加香味的化学物。而这样也就大大提高了瘦肉里的钠含量。例如，一份113克的没有注过盐水的新鲜去骨嫩火鸡中，钠的含量是55毫克，而一份相同重量但注了30% 的盐水的烤火鸡中，钠的含量则高达840毫克。把它塞到购物车之前，先考虑清楚吧。
+12、超市不会让你知道，长长的结账队伍会让你购买更多的东西 调查发现，“困”在长长的结账队伍中的人，购买周围货架上的糖果和苏打水的几率要高25%。一些人发现，暴露在顾客面前的诱惑越多，他们就越可能经受不起这些诱惑的考验。
+这就很好地解释了在超市里，为什么一些像牛奶、面包、鸡蛋这样的日常商品，会被放在一些比较靠后的角落里，因为这样会迫使顾客要穿过其他许许多多的诱惑，去买这些食品。</description>
+    </item>
+    
+    <item>
+      <title>车（四个轮子的！）研究</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-21-car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-21-car/</guid>
+      <description>车么，迟早会买的，今天看到一个帖子引起了我今天好好搜索一下，好好研究一下到底这货，如有错误希望 各位看官留言或Email指正。Gmail：liuzheng712
+写在前面 如果你看到此帖，请注意行车文明用灯，身为光学专业的人我告诉不文明用灯就是拿自己的生命挑战死神。
+自动挡汽车 自动挡汽车因为没有离合器，少去了很多换挡操作的麻烦，使我们在开车时方便了不少，特别是在拥堵的城市 ，自动挡汽车更显示出其优势。但是自动挡并不是完全不用换挡，自动挡也是有档位的，只是更好操作而已。 在自动挡汽车普及的今天，如何才能做到安全驾驶呢？
+普通使用 1、行驶在平坦的城市路面应将挡位始终挂在D挡，自动变速箱会在4个前进挡之间自行切换，无须额外的手动操作。
+2、自动挡车型使用D挡爬坡时，如果感觉到怎样踩油门也不能使发动机输出的动力像行驶在平坦路面一样强劲， 应当立即换到高扭力的低速挡爬坡，这样不仅省油，还能减少或避免发动机的磨损。
+3、城市道路遇到上坡不要猛加油，应该在上坡前加油提速。驾驶自动挡汽车下长坡时，可以根据坡度和 车速将挡位切换到3挡或2挡，这样可以达到通过挡位限制控制车速的目的。
+4、自挡车辆不能空挡滑行。在空挡下，自动挡车型的自动变速器里的齿轮会在车轮带动下高速运转。 由于变速器油泵供油不足，齿轮容易因为得不到充分的润滑而烧蚀，也容易使自动变速器油温过高而影响 使用寿命。所以自动挡车型切忌 空挡滑行。
+上下坡技巧 上坡时把档位放到D挡位置，视坡度大小加油门，在坡顶时注意减速，因为视距受限，不能注意以对方来的车辆。 下坡时需要把档位换到1挡或者L(低)挡，配合使用脚刹，但频繁脚刹可能会造成制动装置过热，而出现刹车不良问题。 切忌不要挂N挡下坡。
+安全开车几个要诀 1。、心里要稳。 首先，应该调整好自身的心理素质。面对飞来驰去的车流和纵横交错的道路，千万不要过于紧张， 切记保持冷静的头脑。新手上路后，经常是紧张得不知道该怎样挂挡、转向等， 看到身边有其他车辆通过就恨不得抬着车子走，其实只要冷静地按照规章驾驶就不会有问题。
+2、找人壮胆。新手最初上路最好能有人陪同。有会开车的朋友坐在身旁就像是有了定心丸， 一旦驾驶中出现什么差错，也会得到及时地提醒和帮助。朋友同车上路还有一个好处，在实在无法开车时， 朋友还可以下车为你指挥交通，在车前面为你和车开出一条通路。当然，如遇朋友如此帮忙，则一定要以“大餐”答谢才是。
+3、做好准备。上路前，要在心里盘算好驾驶的要领，并熟悉一下刹车、油门、离合器， 以防紧张的时候将油门当刹车踩（那可是太危险了）；熟悉一下各挡位，因为“新手”上路一旦紧张就会忘记增减挡。 汽车的怒吼声对于新手来说经常是充耳不闻，能够将手动挡车开成自动挡是很多“新手”经常犯的错误， 所以上路前这些基本的操作一定要烂熟于心。
+提前提档相对节油 pcauto里面很多车友都听说过自动档要踩一下松一下可以实现提前升档，而且加速更快～这种概念并不是完全正确的， 自动档踩一下松一下可以实现提前升档是正确的（但也要选择好踩、松的时机），但这是在牺牲加速的情况下达到 相对节油的目的，并不能使车辆加速更快。具体举例：驾驶车辆起步后，很快档位升入2档（注：1～2档没有必要 进行以下操作，因为1档的发动机阻力较大，你松开油门后车速会迅速降下来，你只要缓踩油门档位就会适当时升入二档）， 这时稍微重踩油门（以快点加速），当发动机转速刚过2000，速度约30km时，稍微松一下油门，变速箱就会提前升入3档， 再踩下油门至转速2000，速度达到50时，松开油门，变速箱就会提前升入4档，相同的情况也会出现再速度70左右时， 使变速箱提前升入5档。这样可在不影响太多加速的情况下实现提前进档。不同的车辆换档时机或有差异， 各位车友可以在了解了自己车辆的情况下，根据自己车辆的换档情况，选择时机施行以上操作。而且， 即使不是为了提前进档，这样用油门来适当控制一下换档时间也是有好处的，当转速上升到换档区间后， 你只要轻收油门，自动变速箱会自动作出升档的指令，而在你收油的瞬间发动机转速会下降一些， 正好于刚升档的齿比衔接，这时再加油前行，你会觉得整个换档过程更加平顺，乘坐也更加舒适。 以上过程需要对自己的爱车有一定接触和了解才能完成，各位车友不要急于实施，等你摸清了爱车的脾气做出以上操作就得心应手了：）
+需要注意的是，实现提前升档后，再踩油门时不可度数过大，否则变速箱会认为驾驶者需要急加速， 而当前档位动力输出无法满足要求而自动降档，又回到较低档位上造成跳档！这点车友们可以在操作中 实验几次掌握好自己车辆变速箱的控制尺度。
+自动档的注意事项 1） 只有在P、N两档时才可以发动车辆，从P档摘出排挡杆必需踩住刹车。 N档启动的使用是当你车辆发动后就直接向前行驶时，你可以先接通电源（不打着发动机）， 踩住刹车把档位拉到N，再点火，之后挂入D档直接前行，这样可以避免在P档打火后，需要经过R档， 使变速箱经过一次反向冲击！这就有点精益求精了，呵呵：）另外的作用就是在行驶中突然熄火时， 可以在保证安全的情况下迅速将档位推至N档打火再启动发动机。
+2） 一般档位在N、D、3间切换时不用按换档按钮，从3往下的限制档上挂必需按换档钮， 从低档往高档挂不用按换档钮。（排挡杆上的按钮，也有错位排列的排挡杆没有换档按钮，如别克凯越等）
+3） 行驶中切不可挂入N档滑行，因为自动变速箱内需要润滑，当行驶中把档位放在N上面时油泵是无法正常地供油进行润滑的， 会使变速箱内部件温度升高，造成彻底损坏！另外高速是空档滑行也是非常危险的，而且并不省油！ 这方面的介绍有很多，我就不再赘述了。低速时滑至停止可以提前挂入N档，倒没有什么影响。
+4） 自动档车在行驶中切不可推入P档，除非你不想要车了：）在行驶方向变动时（前进改后退或者后退改前进） 就是从倒档挂入前进档或前进挂入倒档时，一定要等车辆停稳后再做操作。
+5） 行驶结束停车时，自动档车必须熄火挂入P档才能抽出钥匙。很多人习惯停下来直接推到P档再熄火，拉手刹。 细心的人会发现这样操作，熄火后一般车辆因路面不平会前后小小挪动一下，而这时P档变速箱有个咬合装置是和变速齿轮咬住的， 这时的挪动会对变速齿轮造成一点冲击！正确的做法应该是：车进入停车位置后，踩住刹车将排挡杆拉到N档， 拉起手刹，松开脚刹然后熄火，最后再将排挡杆推入P档！当然这也是属于对变速箱精益求精的保护：） 要说明一点，P挡和N挡的区别还在于，P挡时变速箱内有齿轮咬合，它不仅用于停车，而且会帮助车辆制动， 在停驶车辆后一定要将档位推到P档，切不挂在N档单单依靠手刹来制动！特别在有坡度的地方停车更是应该如此！！</description>
+    </item>
+    
+    <item>
+      <title>运维群Docker讨论</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-07-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-07-docker/</guid>
+      <description>本文版权所有是InfoQ高效运维群，转载请到公众号转 公众号戳：infoqops
+源起晓梦的一条链接http://card.weibo.com/article/h5/s#cid=1001603839871499289201&amp;amp;from=1052893010&amp;amp;wm=3333_2001&amp;amp;ip=10.209.17.50
+这是一篇讲docker缺点的文章，其主要担忧是base img出现bug后将会导致整个docker image进行重构，这将会给运维人员带来巨大的运维压力，其次是由于运行的版本过多，运维人员不能很好的控制风险。
+我的观点稍有不同，docker的作用是能让运维人员清楚的知道开发人员的环境，以便部署的时候比较容易定义版本问题，docker节约的是容灾资源的共享，根据1:1:1更健康的观点，1份运行资源，1份高峰资源，1份容灾资源。对于base bug我个人确实也挺头大的。。。
+萧田国@触控则认为docker的时代会比预想中更快的到来，现实存在的细节问题可以不必纠结。
+刘鹏@浙江移动在他们的业务中用dokcer使用了两组核心集群，并引入了1/3的流量，效果拔群。但他也表示了这也引入了监控和运维管理的一些问题。虚拟化已经在屋里机上多了一层，docker又在云OS上加了一层，从系统层级说复杂了很多，面临一系列的服务端口管理和网络问题。（我想说在后续docker版本支持ipv6，端口资源可以省心了）。据他透露他们在某业务上跑了快一年了，没出过大事。高可用在应用和部署架构支持，可以快速进行服务能力切换。不过分追求单个Contanier的能力及稳定性，总体思路是快速failover，踢出问题节点，由架构层面进行保障。 理论上和监控配套进行可以对问题节点的判断和自动踢出。 带着环境迁移，Scale out确实方便，前提是应用支持。 一年出了2-3次小问题，可以通过参数优化和版本升级解决。 往往是一台主机上的容器会有不同程度问题。 他建议根据宿主机的情况轻量，狼群攻击式部署。 部署呢则部署到干净的宿主机上，用在资源池中。
+晓梦表示部署的话装干净的机器用docker干嘛（想想似乎也对！）。他表示主要用的是隔离性。
+诸超@vip：狭义的cloud就是解决无状态的deploy和scaling问题。
+晓梦：用传统办法puppet解决扩容的问题，也可以达到效果。
+唐云吉@银联@魔都 运维云化后，管理和监控是个难点
+诸超@vip 提问： 这里有多少人关注microservice
+关胜@新浪 ：1.不管有docker，无docker，puppet解决的是配置管理的事情；2.集群的管理，包括扩容都是需要通过集群管理系统去做的，一般集群底层都有一个任务调度的组件；3.对于环境问题：无论干净还是线上机器，对于无状态的app，包括web，rpc，前面都会有7层或者配置服务，高可用都是可以做的。docker解决的实例问题，本身无调度功能，CoreOS会有调度功能；4.docker出现，是的微服务架构更容易，但是这不是充分必要条件。微服务更多的是业务架构与拆分。相对是比较难的。
+晓梦 ： 这里讨论的是扩容问题。。。。 单纯冲扩容这个角度讲，这俩都能做，一个简单一个容易。 用docker还是一个负责的操作啊，而且带来的管理成本，就如文章里说的那样也是很高的。要不docker的生态圈也不能那么繁荣。
+关胜@新浪 扩容是一个复杂的操作，并不是说puppet不能做，是结合多个工具才能完成的
+刘鹏@浙江移动 ： 我倒是任务所有的动态扩缩容难度系数高，只要涉及到服务的弹性扩展，必然涉及到一系列的配套组件。
+诸超@vip kv系统相对容易一些
+关胜@新浪 kv系统扩缩容要做的好，得有好的中间件货proxy，需要解决状态问题。没有这些的话，就是配置硬编码，或者配置中心，我觉得还是蛮复杂的。
+关胜@新浪：像我们对于缓存的使用，已经多层多级，对于slave的扩容相对简单 。对于master的扩容，还会需要去预热。步骤还是比较多的。当然还是要看你的业务场景是否复杂。
+至此，对于docker的使用，还是得看业务架构，我自己所部署的docker都只是环境，运行代码全部是启动时挂载，docker环境使用Dockerfile进行git版本管理，这样连同整个项目都可以以脚本化版本化进行控制。当然docker是相当稳定的，技术都是老的，不过对于上文提到的base bug，我觉得还是我个人的方案比较优良，仅仅对环境重构成本小，脚本化后其实运维人员的工作量并不多，倒是网络传输环境的耗资严重。</description>
+    </item>
+    
+    <item>
+      <title>运维群book</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-03-book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-03-book/</guid>
+      <description>以下是InfoQ高效运维群内推荐的图书，在此感谢所有推荐书单的运维大神们！
+张陆亚@明星衣橱：《高性能MySQL》http://book.douban.com/subject/4241826/
+姜晨@腾讯:《把时间当做朋友-运用心智获得解放》http://book.douban.com/subject/3609132/
+泰稳@InfoQ：《JavaScript语言精粹》http://book.douban.com/subject/11874748/
+我：《精通正则表达式》http://book.douban.com/subject/2154713/
+我：《代码之美》http://book.douban.com/subject/3224524/
+张陆亚@明星衣橱：《白帽子讲Web安全》http://book.douban.com/subject/10546925/
+我：《A Practical Guide to Linux&amp;reg; Commands, Editors, and Shell Programming》http://book.douban.com/subject/1437308/
+我：《Automating Linux and Unix System Administration》http://book.douban.com/subject/3334604/
+《浪潮之巅》http://book.douban.com/subject/6709783/
+《数学之美》http://book.douban.com/subject/10750155/
+《文明之光》http://book.douban.com/subject/25902942/
+李松涛@开源阶梯在线教育:《断舍离》http://book.douban.com/subject/24749465/ 推荐给整天“忙”的同
+Waichun_Ho@ZOL:《思考软件，创新设计——A段架构师的思考技术》http://book.douban.com/subject/25895196/
+Tony@netease:《High Performance Browser Networking》http://book.douban.com/subject/21866396/
+绪江@积成电子:《观止-微软创建NT和未来的夺命狂奔》http://book.douban.com/subject/3699395/
+绪江@积成电子:《清单革命》http://book.douban.com/subject/10788371/清单革命是思维方式方法，运维人值得看，在手忙脚乱时不至于丢三拉四
+晓梦：《时间管理》http://book.douban.com/subject/2253513/
+温国兵@太空漫步：《暗时间》http://book.douban.com/subject/6709809/
+温国兵@太空漫步：运维工程师指北
+温国兵@太空漫步：MySQL DBA Tips
+袁乐天：《大规模分布式存储系统：原理解析与架构实战》http://www.amazon.cn/%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F-%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%AE%9E%E6%88%98-%E6%9D%A8%E4%BC%A0%E8%BE%89/dp/B00H6X6BE8/ref=pd_sim_kinc_1?ie=UTF8&amp;amp;refRID=05X6WERNC7KNATWNT1W2
+萧田国@触控科技：分布式系统工程实践http://www.nosqlnotes.net/wp-content/uploads/Distributed_System_Engineering_Practice.pdf
+赵建鹏@猎豹:《大数据日知录-架构与算法》http://book.douban.com/subject/25984046/
+郭志强@华图：《狼道》
+以下两图是InfoQ 臧秀涛的书架，满满的秀幸福！ 晓梦：搬家未整理 </description>
+    </item>
+    
+    <item>
+      <title>问男人 man ssh</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-16-man-ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-16-man-ssh/</guid>
+      <description>ssh 用了这么久，平时也就Google一些小用法，很少细看man手册，今天在一个不是咖啡馆的咖啡店问男人中，希望以后能成为一个男人！
+先看一下useage：
+usage: ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-L [bind_address:]port:host:hostport] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q cipher | cipher-auth | mac | kex | key] [-R [bind_address:]port:host:hostport] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] [user@]hostname [command]  妥妥好多参数吧，相信应该极少人会用很多。
+man手册(导出命令man ssh | col -b &amp;gt; ssh.txt)：
+SSH(1) BSD General Commands Manual SSH(1) NAME ssh -- OpenSSH SSH client (remote login program) SYNOPSIS ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-L [bind_address:]port:host:hostport] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q cipher | cipher-auth | mac | kex | key | protocol-version] [-R [bind_address:]port:host:hostport] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] [user@]hostname [command] DESCRIPTION ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matlab on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/matlab/</link>
+    <description>Recent content in Matlab on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MATLAB PageRank小结</title>
+      <link>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</guid>
+      <description>从网上找到 Page-Rank-Matlab-Code 提及 MATLAB 的 PageRank 代码，使用 profile viewer 发现有一段 for 效率极低
+源代码如下
+function p=PageRank(L,d) % return PageRank vector % % input: % L = Link Matrix (=rotated adjacency matrix) % d = constant parameter % % Example from Kardi Teknomo&#39;s Page Rank tutorial % is given as input and output of this function. % Read the full tutorial for more explanation. % % (c) 2012 Kardi Teknomo % http://people.revoledu.com/kardi/tutorial/ %%%%%%%%%%%%%%%%%%%%%%% if nargin&amp;lt;1 L=[1 1 1 1 1 1; 0 1 1 1 1 1; 0 0 1 1 1 1; 0 0 0 1 1 1; 0 0 0 0 1 1; 0 0 0 0 0 1;]; end if nargin&amp;lt;2, d=0.</description>
+    </item>
+    
+    <item>
+      <title>[转]linux中matlab的中文乱码问题</title>
+      <link>https://liuzheng.github.io/before2018/2011-08-15-matlablm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2011-08-15-matlablm/</guid>
+      <description>将系统的jre拷贝到matlab去 。
+sudo mv $MATLAB/sys/java/jre/glnx86/jre $MATLAB/sys/java/jre/glnx86/jre.default sudo cp -R /usr/lib/jvm/java-6-sun-1.6.0.13/jre $MATLAB/sys/java/jre/glnx86  或者采取以下方法
+出自gosman的博客(http://gosman.blogbus.com)
+由于Linux下Matlab的图形界面是用Java写的，所以只要搞定Java的中文显示就行了。
+1、我Matlab2007a的JRE目录为：/opt/matlab/sys/java/jre/glnx86/jre1.5.0 请根据自己的安装目录和版本确定JRE的目录；
+2、 $ cd /opt/matlab/sys/java/jre/glnx86/jre1.5.0/lib/fonts/；
+3、建立目录fallback: $ mkdir fallback；
+4、把字体复制或链接到fallback目录：
+$ cp /media/disk/WINDOWS/Fonts/simsun.ttc fallback/ 我用的是Windows XP的simsun字体，你也可以用别的支持中文的字体；  5、进入fallback目录，执行 mkfontscale 命令；
+6、将上一步生成的文件添加到 lib/fonts/fonts.dir文件中，可用以下命令完成，当然也可以用编辑器复制粘贴：
+$ cat fallback/fonts.scale &amp;gt;&amp;gt; fonts.dir (注意fonts.dir应该设为可写)  7、至此Matlab的Java环境中文支持安装完了，接下来配置Matlab;
+8、进入Matlab，选择 菜单 File&amp;gt;&amp;gt;Preferences&amp;gt;&amp;gt;Fonts 选择SimSun字体就行了；
+9、如果没有相应的（我的是SimSun）字体，请把fallback下的字体加上可读属性：$ chmod a+r fallback/*
+10、至此Matlab应该可以正常显示中文了。
+有时运行matlab后，只有一个外框能正确显示，其它的都是一片白。同时转载过来见到的解决办法
+办法1：在matlab安装目录下的bin/matlab文件中（一堆注释后面）添加： export AWT_TOOLKIT=MToolkit  该方法可以解决显示问题，但会经常出现无法输入的问题。比如调用plot函数后，command窗口就
+无法输入新字符了，只能通过依次点击Current Directory 和 Workspace解决。。依次点击后就可以
+继续输入字符了。
+方法2：安装sun-java6-jre。具体方法为 sudo apt-get install sun-java6-jre  然后在matlab安装目录下的bin/matlab文件中（一堆注释后面）添加：</description>
+    </item>
+    
+  </channel>
+</rss>

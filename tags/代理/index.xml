@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代理 on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/%E4%BB%A3%E7%90%86/</link>
+    <description>Recent content in 代理 on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/%E4%BB%A3%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git设置goagent代理</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-gitproxy/</guid>
+      <description>git代理
+git config --global http.proxy 127.0.0.1:8087 git config --global https.proxy 127.0.0.1:8087 git config --global http.sslCAinfo GoAgent/CA.crt  取消代理
+git config --global http.proxy &amp;quot;&amp;quot; git config --global https.proxy &amp;quot;&amp;quot; git config --global http.sslCAinfo &amp;quot;&amp;quot;  </description>
+    </item>
+    
+  </channel>
+</rss>

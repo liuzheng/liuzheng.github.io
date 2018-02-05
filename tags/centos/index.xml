@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centos on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/centos/</link>
+    <description>Recent content in Centos on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]CentOS 5 centos 6下安装Axel插件加速yum下载</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-22-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-22-centos/</guid>
+      <description>http://blog.csdn.net/jiedushi/article/details/7406704
+1 下载axel插件的rpm包
+下载地址 http://pkgs.repoforge.org/axel/
+如果为centos 5 64位系统的话 使用http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm
+如果为centos 6 64位系统 使用 http://pkgs.repoforge.org/axel/axel-2.4-1.el6.rf.x86_64.rpm
+2 安装rpm 包 rpm -ivh http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm
+3 下载配置文件axelget.conf与axelget.py到yum里：
+cd /etc/yum/pluginconf.d/ wget http://cnfreesoft.googlecode.com/svn/trunk/axelget/axelget.conf cd /usr/lib/yum-plugins/ wget http://cnfreesoft.googlecode.com/svn/trunk/axelget/axelget.py  最后确认 /etc/yum.conf中plugins=1
+4 测试并安装yum-fastestmirror插件：
+yum install -y yum-fastestmirror  注：axel插件也可以当独立下载工具来使用。当成独立下载工具使用时，适用于绝大部分Linux发行版。
+使用参数如下：
+一般使用：axel url（下载文件地址）；
+限速使用：加上 -s 参数，如 -s 10240，即每秒下载的字节数，这里是 10 Kb；
+限制连接数：加上 -n 参数，如 -n 5，即打开 5 个连接。
+我通常是 axel -a -n 6 URL
+wget http://pkgs.repoforge.org/axel/axel-2.4-1.el5.rf.x86_64.rpm rpm -ivh axel-2.4-1.el5.rf.x86_64.rpm cd /etc/yum/pluginconf.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/ssh/</link>
+    <description>Recent content in Ssh on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>问男人 man ssh</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-16-man-ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-16-man-ssh/</guid>
+      <description>ssh 用了这么久，平时也就Google一些小用法，很少细看man手册，今天在一个不是咖啡馆的咖啡店问男人中，希望以后能成为一个男人！
+先看一下useage：
+usage: ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-L [bind_address:]port:host:hostport] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q cipher | cipher-auth | mac | kex | key] [-R [bind_address:]port:host:hostport] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] [user@]hostname [command]  妥妥好多参数吧，相信应该极少人会用很多。
+man手册(导出命令man ssh | col -b &amp;gt; ssh.txt)：
+SSH(1) BSD General Commands Manual SSH(1) NAME ssh -- OpenSSH SSH client (remote login program) SYNOPSIS ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-L [bind_address:]port:host:hostport] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q cipher | cipher-auth | mac | kex | key | protocol-version] [-R [bind_address:]port:host:hostport] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] [user@]hostname [command] DESCRIPTION ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.</description>
+    </item>
+    
+  </channel>
+</rss>

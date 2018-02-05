@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/android/</link>
+    <description>Recent content in Android on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android ROM sign</title>
+      <link>https://liuzheng.github.io/before2018/2016-02-21-android-rom-sign/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-02-21-android-rom-sign/</guid>
+      <description> Android 手记 参考：http://stackoverflow.com/questions/16316526/how-to-sign-android-rom-zip-file
+下载apk-zip-signing-tools.zip或者http://goo.gl/lRNlE8
+解压后在该文件目录下运行如下命令，当然各种指路径都是可以的
+java -Xmx1024m -jar signapk.jar -w testkey.x509.pem testkey.pk8 my_rom.zip my_signed_rom.zip  分离驱动和内核（暂时未验证是否有效） 参考：http://forum.ubuntu.org.cn/viewtopic.php?t=450939
+提取驱动 驱动提取很好办，在/system/vendor/modules里面，那一堆.ko文件就是。另外可能还需要固件，在/system/vendor/firmware里面。
+提取内核: 工具下载，本地地址,http://dl.linux-sunxi.org/users/arete74/tools.tar.gz
+通过命令 split_bootimg.pl ../boot.img 来得到一个boot.img-kernel的文件，将它转换成可以从卡上引导的镜像：
+mkimage -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n &amp;quot;Linux 2.6&amp;quot; -d boot.img-kernel uImage  tip:对于 Mac 来说，mkimage 命令可以这样安装brew install u-boot-tools
+注意： 可能一些驱动在ramdisk里面，分离内核之后有个boot.img-ramdisk.gz的文件，两次解压，就可以看到里面有一些安卓启动的脚本，还有一个/system/目录，这个目录下也可能有驱动，如果有就一并提取出来。
+gunzip boot.img-ramdisk.gz 7z x boot.img-ramdisk  </description>
+    </item>
+    
+  </channel>
+</rss>

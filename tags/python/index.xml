@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/python/</link>
+    <description>Recent content in Python on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hadoop with Python 遇到的问题</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</guid>
+      <description>昨天使用了 Python 折腾　Hadoop ，遇到一个神经的问题，纠结了一整天
+使用
+hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar -mapper map.py -reducer reduce.py -input /data/*.txt -output /output  命令时，一直提示我如下错误
+java.io.IOException: Cannot run program &amp;quot;/home/liuzheng/map.py&amp;quot;: error=2, No such file or directory at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047) at org.apache.hadoop.streaming.PipeMapRed.configure(PipeMapRed.java:209) at org.apache.hadoop.streaming.PipeMapper.configure(PipeMapper.java:66) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:38) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426) at org.</description>
+    </item>
+    
+    <item>
+      <title>Median of Two Sorted Arrays</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-27-median-of-two-sorted-arrays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-27-median-of-two-sorted-arrays/</guid>
+      <description>这题https://oj.leetcode.com/problems/median-of-two-sorted-arrays/
+C=sorted(A+B) l = len(C) if l%2==0: return float(C[l/2-1]+C[l/2])/2 else: return C[l/2]  Runtime: 133 ms</description>
+    </item>
+    
+    <item>
+      <title>Valid Number</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-26-valid-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-26-valid-number/</guid>
+      <description>今天做了这题https://oj.leetcode.com/problems/valid-number/
+感觉是作弊么。。。。python 还是屌
+try: float(s) return True except: return False  OK 试试不使用try玩
+唉，试了字符判断，各种不够优雅
+除去前后空白，将字符处理成简单符号，要判断的情况有以下几种：
+- n - sn - dn - nd - nen - ndn - snd - nen - sdn - nden - sndn - nesn - snen - dnen - sdnen - ndnen - ndesn - snden - dnesn - snesn - sdnesn - sndnen - ndnesn s=s.strip() S=&#39; &#39; for i in s: if i==&#39;-&#39; or i==&#39;+&#39;: S=S+&#39;s&#39; elif i==&#39;.</description>
+    </item>
+    
+    <item>
+      <title>two sum</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-24-two-sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-24-two-sum/</guid>
+      <description>今天开始做leetcode！
+选题：Two Sum
+链接：https://oj.leetcode.com/problems/two-sum/
+写了个最短式（显然通不过，这里只记录下我的思考）
+for i in range(len(num)): if (target-num[i]) in num: return (i+1, num.index(target-num[i])+1)  python 还是很精简的！完成任务速度上还是杠杠的，可惜题目没有那么easy
+看到这么一长串input 又说time limite 我也是醉了。网上看到如下code
+dict = {} for i in xrange(len(num)): x = num[i] if target-x in dict: return (dict[target-x]+1, i+1) dict[x] = i  好吧，学习了 xrange 和 range 在效率上的差异，index人家是新建dict，我是全num找
+有人这样做：
+d = {n:pos for pos,n in enumerate(num) } for i,n in enumerate(num): if d.get(target-n): return (i+1, d[target-n]+1) return None  这样写呢，感觉比较优雅，但内存开销较前者大</description>
+    </item>
+    
+  </channel>
+</rss>

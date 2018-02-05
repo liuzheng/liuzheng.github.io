@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keyboard on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/keyboard/</link>
+    <description>Recent content in Keyboard on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>make keyboard</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-12-make-keyboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-12-make-keyboard/</guid>
+      <description>又蛋疼了，搜了一下单手机械键盘，搜到该帖 http://tieba.baidu.com/p/2646628267# ， 春心荡漾有木有！！！心想，自己学了这些个泛技术知识，应该足够做一个键盘了吧。春心荡漾！！！
+今天做完PPT后画一下键位布局，决定是左手键盘
+要准备的材料是洞洞板、茶轴（还是觉得茶轴舒适）、键帽，其他耗材都有好像，单片机用家里那块沉睡已久的51好了，或者买个MSP430，好像挺小巧的，普通的是4x4的矩阵键盘，16个键，不知道组合键怎么搞？？？
+想想还是有点小激动，看来月底得抽空回家哪些技术资料了，咩哈哈</description>
+    </item>
+    
+  </channel>
+</rss>

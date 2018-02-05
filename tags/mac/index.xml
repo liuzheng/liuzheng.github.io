@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/mac/</link>
+    <description>Recent content in Mac on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac使用</title>
+      <link>https://liuzheng.github.io/before2018/2015-05-03-mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-05-03-mac/</guid>
+      <description>修改主机名：
+sudo scutil --set HostName MyHostName  安装brew来更新各种软件
+http://linfan.info/blog/2012/02/27/colorful-terminal-in-mac/
+https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+export LC_ALL=&amp;quot;en_US.UTF-8&amp;quot; export CLICOLOR=&amp;quot;xterm-color256&amp;quot; export LSCOLORS=&amp;quot;gxfxcxdxbxegedabagacad&amp;quot;  </description>
+    </item>
+    
+  </channel>
+</rss>

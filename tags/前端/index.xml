@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>玩坏console</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-21-console/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-21-console/</guid>
+      <description>好吧，发现了几个公司都在cosole里加了招聘信息，我也跟风瞅了一下。下列代码从百度网盘里扣出来的
+略去大量数据
+try { if (window.console &amp;amp;&amp;amp; window.console.log &amp;amp;&amp;amp; top === self) { console.log(&amp;quot;\n\n\n%c&amp;quot;, &#39;font-size:0;margin-top:20px;line-height:36px;padding-top:50px;padding-left:158px;background:url(&amp;quot;data:image/png;base64,...&amp;quot;);background-repeat:no-repeat;&#39;); console.log(&amp;quot;...&amp;quot;); console.log(&amp;quot;...&amp;quot;, &amp;quot;color:red&amp;quot;); } } catch (e) { }  这是另一份，感觉可以玩玩的，哈哈
+console.log(&amp;quot;%c &amp;quot;, &amp;quot;font-size:200px;background:url(http://png);&amp;quot;);  </description>
+    </item>
+    
+  </channel>
+</rss>

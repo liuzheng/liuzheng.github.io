@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/linux/</link>
+    <description>Recent content in Linux on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows 和 Linux共存时时间不一致</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-13-winluxtimezone/</guid>
+      <description>让Windows把硬件时间当作UTC，与Linux/Unix/Mac保持一致。
+在 注册表项：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+下中添加一项数据类型为REG_DWORD，名称为RealTimeIsUniversal，值设为1 的键值。
+或者在windows下运行下列代码
+@echo off color 0a Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 echo. echo 已让Windows识别存贮在主板CMOS内的时间为格林威治标准时间（GMT）,即系统根据CMOS时间和设置的时区来确定当前系统的时间。 echo. pause  </description>
+    </item>
+    
+    <item>
+      <title>[转]你值得拥有 —— 25 个 Linux 性能监控工具</title>
+      <link>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</guid>
+      <description>原文：http://linoxide.com/monitoring-2/linux-performance-monitoring-tools/作者： Adrian Dinu
+译文：LCTT http://linux.cn/article-4481-1.html 译者： andyxue
+一段时间以来，我们在网上向读者介绍了如何为Linux以及类Linux操作系统配置多种不同的性能监控工具。在这篇文章中我们将罗列一系列使用最频繁的性能监控工具，并对介绍到的每一个工具提供了相应的简介链接，大致将其划分为两类，基于命令行的和提供图形化接口的。
+基于命令行的性能监控工具 1. dstat - 多类型资源统计工具 该命令整合了vmstat，iostat和ifstat三种命令。同时增加了新的特性和功能可以让你能及时看到各种的资源使用情况，从而能够使你对比和整合不同的资源使用情况。通过不同颜色和区块布局的界面帮助你能够更加清晰容易的获取信息。它也支持将信息数据导出到cvs格式文件中，从而用其他应用程序打开，或者导入到数据库中。你可以用该命令来监控cpu，内存和网络状态随着时间的变化。
+##　2. atop - 相比top更好的ASCII码体验 这个使用ASCII码显示方式的命令行工具是一个显示所有进程活动的性能监控工具。它可以展示每日的系统日志以进行长期的进程活动分析，并高亮显示过载的系统使用资源。它包含了CPU，内存，交换空间，磁盘和网络层的度量指标。所有这些功能只需在终端运行atop即可。
+# atop  当然你也可以使用交互界面来显示数据并进行排序。 3. Nmon - 类Unix系统的性能监控 Nmon是Nigel&amp;rsquo;s Monitor缩写，它最早开发用来作为AIX的系统监控工具。如果使用在线模式，可以使用光标键在屏幕上操作实时显示在终端上的监控信息。使用捕捉模式能够将数据保存为CSV格式，方便进一步的处理和图形化展示。 4. slabtop - 显示内核slab缓存信息 这个应用能够显示缓存分配器是如何管理Linux内核中缓存的不同类型的对象。这个命令类似于top命令，区别是它的重点是实时显示内核slab缓存信息。它能够显示按照不同排序条件来排序显示缓存列表。它同时也能够显示一个slab层信息的统计信息的题头。举例如下：
+# slabtop --sort=a # slabtop -s b # slabtop -s c # slabtop -s l # slabtop -s v # slabtop -s n # slabtop -s o  5. sar - 性能监控和瓶颈检查 sar 命令可以将操作系统上所选的累积活动计数器内容信息输出到标准输出上。其基于计数值和时间间隔参数的审计系统，会按照指定的时间间隔输出指定次数的监控信息。如果时间间隔参数为设置为0，那么sar命令将会显示系统从开机到当时时刻的平均统计信息。有用的命令如下：</description>
+    </item>
+    
+    <item>
+      <title>[转]记录bash的操作</title>
+      <link>https://liuzheng.github.io/before2018/2015-12-07-bash-log-history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-12-07-bash-log-history/</guid>
+      <description>转自：http://www.freeoa.net/osuport/sysec/simple-linux-sys-users-operate-manage-solution_1880.html
+当需要登录服务器的用户增加时，就必须知道运维人员、开发人员或者黑客在机器上进行了什么样的操作，或如果机器上的重要文件被删除了，你是否很想知道是谁在什么时候删的？
+本文将介绍这样的一种组合方案，来对用户登录后的行为进行跟踪和审计。
+bash 本身就有记录命令的功能，即 history。可以执行 history 命令显示你之前执行了什么命令。但history有其固有的缺陷，比如默认有大小限制、可轻易被人篡改或清空或不记录。而history分散在各机器上既无法保证其完整性也不方便审计，所以我们需要将其统一收集起来。
+方案基本思路 收集 history的思路比较简单，即将history写入文件并上传到服务端或者写入syslog，然后由 syslog实时的发到远程日志服务器，或将收集到的 history 进行后续处理则可以写入文件保存或者写入数据库供日后查询。而如何收集history，则可以从bash的现有功能或者源代码着手考虑。 主要有两种方法：
+一、script方法 将用户执行的命令，以及命令所产生的结果都重定向到具体文件中。 将下面的命令添加到/etc/profile中：
+exec /usr/bin/script -a -f -q /var/log/ops/`whoami`-`date +%Y%m%d%H%M`.log  创建日志目录：mkdir /var/log/operation/ -p
+用户登录时便会自动记录用户的操作记录了，用户通过当前主机SSH到其他服务器上面去也可以记录用户在那台机器上的操作日志。
+/usr/bin/script –a /var/log/operation/$USER.log 2&amp;gt;&amp;amp;1  有时在日志文件里不能一直看到命令行的输出，好像有丢失，不知何故。不推荐使用这种方法，&amp;rsquo;script&amp;rsquo;指令多年不再更新了，最新的手册页是2000年的。在用户登录后，它会开启另外一个进程(/usr/bin/script -a /var/log/operation/root.log 像这种形式的)，来监控用户的操作及其输出，当然从终端退出时要退出两次。
+当操作输出量很大时(像导入mysql数据库)时，对应的记录日志文件会变的很大，对事后查找反而又变得不方便了。
+exec /usr/bin/script -a -f -q /var/log/ops/`whoami`-`date +%Y%m%d%H%M`.log  You can set the PS4 variable, which is evaluated for every command being executed just before the execution if trace is on:</description>
+    </item>
+    
+  </channel>
+</rss>

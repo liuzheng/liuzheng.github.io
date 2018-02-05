@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alsa on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/alsa/</link>
+    <description>Recent content in Alsa on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/alsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu启动声卡不工作</title>
+      <link>https://liuzheng.github.io/before2018/2014-11-06-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-11-06-dailyshell/</guid>
+      <description>蛋疼的发现ubuntu启动后木有声卡不工作了。。。
+sudo /sbin/alsa force-reload  </description>
+    </item>
+    
+  </channel>
+</rss>

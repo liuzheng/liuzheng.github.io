@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disk on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/disk/</link>
+    <description>Recent content in Disk on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/disk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dell 服务器 SAS硬盘热插拔识别问题解决</title>
+      <link>https://liuzheng.github.io/before2018/2014-05-29-dellhotdisk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-05-29-dellhotdisk/</guid>
+      <description>前日BOSS将硬盘取下倒腾了一下，然后插回服务器，一切看似如此淡定。
+昨日收到小伙伴的报告，说hadoop无法启动。下面就是解决的详细过程。
+首先验证他说的
+$ bin/stop-all.sh $ bin/start-all.sh
+然后在浏览器上查看信息，发现果真宕了，好吧，相信他的话。
+Safe mode is ON. The reported blocks is only 0 but the threshold is 0.9990 and the total blocks ****. Safe mode will be turned off automatically. **** files and directories, **** blocks = **** total. Heap Size is **** GB / **** GB (*%)
+然后到节点服务器上查看运行情况
+$ jps
+呵呵，少了DataNode，手动加上看看
+$ hadoop-daemon.sh start DataNode Error: Could not find or load main class DataNode</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ppa on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/ppa/</link>
+    <description>Recent content in Ppa on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/ppa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu add ppa Error</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-03-ubuntu-add-ppa-error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-03-ubuntu-add-ppa-error/</guid>
+      <description>参考http://askubuntu.com/questions/212132/i-cant-add-ppa-repository-behind-the-proxy
+sudo add-apt-repository ppa:gnome3-team/gnome3 Cannot add PPA: &#39;ppa:gnome3-team/gnome3&#39;.  该问题是由于是使用代理上网导致的
+export http_proxy=http://username:password@host:port/ export https_proxy=https://username:password@host:port/  并且在 /etc/sudoers 末尾追加 Defaults env_keep=&amp;quot;https_proxy&amp;quot;
+之后再运行
+sudo -E add-apt-repository ppa:gnome3-team/gnome3  </description>
+    </item>
+    
+  </channel>
+</rss>

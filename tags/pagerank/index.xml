@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pagerank on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/pagerank/</link>
+    <description>Recent content in Pagerank on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/pagerank/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MATLAB PageRank小结</title>
+      <link>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-6-26-matlab_pagerank/</guid>
+      <description>从网上找到 Page-Rank-Matlab-Code 提及 MATLAB 的 PageRank 代码，使用 profile viewer 发现有一段 for 效率极低
+源代码如下
+function p=PageRank(L,d) % return PageRank vector % % input: % L = Link Matrix (=rotated adjacency matrix) % d = constant parameter % % Example from Kardi Teknomo&#39;s Page Rank tutorial % is given as input and output of this function. % Read the full tutorial for more explanation. % % (c) 2012 Kardi Teknomo % http://people.revoledu.com/kardi/tutorial/ %%%%%%%%%%%%%%%%%%%%%%% if nargin&amp;lt;1 L=[1 1 1 1 1 1; 0 1 1 1 1 1; 0 0 1 1 1 1; 0 0 0 1 1 1; 0 0 0 0 1 1; 0 0 0 0 0 1;]; end if nargin&amp;lt;2, d=0.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/golang/</link>
+    <description>Recent content in Golang on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>编译golang,给go get加进度条</title>
+      <link>https://liuzheng.github.io/before2018/2016-05-31-go-make/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-05-31-go-make/</guid>
+      <description>参考：http://life.leanote.com/post/%E8%AE%A9-go-get-%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6,http://www.jianshu.com/p/4f894d605e1a
+蛋疼的网络，不知道go get有没宕，在网上找到一篇加进度条的，然后编译也需要，顺带一起记录下
+首先先下载go1.4版本的，鸡生蛋蛋生鸡的问题。。。
+wget https://storage.googleapis.com/golang/go1.4.3.src.tar.gz tar zxvf go1.4.3.src.tar.gz  记住解压的地址啊，我是放在/opt/go1.4里的
+我是brew install go的，所以go的地址是在/usr/local/Cellar/go/1.6.1/libexec/src
+修改./cmd/go/vcs.go
+// vcsGit describes how to use Git. var vcsGit = &amp;amp;vcsCmd{ name: &amp;quot;Git&amp;quot;, cmd: &amp;quot;git&amp;quot;, createCmd: &amp;quot;clone {repo} {dir}&amp;quot;, // 此处修改为 clone --progress {repo} {dir} --depth 1 downloadCmd: &amp;quot;pull --ff-only&amp;quot; }  找到run1()方法, 在 cmd.Stderr = &amp;amp;buf 下添加两行, 如:
+var buf bytes.Buffer cmd.Stdout = &amp;amp;buf cmd.Stderr = &amp;amp;buf cmd.Stdout = os.Stdout // 重定向标准输出 cmd.Stderr = os.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kvm on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/kvm/</link>
+    <description>Recent content in Kvm on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KVM &#43; VNC (ubuntu)</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-20-play-kvm---vnc-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-20-play-kvm---vnc-ubuntu/</guid>
+      <description>之前有进行过ubuntu server的KVM安装，不过似乎没有记录下来&amp;hellip;
+安装gnome-core 个人一直喜欢GNOME做为桌面系统，在此用vnc的时候也希望默认桌面系统是自己熟悉的，如喜欢其他桌面系统相应安装相关桌面系统的包。
+sudo apt-get install gnome-core  安装vnc vnc安装也是一条命令的事情。。。
+sudo apt-get install vnc4server  至此你就可以使用命令vncserver来创建你的密码，一切结束后就可以使用vnc相关连接工具进行使用了，我个人使用的是chrome的插件，https://chrome.google.com/webstore/detail/iabmpiboiopbgfabjmgeedhcmjenhbla
+当然这样还是不够的，没有对vnc默认桌面进行配置
+vim .vnc/xstartup  在此我注解掉所有原始配置，添加下文
+unset SESSION_MANAGER metacity &amp;amp; x-terminal-emulator -geometry 800x600+10+10 -ls -title &amp;quot;$VNCDESKTOP Desktop&amp;quot; &amp;amp; gnome-settings-daemon &amp;amp; gnome-panel &amp;amp;  安装KVM及virt管理软件 sudo apt-get install kvm qemu sudo apt-get install virtinst python-libvirt virt-viewer virt-manager  配置桥接网卡 sudo apt-get install bridge-utils  通过ifconfig命令我们可以发现网卡多了一个virbr0，这个是装完KVM后自己生成的虚拟网卡
+增加一个虚拟网卡br0，让这个网卡和em1进行桥接
+sudo vim /etc/networks/interfaces  在其后追加如下内容
+auto tap0 iface tap0 inet manual up ifconfig $IFACE 0.</description>
+    </item>
+    
+    <item>
+      <title>[转]KVM Disk Performance Optimization</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-21-kvm-disk-performance-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-21-kvm-disk-performance-optimization/</guid>
+      <description>转: http://www.pubyun.com/blog/cloud/kvm%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/
+KVM磁盘性能优化  发表于2013 年 2 月 16 日由refactor *  磁盘性能是虚拟技术中的一个瓶颈，虚拟机由于经过封装以后，磁盘有所下降，尤其要对磁盘性能进行优化。
+优化要点：
+1、在母机（host）上，设置磁盘调度器为 deadline，有两种方法
+– 在启动的时候，加入参数（需要重新启动）： elevator=deadline
+– 或者实时调整参数（不需要重新启动，但是下次启动时丢失）： for f in /sys/block/sd*/queue/scheduler; do echo “deadline” &amp;gt; $f; done
+2、使用 virtio，一定注意，否则导致磁盘性能严重下降
+3、在虚拟机（VM）上，设置磁盘调度器为 noop，有两种方法
+– 在启动的时候，加入参数（需要重新启动）： elevator=noop
+– 或者实时调整参数（不需要重新启动，但是下次启动时丢失）： for f in /sys/block/sd*/queue/scheduler; do echo “noop” &amp;gt; $f; done
+4、尽量使用 LVM 作为虚拟机的磁盘，qcow2会带来额外的负担，从而导致IO性能下降
+5、注意虚拟机内的 virtio驱动程序一定是最新的，特别是windows虚拟机 参考： http://serverfault.com/questions/360718/kvm-low-io-performance
+以下转自：http://www.hengtianyun.com/download-show-id-11.html
+ virtio  virtio是KVM的半虚拟化机制,用以提高IO性能,使用virtio可以显著提高KVM性能。大部分的linux都已经集成virtio驱动，windows则因没有集成virtio驱动所以需要手动安装。
+ 使用writeback缓存选项  针对客户机块设备的缓存,drive有一个子选项cache来设置缓存模式。两个主要的选项为writeback和writethrough,man手册是这样说的
+By default, writethrough caching is used for all block device.</description>
+    </item>
+    
+    <item>
+      <title>[转]桥网络配置</title>
+      <link>https://liuzheng.github.io/before2018/2015-09-21-kvm-bridge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-09-21-kvm-bridge/</guid>
+      <description>转：http://blog.csdn.net/cybertan/article/details/8160102
+在QEMU/KVM的网络使用中，网桥（bridge）模式可以让客户机和宿主机共享一个物理网络设备连接网络，客户机有自己的独立IP地址，可以直接连接与宿主机一模一样的网络，客户机可以访问外部网络，外部网络也可以直接访问客户机（就像访问普通物理主机一样）。即使宿主机只有一个网卡设备，使用bridge的方式也可知让多个客户机与宿主机共享网络设备，其使用非常方便，其应用也非常广泛。
+在qemu-kvm的命令行中，关于bridge模式的网络参数如下：
+-net tap[,vlan=n][,name=str][,fd=h][,ifname=name][,script=file][,downscript=dfile][,helper=helper][,sndbuf=nbytes][,vnet_hdr=on|off][,vhost=on|off][,vhostfd=h][,vhostforce=on|off]  该配置表示连接宿主机的TAP网络接口到n号VLAN中，并使用file和dfile两个脚本在启动客户机时配置网络和在关闭客户机时取消网络配置。
+tap参数，表明使用TAP设备。TAP是虚拟网络设备，它仿真了一个数据链路层设备（ISO七层网络结构的第二层），它像以太网的数据帧一样处理第二层数据报。而TUN 与TAP类似，也是一种虚拟网络设备，它是对网络层设备的仿真。TAP被用于创建一个网络桥，而TUN与路由相关。
+vlan=n 设置该设备VLAN编号，默认值为0。
+name=name 设置名称，在QEMU monior中可能用到，一般由系统自动分配即可。
+fd=h 连接到现在已经打开着的TAP接口的文件描述符，一般来说不要设置该选项，而是让QEMU会自动创建一个TAP接口。当使用了fd=h的选项后，ifname、script、downscript、helper、vnet_hdr等选项都不可使用了（不能与fd选项同时出现在命令行中）。
+ifname=name 设置在宿主机中添加的TAP虚拟设备的名称（如tap1、tap5等等），不设置这个参数时，QEMU会根据系统中目前的情况，产生一个TAP接口的名称。
+script=file 设置宿主机在启动客户机时自动执行的网络配置脚本。如果不指定，其默认值为&amp;rdquo;/etc/qemu-ifu&amp;rdquo;”这个脚本，可指定自己的脚本路径以取代默认值；如果不需要执行脚本，则设置为&amp;rdquo;script=no&amp;rdquo;。
+downscript=dfile 设置宿主机在客户机关闭时自动执行的网络配置脚本。如果不设置，其默认值为&amp;rdquo;/etc/qemu-ifdown&amp;rdquo;；若客户机关闭时宿主机不需要执行脚本，则设置为&amp;rdquo;downscript=no&amp;rdquo;。
+helper=helper 设置启动客户机时在宿主机中运行的辅助程序，包括去建立一个TAP虚拟设备，它的默认值为/usr/local/libexec/qemu-bridge-helper，一般不用自定义，采用默认值即可。
+sndbuf=nbytes 限制TAP设备的发送缓冲区大小为n字节，当需要流量进行流量控制时可以设置该选项。其默认值为&amp;rdquo;sndbuf=0&amp;rdquo;，即不限制发送缓冲区的大小。
+其余几个选项都是与virtio相关的，这里暂不做过多的介绍。
+上面介绍了使用TAP设备的一些选项，接下来通过在宿主机中执行如下几个步骤来实现网桥方式的网络配置。
+（1）要是用bridge模式的网络配置，首先需要安装两个RPM包，即：bridge-utils和tunctl，它们提供所需的brctl、tunctl命令行工具。可以用yum工具安装它们，如下：
+[root@jay-linux ~]# yum install bridge-utils tunctl  （2）查看tun模块是否加载，如下：
+[root@jay-linux ~]# lsmod | grep tun tun 12197 2  如果tun模块没有加载，则运行&amp;rdquo;modprobe tun&amp;rdquo;命令来加载即可；当然，如果已经将tun编译到内核（可查看内核config文件中是否有&amp;rdquo;CONFIG_TUN=y&amp;rdquo;选项），则不需要加载了；而如果内核完全没有配置TUN模块，则需要重新编译内核才行了。
+（3）检查/dev/net/tun的权限，需要让当前用户拥有可读可写的权限。
+[root@jay-linux ~]# ll /dev/net/tun  crw-rw-rw- 1 root root 10, 200 Jul 20 16:23 /dev/net/tun
+（4）建立一个bridge，并将其绑定到一个可以正常工作的网络接口上，并让bridge成为连接本机与外部网络的接口。主要的配置命令如下面命令行所示。
+[root@jay-linux ~]# brctl addbr br0 #添加br0这个bridge [root@jay-linux ~]# brctl addbr br0 eth0 #将br0与eth0绑定起来 [root@jay-linux ~]# brctl stp br0 on #将br0加入到STP协议中 [root@jay-linux ~]# dhclient br0 #将br0的网络配置好 [root@jay-linux ~]# route #参看路由表是否正常配置 Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 192.</description>
+    </item>
+    
+  </channel>
+</rss>

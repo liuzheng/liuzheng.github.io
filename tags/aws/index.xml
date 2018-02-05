@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/aws/</link>
+    <description>Recent content in Aws on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fxxk AWS Elasticsearch service</title>
+      <link>https://liuzheng.github.io/before2018/2017-05-25-fxxk-aws-elasticsearch-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2017-05-25-fxxk-aws-elasticsearch-service/</guid>
+      <description>AWS Elasticsearch I admmit AWS have awsome services in his provide. But the Elasticsearch service is not the one.
+It cost too much money!
+You can find the cost list at here: https://aws.amazon.com/elasticsearch-service/pricing/
+Here have a limit Volume size must be an integer between 10 and 100/512/1536.
+So, that cost too much when I have more than 1TB data.
+And it have limit in the Elasticsearch&amp;rsquo;s version, you know a new version about Elasticsearch will wait so long time until aws support.</description>
+    </item>
+    
+  </channel>
+</rss>

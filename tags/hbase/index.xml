@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hbase on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/hbase/</link>
+    <description>Recent content in Hbase on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/hbase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HBase 单机运行出的神奇的问题</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-15-hbase-single/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-15-hbase-single/</guid>
+      <description>困扰一周的问题！！！已经有人提交过这个了 https://issues.apache.org/jira/browse/HBASE-3487
+regionserver.HRegionServer: No master found; retry  这个错误我是百思不得其解！
+解决方法，修改 $HBASE_HOME/conf/regionservers , 里面要保证三行以上吧
+又死了，原因暂时又不懂了。。。。
+出错原因
+由于实验室环境条件限制，暂时无法使用多机进行hadoop配置，我就腾出一台服务器。。。
+所以regionservers我这里只配了一个，这就是坑爹所在。容后查文档研究。。。
+应该是xxx选举所致</description>
+    </item>
+    
+    <item>
+      <title>Python, Hbase, Thrift</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-21-python-hbase-thrift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-21-python-hbase-thrift/</guid>
+      <description>使用 Python 对 Hbase 做操作初期配置 首先下载 thrift 用来生成 python hbase 包
+https://thrift.apache.org/download
+下载 Hbase 源码包
+http://www.apache.org/dyn/closer.cgi/hbase/
+Windows 篇 http://apache.fayea.com/apache-mirror/thrift/0.9.1/thrift-0.9.1.exe
+将其拷贝到默认 PATH 路径下，若喜欢安文件分类，手动加PATH吧，我懒。。。直接加到Git/bin下面
+找到 Hbase 源码文件中 hbase.thrift 。当然，你会发现上级目录有一个thrift2，其对比我在该链接(Thrift介绍与应用（三）—hbase的thrift接口)[http://blog.csdn.net/guxch/article/details/12163047]找到了他们的不同，深入了解的话可以细看。
+cd 到刚才找到的文件，运行
+thrift --gen py hbase.thrift  会生成 gen-py 文件夹，将其内部的 hbase 复制到 $PYTHON/Lib\site-packages 下即可 import 了
+Ubuntu 篇 安装必要的包
+sudo apt-get install python-dev automake libtool flex bison pkg-config g++  安装boost
+sudo apt-get install libboost-test-dev  cd 到 thrift 文件夹，运行
+./configure --without-ruby --without-php --without-cpp  我就要一个 Python ， 运行结果如下</description>
+    </item>
+    
+  </channel>
+</rss>

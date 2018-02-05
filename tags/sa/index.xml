@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sa on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/sa/</link>
+    <description>Recent content in Sa on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/sa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansible Inventory</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-06-ansible-inventory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-06-ansible-inventory/</guid>
+      <description>参考：http://docs.ansible.com/intro_inventory.html
+由于实习要求我学习Ansible，故而开始看，今天遇到的问题是hosts的分组
+我一直都是比较奇葩的，所以就把服务器分组就折腾的各种“优雅”
+遇到的问题是未对官方文档详细查看，仅仅看了中文文档。
+这里是一份 /etc/ansible/hosts 的样本
+mail.example.com [webservers] foo.example.com bar.example.com [dbservers] one.example.com two.example.com three.example.com  对于我来说，想做到的就是像盗梦空间里那样的各种嵌套，由于不熟练，以为分组仅仅是多加一个中括号而已，故而出现了连接问题
+我是这样干的，/etc/ansible/hosts
+[AAA] IP1 [BBB] IP2 [CCC] AAA BBB $ ansible CCC -m ping CCC | FAILED =&amp;gt; SSH encountered an unknown error during the connection. We recommend you re-run the command using -vvvv, which will enable SSH debugging output to help diagnose the issue  这里就出问题了，原因就是分组他有特殊的规则，必须后面加上:children，想想也对，符合逻辑，不然会出不知道的bug
+[AAA] IP1 [BBB] IP2 [CCC：children] AAA BBB  奇葩的我当然还没结束</description>
+    </item>
+    
+    <item>
+      <title>CentOS6 Nginx 502 proxy_pass</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-27-centos6-nginx-502-proxy_pass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-27-centos6-nginx-502-proxy_pass/</guid>
+      <description>困扰一天了。。。
+SELinxu在这台服务器上居然开了
+查看SELinux状态： 1、/usr/sbin/sestatus -v ##如果SELinux status参数为enabled即为开启状态
+SELinux status: enabled
+2、getenforce ##也可以用这个命令检查
+Nginx做反代啊什么各种502
+临时 setsebool -P httpd_can_network_connect 1  永久 修改/etc/selinux/config 文件
+将SELINUX=enforcing改为SELINUX=disabled
+有时候iptables也会来凑热闹 chkconfig --level 12345 iptables off chkconfig --level 12345 ip6tables off service iptables stop service ip6tables stop  参考
+http://stackoverflow.com/questions/25995060/nginx-cannot-connect-to-jenkins-on-centos-7
+http://www.cnblogs.com/xiangxiaodong/</description>
+    </item>
+    
+    <item>
+      <title>实验室集群重装Plan</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-14-linux-system-administrator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-14-linux-system-administrator/</guid>
+      <description> 准备开始对实验室的集群重装，今天先拉出一台机器做前期调试
+实验室机器是8台 Dell R720，每台机器挂有11块1T的SAS盘。
+现有机器运行着CentOS6.5，由于曾经恶劣的开发使用策略and历史遗留问题，导致后期开发使用存在着相当大的隐患，各种整理系统已经无法弥补。。。
+等待各种项目结束，终于快有机会整顿了。。。
+需求 实验室基本不会有多少运维的人，大家都只搞开发，还好机器能抗住这么折腾
+硬盘  硬盘热插拔：硬盘总有蛋疼的时候被人热插拔，原先的系统就会跪，卷标出错。。。每次都需要到Dell的BIOS里去调。。。蛋疼至极！
+ 硬盘新增：增加硬盘也停麻烦（对于不熟Linux的人来说），一直都木有一个文档什么给留下
+ 硬盘移除：服务器运行当然会存在硬盘跪的情况，对于原先的系统来说，操作没有手册。。。还是得写GUIDE留下。。。
+  系统  原先是CentOS6.x 被我一点点升级上来了，经讨论各个开发（主要是Spake组他们说CentOS7不支持某些包，Java这边我知道是木有问题的）决定保持CentOS6，使用6.5版本
+ 之前管理集群都是一台台机器敲命令，鉴于使用者敲的命令比较单一，我提供了pssh的解决方案，并写了一些pssh的简单命令，整顿后仍打算保留该功能，增加salt管理方法
+ 图形界面什么我最不喜欢了，怎耐各个开发者强烈要求保留图形界面功能。。。
+ 系统原先我打算是3台Ubuntu和5台CentOS，Ubuntu做开发，CentOS作为项目的稳定运行环境，稳定运行环境可以使用开发机的计算资源，开发机则独立，不知道能否征得其他人的同意。。。
+  环境  考虑使用Docker之类的容器来隔离应用
+ 为各个开发者提供独立的开发测试环境，不允许各开发者对系统做修改，之前发生过某人将Hadoop环境做修改导致博士无法正常开发。。。麻烦！
+ 由于Hadoop木有更多的权限管理机制，考虑使用多Hadoop环境来隔离开发环境和稳定运行环境
+ 期望能完成服务器运维的web化管理系统
+  </description>
+    </item>
+    
+  </channel>
+</rss>

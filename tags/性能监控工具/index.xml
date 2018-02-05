@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>性能监控工具 on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 性能监控工具 on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]你值得拥有 —— 25 个 Linux 性能监控工具</title>
+      <link>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-03-25-linux_system_moniter/</guid>
+      <description>原文：http://linoxide.com/monitoring-2/linux-performance-monitoring-tools/作者： Adrian Dinu
+译文：LCTT http://linux.cn/article-4481-1.html 译者： andyxue
+一段时间以来，我们在网上向读者介绍了如何为Linux以及类Linux操作系统配置多种不同的性能监控工具。在这篇文章中我们将罗列一系列使用最频繁的性能监控工具，并对介绍到的每一个工具提供了相应的简介链接，大致将其划分为两类，基于命令行的和提供图形化接口的。
+基于命令行的性能监控工具 1. dstat - 多类型资源统计工具 该命令整合了vmstat，iostat和ifstat三种命令。同时增加了新的特性和功能可以让你能及时看到各种的资源使用情况，从而能够使你对比和整合不同的资源使用情况。通过不同颜色和区块布局的界面帮助你能够更加清晰容易的获取信息。它也支持将信息数据导出到cvs格式文件中，从而用其他应用程序打开，或者导入到数据库中。你可以用该命令来监控cpu，内存和网络状态随着时间的变化。
+##　2. atop - 相比top更好的ASCII码体验 这个使用ASCII码显示方式的命令行工具是一个显示所有进程活动的性能监控工具。它可以展示每日的系统日志以进行长期的进程活动分析，并高亮显示过载的系统使用资源。它包含了CPU，内存，交换空间，磁盘和网络层的度量指标。所有这些功能只需在终端运行atop即可。
+# atop  当然你也可以使用交互界面来显示数据并进行排序。 3. Nmon - 类Unix系统的性能监控 Nmon是Nigel&amp;rsquo;s Monitor缩写，它最早开发用来作为AIX的系统监控工具。如果使用在线模式，可以使用光标键在屏幕上操作实时显示在终端上的监控信息。使用捕捉模式能够将数据保存为CSV格式，方便进一步的处理和图形化展示。 4. slabtop - 显示内核slab缓存信息 这个应用能够显示缓存分配器是如何管理Linux内核中缓存的不同类型的对象。这个命令类似于top命令，区别是它的重点是实时显示内核slab缓存信息。它能够显示按照不同排序条件来排序显示缓存列表。它同时也能够显示一个slab层信息的统计信息的题头。举例如下：
+# slabtop --sort=a # slabtop -s b # slabtop -s c # slabtop -s l # slabtop -s v # slabtop -s n # slabtop -s o  5. sar - 性能监控和瓶颈检查 sar 命令可以将操作系统上所选的累积活动计数器内容信息输出到标准输出上。其基于计数值和时间间隔参数的审计系统，会按照指定的时间间隔输出指定次数的监控信息。如果时间间隔参数为设置为0，那么sar命令将会显示系统从开机到当时时刻的平均统计信息。有用的命令如下：</description>
+    </item>
+    
+  </channel>
+</rss>

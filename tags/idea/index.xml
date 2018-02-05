@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Idea on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/idea/</link>
+    <description>Recent content in Idea on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/idea/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>robotIdea</title>
+      <link>https://liuzheng.github.io/before2018/2015-02-26-robotidea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-02-26-robotidea/</guid>
+      <description>刚想到的，其实我可以不用树莓派做摄像头主机，直接用小本加上之前买的无线网络摄像头做
+小本上做好路由和ftp服务就行了，主要还要加上电源和轮子，这个应该不难，电源一般36V，看看有没有匹配的电源适配器就行了</description>
+    </item>
+    
+  </channel>
+</rss>

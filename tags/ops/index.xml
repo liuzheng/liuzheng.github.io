@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ops on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/ops/</link>
+    <description>Recent content in Ops on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/ops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysql slow log</title>
+      <link>https://liuzheng.github.io/before2018/2015-08-13-mysql-slow-log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-08-13-mysql-slow-log/</guid>
+      <description>上午MySQL日志打爆，同事之前已经设置slow_query_log 5 秒，经过排查，是某表未加index，并且 log_queries_not_using_indexes is ON
+故将该表加index
+使用ALTER TABLE语句创建索引。 语法如下：
+alter table table_name add index index_name (column_list) ; alter table table_name add unique (column_list) ; alter table table_name add primary key (column_list) ;  另一解决办法是将 log_queries_not_using_indexes set to OFF
+由于不想改各种表结构，两个都做了。。。
+参考https://dev.mysql.com/doc/refman/5.6/en/slow-query-log.html
+slow_query_log = 1 slow_query_log_file = /var/log/mysql/slow.log long_query_time = 10 log_queries_not_using_indexes = 1  </description>
+    </item>
+    
+    <item>
+      <title>现代运维的坑</title>
+      <link>https://liuzheng.github.io/before2018/2016-07-05-ops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-07-05-ops/</guid>
+      <description>引言 最近发现各种软件工具越来越傻瓜化了，这是好事啊，任何软件都是直接下载即可安装，或者直接可以从源中获得，完全没有了当年调优配参数的感觉。。。
+表面上着看上去是好事啊，减轻了运维的负担，“降低”了运维的门槛，但是年纪稍长的运维就会发现各个进程之间直接产生了竞争系统资源的情况。
+在未对系统上跑的任务做合理分配（穷，机器少，都跑一台上了），包括分时分资源上，直接导致了某些高能业务某一时刻产生资源竞争。
+使用nice去初步限制优先级 参考此文http://www.webtag123.com/linux/47327.html
+通常linux下限制cpu使用有三种方法：  nice/renice : 调整进程使用cpu的优先级 cpulimit ：不修改进程的nice值，通过暂停进程一段时间，来限制cpu使用 cgroups :内核提供的机制，可以限制、记录、隔离一组进程所使用的cpu、内存、磁盘、网络等资源，是docker等容器的基础技术之一
+ 限制磁盘io ：  ionice : 调整io调度的优先级 cgroups
+ 这里只说nice和ionice，实际上nice和ionice只是改变优先级，并没有真正的限制</description>
+    </item>
+    
+  </channel>
+</rss>

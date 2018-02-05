@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hack on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/hack/</link>
+    <description>Recent content in Hack on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/hack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sqlmap 攻击日志分析及自动化解决想法</title>
+      <link>https://liuzheng.github.io/before2018/2016-01-20-sqlmap-log-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-01-20-sqlmap-log-analysis/</guid>
+      <description>以下内容高危，如你知道密码，请输入
+以下是我用sqlmap扫的日志，这是最简单的扫描记录 GET /?a=1 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=2904 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%22%28%27%27%28%22%28%27%29%28 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%208676%3D9977%20AND%20%289633%3D9633 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%203925%3D3925%20AND%20%289861%3D9861 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%29%20AND%20636%3D7258%20AND%20%285513%3D5513 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%204986%3D6711 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%203925%3D3925 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%20AND%203864%3D9683 HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%20940%3D4505%20AND%20%28%27konc%27%3D%27konc HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%203925%3D3925%20AND%20%28%27FFCP%27%3D%27FFCP HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%29%20AND%207381%3D1001%20AND%20%28%27OLcv%27%3D%27OLcv HTTP/1.1 sqlmap/0.9 (http://sqlmap.sourceforge.net) GET /?a=1%27%20AND%202327%3D9115%20AND%20%27Qlha%27%3D%27Qlha HTTP/1.1 sqlmap/0.</description>
+    </item>
+    
+  </channel>
+</rss>

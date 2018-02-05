@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dailyshell on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/dailyshell/</link>
+    <description>Recent content in Dailyshell on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/dailyshell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>shell变量</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-28-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-28-dailyshell/</guid>
+      <description>shell变量
+${varname:-word} 如varname存在且非null，则返回其值，否则返回word ${varname:=word} 如varname存在且非null，则返回其值，否则设置为word ${varname:?word} 如varname存在且非null，则返回其值，否则显示varname:word ${varname:+word} 如varname存在且非null，则返回word，否则返回null ${varname#key} 从头开始删除关键词，执行最短匹配 ${varname##key} 从头开始删除关键词，执行最长匹配 ${varname%key} 从尾开始删除关键词，执行最短匹配 ${varname%%key} 从尾开始删除关键词，执行最长匹配 ${varname/old/new} 将old替换为new，仅替换第一个出现的old ${varname//old/new} 将old替换为new，替换所有old  </description>
+    </item>
+    
+    <item>
+      <title>挂载 smb 盘</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-20-daily-shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-20-daily-shell/</guid>
+      <description>挂载 smb 盘时 mount -t 是 cifs ，不是 smbfs，被坑了一晚上。。。
+mount -t cifs //IP/share /tmp/mountPoint  今天开始准备把数据导出到hdfs里
+gunzip -c 20131003.log.gz | sed &#39;s/&amp;quot;&amp;quot; //&#39;|sed &#39;s/&amp;quot; &amp;quot;/&amp;quot;\t&amp;quot;/g&#39; | awk -F&amp;quot;\t&amp;quot; &#39;BEGIN{}{if($13!=&amp;quot;\&amp;quot;400\&amp;quot;&amp;quot; &amp;amp;&amp;amp; $13!=&amp;quot;\&amp;quot;403\&amp;quot;&amp;quot; &amp;amp;&amp;amp; $13!=&amp;quot;\&amp;quot;404\&amp;quot;&amp;quot;){print $0;}}END{}&#39; &amp;gt; /opt/yun/20131003.log.lz  </description>
+    </item>
+    
+    <item>
+      <title>某日志处理</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-14-dailyshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-14-dailyshell/</guid>
+      <description>cat 20131001.log | sed &amp;rsquo;s/&amp;ldquo;&amp;rdquo; //&amp;lsquo;|sed &amp;rsquo;s/&amp;rdquo; &amp;ldquo;/&amp;rdquo;\t&amp;rdquo;/g&amp;rsquo; | awk -F&amp;rdquo;\t&amp;rdquo; &amp;lsquo;BEGIN{}{if($13!=&amp;rdquo;\&amp;ldquo;400\&amp;ldquo;&amp;rdquo; &amp;amp;&amp;amp; $13!=&amp;rdquo;\&amp;ldquo;403\&amp;ldquo;&amp;rdquo; &amp;amp;&amp;amp; $13!=&amp;rdquo;\&amp;ldquo;404\&amp;ldquo;&amp;rdquo;){print $0;}}END{}&amp;rsquo; &amp;gt; 20131001.log.lz</description>
+    </item>
+    
+  </channel>
+</rss>

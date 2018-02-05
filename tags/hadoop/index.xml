@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hadoop on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/hadoop/</link>
+    <description>Recent content in Hadoop on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS6 x64 Hadoop编译</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-07-centos6_x64_hadoop_warnning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-07-centos6_x64_hadoop_warnning/</guid>
+      <description>由于各种“偷懒”，架设hadoop集群的时候按照正常步骤安装，最近发现日志里 总有一堆的java报错，通过各方帖子了解是hadoop官方默认的是32位，而我这里 使用的是64位的centos6。好吧，编译了要
+编译环境安装 yum install cmake lzo-devel zlib-devel gcc autoconf automake libtool ncurses-devel openssl-devel gcc-c++  maven 配置 wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz  解压，并cd到/usr/local/目录
+对解压的文件在/usr/local/目录下做软连接
+在/etc/profile后追加
+export MAVEN_HOME=/usr/local/maven export PATH=$MAVEN_HOME/bin:$PATH  source一下
+# mvn -v Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-15T01:29:23+08:00) Maven home: /usr/local/maven Java version: 1.7.0_71, vendor: Oracle Corporation Java home: /opt/jdk1.7.0_71/jre Default locale: en_US, platform encoding: UTF-8 OS name: &amp;quot;linux&amp;quot;, version: &amp;quot;2.6.32-504.3.3.el6.x86_64&amp;quot;, arch: &amp;quot;amd64&amp;quot;, family: &amp;quot;unix&amp;quot;  protoc 安装 需要gcc-c++ 在网站 http://code.</description>
+    </item>
+    
+    <item>
+      <title>Hadoop 64 fix</title>
+      <link>https://liuzheng.github.io/before2018/2015-01-20-hadoop-64-fix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2015-01-20-hadoop-64-fix/</guid>
+      <description>http://blog.csdn.net/sunflower_cao/article/details/38513839
+解决办法一： hadoop@master~: sudo gedit ~/.bash_profile 然后输入如下内容并保存：
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  解决办法二： 打开$HADOOP_HOME/etc/hadoop/hadoop-env.sh文件，输入如下内容并保存
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  解决办法三： 打开$HADOOP_HOME/etc/hadoop/yarn-env.sh，在任意位置输入如下内容
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native export HADOOP_OPTS=&amp;quot;-Djava.library.path=$HADOOP_PREFIX/lib&amp;quot;  最后在运行$HADOOP_HOME/sbin/start-all.sh</description>
+    </item>
+    
+    <item>
+      <title>Hadoop with Python 遇到的问题</title>
+      <link>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-10-27-hadoop-with-python-bug/</guid>
+      <description>昨天使用了 Python 折腾　Hadoop ，遇到一个神经的问题，纠结了一整天
+使用
+hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar -mapper map.py -reducer reduce.py -input /data/*.txt -output /output  命令时，一直提示我如下错误
+java.io.IOException: Cannot run program &amp;quot;/home/liuzheng/map.py&amp;quot;: error=2, No such file or directory at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047) at org.apache.hadoop.streaming.PipeMapRed.configure(PipeMapRed.java:209) at org.apache.hadoop.streaming.PipeMapper.configure(PipeMapper.java:66) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:38) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:606) at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:106) at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:75) at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133) at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426) at org.</description>
+    </item>
+    
+  </channel>
+</rss>

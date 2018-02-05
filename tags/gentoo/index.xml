@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gentoo on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/gentoo/</link>
+    <description>Recent content in Gentoo on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/gentoo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gentoo集群架设（1）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster1/</guid>
+      <description>gentoo install 编译内核省略
+以下是最初使用的方法 passwd /etc/init.d/sshd start fdisk /dev/sda 300M 4G mkfs.ext4 /dev/sda1 mkfs.ext4 /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 scp portage-*.tar.bz2 root@192.168.1.133:/mnt/gentoo/ scp stage3-*.tar.bz2 root@192.168.1.133:/mnt/gentoo/ tar jxf stage3-*.tar.bz2 tar jxf portage-*.tar.bz2 -C /mnt/gentoo/usr mount /dev/sda3 /mnt/gentoo mkdir /mnt/gentoo/boot mount /dev/sda3 /mnt/gentoo mount /dev/sda1 /mnt/gentoo/boot mount -t proc none /mnt/gentoo/proc mount -o bind /dev /mnt/gentoo/dev cp -L /etc/resolv.conf /mnt/gentoo/etc/ chroot /mnt/gentoo /bin/bash emerge --sync --quiet cd usr/src/linux make menuconfig rsync -azIHP --exclude=src/* --exclude=portage/distfiles/* -e ssh /usr/ root@192.</description>
+    </item>
+    
+    <item>
+      <title>Gentoo集群架设（2）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster2/</guid>
+      <description>主要使用到的是distcc这个分布式编译软件
+# emerge distcc  注意必须在每一台机器上都安装该软件，并采用相同配置
+# vim /etc/portage/make.conf MAKEOPTS=&amp;quot;-jN -lM&amp;quot; FEATURES=&amp;quot;distcc&amp;quot;  这里N参数大家都应该清楚，是cpu个数，这里强调一下是所有机器的cpu数，官方是这样叙述的
+A common strategy is to set N as twice the number of total (local + remote) CPUs + 1 and M as number of local CPUs.
+两倍的cpu个数然后还要加一，我觉得还是安小的来（两倍的cpu数还要小一点），毕竟都分布式编译了，保证系统稳定，我是这么认为的
+M参数是本地的cpu参数，是为了防止分布失败时不至于线程数过多拖垮系统，注意M前面是L，不要看着像一来填一了
+你可以使用
+# /usr/bin/distcc-config --set-hosts &amp;quot;Host1IP Host2IP Host3IP Host4IP&amp;quot;  来设定机器数
+也可以在make.conf里添加这条
+DISTCC_HOSTS=&amp;quot;Host1IP,Host2IP,Host3IP,Host4IP&amp;quot;  据说越前面的越会被用到
+启动并添加开机启动
+# rc-update add distccd default # /etc/init.d/distccd start  好了，可以配置ssh了
+通过ssh-keygen等一系列操作将集群可以通过无密码进行访问，这点从略
+对于蛋疼的SA来说，端口啥啥的总要改改，官方也给了教程
+# ssh-keygen -b 2048 -t rsa -f /var/tmp/portage/.</description>
+    </item>
+    
+    <item>
+      <title>Gentoo集群架设（3）</title>
+      <link>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-04-29-gentoocluster3/</guid>
+      <description>前文已架设完毕gentoo的分布式编译集群，系统维护不可能每台机器都编译一次或者手动拷贝软件
+故配置gentoo buildhost来分发二进制包
+首先安装vsftpd
+emerge -av vsftpd  添加vsftpd自启动
+rc-update add vsftpd default  新建/home/ftp/gentoo
+修改/home/ftp/gentoo文件夹777权限
+mount --bind /usr/portage/packages /home/ftp/gentoo/ vim /etc/local.d/mount.start中添加“mount --bind /usr/portage/packages /home/ftp/gentoo/”  修改 /etc/vsftpd/vsftpd.conf，安自己需要配置，不赘述</description>
+    </item>
+    
+  </channel>
+</rss>

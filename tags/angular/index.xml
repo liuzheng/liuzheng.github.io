@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on LZ&#39;s Blog</title>
+    <link>https://liuzheng.github.io/tags/angular/</link>
+    <description>Recent content in Angular on LZ&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://liuzheng.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular change interpolateProvider</title>
+      <link>https://liuzheng.github.io/before2018/2014-12-07-angular-change-interpolateprovider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2014-12-07-angular-change-interpolateprovider/</guid>
+      <description>修改Angular的标识符，避免和Django冲突
+xxx.config(function($interpolateProvider){ $interpolateProvider.startSymbol(&#39;{[{&#39;); $interpolateProvider.endSymbol(&#39;}]}&#39;); })  </description>
+    </item>
+    
+    <item>
+      <title>Angular使用总结</title>
+      <link>https://liuzheng.github.io/before2018/2016-05-02-angular2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liuzheng.github.io/before2018/2016-05-02-angular2/</guid>
+      <description> 为什么想到用Angular 之前室友在他的项目中使用了Angular，并且觉得很赞，我呢一直没有项目需求来使用Angular，恰逢Jumpserver开发组打算重构整个项目，故而决定使用Angular来作为前端js框架。
+学习曲线 对于有过Angularjs的项目经验的我来说，个人心理感觉其实这个应该没有太大问题，Angularjs本身就是可以说是为后端开发人员设计的前端框架，但是据说学习曲线很陡，我并没啥感觉，觉得还是比较好理解的，也很比较容易掌握。对于Angular来说，我有Python语言的背景觉得这语言设计的真是有些反人类啊。
+import {Component} from &#39;angular2/core&#39;;  天晓得为什么要这么设计
+from &#39;angular2/core&#39; import {Component}  这样不是很通俗也很能让IDE智能补全么。。。
+其他部分到还好，据说Dart更像Java，不过这个对于外界（google内部是用Dart的）来说，ts更易推广，我就没花精力去看Dart了，后期有时间再弄弄吧。
+背景知识 http://angularjs.cn/A1er
+https://gf-rd.gitbooks.io/angular-2-step-by-step/content/
+语法清单 https://segmentfault.com/a/1190000004071388
+单元测试 https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.mnwfhbm6k
+集合 https://segmentfault.com/a/1190000003761054
+这些简单的学习我就懒的帖了，网上都有~
+技术想法 </description>
+    </item>
+    
+  </channel>
+</rss>
