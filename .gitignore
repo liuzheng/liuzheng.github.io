@@ -1,0 +1,5 @@
+.idea/
+deploy.sh
+dist/
+themes/
+
