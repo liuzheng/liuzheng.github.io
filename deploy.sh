@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 hugo -d dist
-
+cp CNAME dist/
 set -o errexit #abort if any command fails
 me=$(basename "$0")
 
