@@ -36,7 +36,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is the personal blog.
 author: liuzheng
 email: bug
-avatar: assets/images/avatar.jpg
+avatar: https://avatars2.githubusercontent.com/u/1198380
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "/" # the subpath of your site, e.g. /blog
