@@ -97,13 +97,15 @@ func timeSleep(ns int64) {
 
 举个例子,假设我们的package布局如下:
 
- > ├── a
- > │   └── a.go
- > ├── b
- > │   ├── b.go
- > │   └── internal.s
- > └── main
- >     └── main.go
+```
+├── a
+│   └── a.go
+├── b
+│   ├── b.go
+│   └── internal.s
+└── main
+    └── main.go
+```
 
 package **a** 定义了私有的方法,并加上 `go:linkname`指令， package **b** 可以调用 package **a**的私有方法。 **main.go** 测试访问 **b**中的函数。
 
