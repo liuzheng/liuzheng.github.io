@@ -35,7 +35,7 @@ subtitle: Talk is cheap, show me the code!
 description: >- # this means to ignore newlines until "baseurl:"
   This is the personal blog.
 author: liuzheng
-email: bug
+email: bug@ilz.me
 avatar: https://avatars2.githubusercontent.com/u/1198380
 
 # You'll want to customize url and baseurl for your own site:
