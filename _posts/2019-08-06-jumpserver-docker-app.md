@@ -40,12 +40,12 @@ tags: [Jumpserver]
 ## 方案细节
 可以参考如下几个 repo 进行容器封装
 
-    * [DBeaver](https://github.com/liuzheng/dbeaver-in-docker)
-    * [mysql workbench](https://github.com/liuzheng/mysqlworkbench-in-docker)
-    * [wps](https://github.com/liuzheng/wps-in-docker)
-    * [term](https://github.com/liuzheng/term-in-docker)
-    * [firefox](https://github.com/liuzheng/firefox-in-docker)
-    * [chrome](https://github.com/liuzheng/chrome-in-docker)
+* [DBeaver](https://github.com/liuzheng/dbeaver-in-docker)
+* [mysql workbench](https://github.com/liuzheng/mysqlworkbench-in-docker)
+* [wps](https://github.com/liuzheng/wps-in-docker)
+* [term](https://github.com/liuzheng/term-in-docker)
+* [firefox](https://github.com/liuzheng/firefox-in-docker)
+* [chrome](https://github.com/liuzheng/chrome-in-docker)
 
 这里仅列出撰文时我所封装的容器，如需要看到更多可以访问该链接<https://github.com/liuzheng?utf8=%E2%9C%93&tab=repositories&q=in-docker&type=&language=>
 
