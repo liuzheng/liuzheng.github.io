@@ -77,46 +77,12 @@ ip route add default via 172.16.0.1 dev eth0
 目前研究dhcp的方案，反正装个dhcp服务即可
 
 # 一些操作
-## 加载网卡
-https://github.com/firecracker-microvm/firecracker/blob/main/docs/api_requests/patch-network-interface.md
-```
-curl --unix-socket /tmp/firecracker.socket -i \
-  -X PUT 'http://localhost/network-interfaces/eth0' \
-  -H 'Accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "iface_id": "eth0",
-      "guest_mac": "AA:FC:00:00:00:01",
-      "host_dev_name": "tap0"
-    }'
-```
-## 挂盘
-https://github.com/firecracker-microvm/firecracker/blob/main/docs/api_requests/patch-block.md
+## SendCtrlAltDel Example
 
 ```bash
-curl --unix-socket ${socket} -i \
-     -X PUT "http://localhost/drives/dummy" \
-     -H "accept: application/json" \
-     -H "Content-Type: application/json" \
-     -d "{
-             \"drive_id\": \"dummy\",
-             \"path_on_host\": \"${drive_path}\",
-             \"is_root_device\": false,
-             \"is_read_only\": false,
-             \"cache_type\": \"Writeback\"
-         }"
-```
-
-## 变更实例大小
-```
-curl --unix-socket /tmp/firecracker.socket -i  \
-  -X PUT 'http://localhost/machine-config' \
-  -H 'Accept: application/json'            \
-  -H 'Content-Type: application/json'      \
-  -d '{
-      "vcpu_count": 2,
-      "mem_size_mib": 1024
-  }'
+curl --unix-socket /tmp/firecracker.socket -i \
+    -X PUT "http://localhost/actions" \
+    -d '{ "action_type": "SendCtrlAltDel" }'
 ```
 
 ## 扩容rootfs大小
