@@ -7,7 +7,7 @@ tags: [life]
 ---
 
 
-转自：http://blog.douguo.com/?p=6677
+转自：https://blog.douguo.com/?p=6677
 
 当西红柿遇到鸡蛋，你会想到什么？
 

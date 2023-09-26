@@ -20,7 +20,7 @@ tags: [代码规范, Google, HTML/CSS, style guide]
 对于HTML代码：
 
     <!-- 不建议使用 -->
-    <script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
+    <script src="https://www.google.com/js/gweb/analytics/autotrack.js"></script>
 
     <!-- 建议使用 -->
     <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
@@ -29,7 +29,7 @@ tags: [代码规范, Google, HTML/CSS, style guide]
 
     /* 不建议使用 */
     .example {
-      background: url(http://www.google.com/images/example);
+      background: url(https://www.google.com/images/example);
     }
 
     /* 建议使用 */

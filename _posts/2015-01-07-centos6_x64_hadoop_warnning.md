@@ -19,7 +19,7 @@ tags: [hadoop]
 
 # maven 配置
 
-    wget  http://mirrors.cnnic.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz
+    wget  https://mirrors.cnnic.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz
 
 解压，并cd到/usr/local/目录
 
@@ -42,7 +42,7 @@ source一下
 
 # protoc 安装
 需要gcc-c++
-在网站 http://code.google.com/p/protobuf/downloads/list上可以下载 Protobuf 的源代码,目前最新版本是2.4.1.解压缩,编译,步骤如下:
+在网站 https://code.google.com/p/protobuf/downloads/list上可以下载 Protobuf 的源代码,目前最新版本是2.4.1.解压缩,编译,步骤如下:
 
     tar -xzf protobuf-2.4.1.tar.gz
     cd protobuf-2.4.1
@@ -59,7 +59,7 @@ source一下
 
 # 安装Ant
 
-    wget http://mirrors.sonic.net/apache/ant/binaries/apache-ant-1.9.4-bin.tar.gz
+    wget https://mirrors.sonic.net/apache/ant/binaries/apache-ant-1.9.4-bin.tar.gz
 解压并在/usr/local/下做软连
 
     export ANT_HOME=/usr/local/ant
@@ -69,7 +69,7 @@ source一下
 
 下载一个源文件
 
-    wget http://apache.arvixe.com/hadoop/common/stable2/hadoop-2.6.0-src.tar.gz
+    wget https://apache.arvixe.com/hadoop/common/stable2/hadoop-2.6.0-src.tar.gz
 
 常规解压
 
@@ -80,4 +80,4 @@ cd到目录有运行
 
 
 # 参考
-<http://www.eziep.net/details/136.html>
+<https://www.eziep.net/details/136.html>

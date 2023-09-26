@@ -8,7 +8,7 @@ tags: [MATLAB, PageRank]
 ---
 
 
-从网上找到 [Page-Rank-Matlab-Code](http://people.revoledu.com/kardi/tutorial/PageRank/Page-Rank-Matlab-Code.html) 提及 MATLAB 的 PageRank 代码，使用 `profile viewer` 发现有一段 `for` 效率极低
+从网上找到 [Page-Rank-Matlab-Code](https://people.revoledu.com/kardi/tutorial/PageRank/Page-Rank-Matlab-Code.html) 提及 MATLAB 的 PageRank 代码，使用 `profile viewer` 发现有一段 `for` 效率极低
 
 源代码如下
 
@@ -24,7 +24,7 @@ tags: [MATLAB, PageRank]
     % Read the full tutorial for more explanation. 
     % 
     % (c) 2012 Kardi Teknomo 
-    % http://people.revoledu.com/kardi/tutorial/ 
+    % https://people.revoledu.com/kardi/tutorial/ 
     %%%%%%%%%%%%%%%%%%%%%%% 
     if nargin<1 
         L=[1 1 1 1 1 1; 
@@ -68,7 +68,7 @@ tags: [MATLAB, PageRank]
     % Read the full tutorial for more explanation. 
     % 
     % (c) 2012 Kardi Teknomo 
-    % http://people.revoledu.com/kardi/tutorial/ 
+    % https://people.revoledu.com/kardi/tutorial/ 
     %%%%%%%%%%%%%%%%%%%%%%% 
     if nargin<1 
         L=[1 1 1 1 1 1; 

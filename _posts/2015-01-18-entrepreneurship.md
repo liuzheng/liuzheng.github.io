@@ -6,7 +6,7 @@ category:
 tags: [Entrepreneurship]
 ---
 
-[转]<http://newshtml.iheima.com/2014/0810/144814.html>
+[转]<https://newshtml.iheima.com/2014/0810/144814.html>
 
 i黑马注：创业，本就是九死一生。以下是作者总结的创业过程中可能遇到的的合伙、翻脸、分赃、散伙等法则。
 评论容易，创业不易，且看且珍惜。但目前社会上你所能看到的都是九生一死，看到的都是乔布斯、雷布斯、

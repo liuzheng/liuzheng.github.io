@@ -7,7 +7,7 @@ tags: [SA]
 ---
 
 
-参考：<http://docs.ansible.com/intro_inventory.html>
+参考：<https://docs.ansible.com/intro_inventory.html>
 
 由于实习要求我学习Ansible，故而开始看，今天遇到的问题是hosts的分组
 

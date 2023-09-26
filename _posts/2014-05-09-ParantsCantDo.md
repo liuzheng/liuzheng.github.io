@@ -7,7 +7,7 @@ tags: [转, 孩子, 教育, 生活]
 ---
 
 
-转自：<http://m.parenting.com.tw/article/article.action?id=5054875>
+转自：<https://m.parenting.com.tw/article/article.action?id=5054875>
 
 潛能開發、培養外語基礎……許多父母積極為孩子打造一條順利的學習之路，但日本 PHP 研究所卻提醒，孩子9歲前，有7件父母不該做的事：
 

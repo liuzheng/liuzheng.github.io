@@ -40,6 +40,6 @@ Nginx做反代啊什么各种502
 
 参考
 
-<http://stackoverflow.com/questions/25995060/nginx-cannot-connect-to-jenkins-on-centos-7>
+<https://stackoverflow.com/questions/25995060/nginx-cannot-connect-to-jenkins-on-centos-7>
 
-<http://www.cnblogs.com/xiangxiaodong/>
+<https://www.cnblogs.com/xiangxiaodong/>

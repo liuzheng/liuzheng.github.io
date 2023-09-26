@@ -7,7 +7,7 @@ tags: [gfw]
 ---
 
 
-参考：<http://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html>
+参考：<https://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html>
 
 蛋疼了一下午，本来要写man ssh都delay 了。。。
 
@@ -41,7 +41,7 @@ Use command:
 
 在Service里面添加一行
 
-    Environment='HTTP_PROXY=http://127.0.0.1:8087/'
+    Environment='HTTP_PROXY=https://127.0.0.1:8087/'
 
 然后reload
 

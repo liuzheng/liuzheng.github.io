@@ -173,9 +173,9 @@ BUG:首卡下卡以后,如果申请临时额度成功,可以马上申请第二�
 
 目前已知的：兴业5%（不限次数，不可取现），民生10%（需申请开通，只限一次），广发10%（需申请开通,只限一次），平安10-30%，浦发0-10%(需申请开通，只限一次，依系统评分)，中信仅小额（只限一次），光大没有，招行没有，交通没有，其他不详。
 
-香港红十字会:http://www.redcross.org.hk/tc/home.html
+香港红十字会:https://www.redcross.org.hk/tc/home.html
 
-联合国难民署:http://www.unhcr.org.hk/unhcr/sc/home.html
+联合国难民署:https://www.unhcr.org.hk/unhcr/sc/home.html
 
 说的差不多了,祝愿各位朋友都有好额度的信用卡,毕竟需要用钱的地方太多,你可以申请下来不开卡,以备不时之需.
 

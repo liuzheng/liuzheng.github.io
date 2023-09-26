@@ -16,7 +16,7 @@ tags: []
 
 epel是标配大家都懂的，这里就顺手加一下，以后查起来便利。
 
-    sudo rpm -ivh http://download.fedora.redhat.com/pub/epel/6/x86_64/epel-release-6-5.noarch.rpm
+    sudo rpm -ivh https://download.fedora.redhat.com/pub/epel/6/x86_64/epel-release-6-5.noarch.rpm
 
 ## 安装SCL
 这个可以提供如下几个版本的更新
@@ -113,4 +113,4 @@ epel是标配大家都懂的，这里就顺手加一下，以后查起来便利�
 
 # 参考
 
-http://wiki.centos.org/AdditionalResources/Repositories/SCL
+https://wiki.centos.org/AdditionalResources/Repositories/SCL

@@ -18,7 +18,7 @@ tags: [Search]
 
 曾几何时，我突发奇想想找一个东西， 我便开始使用搜索引擎了， 那时我用最“丰富”的词语描绘我所想要找的东西，结果却不尽人意， 当时我弄错了一点， 计算机它不是人， 他无法理解（人类意义上的理解）我的话（或是我表述有问题。。。）， 它只能对词进行理解， 而句子就难度大了， 所以我的冗余词汇加大了错误搜索的概率， 同时也不经意间过滤掉了想要的结果。
 
-http://www.williamlong.info/archives/728.html
-http://www.iplaysoft.com/get-more-out-of-google.html
-http://www.mifengtd.cn/articles/5-tips-improve-search-results.html
-http://www.pc841.com/article/20120731-7509.html
+https://www.williamlong.info/archives/728.html
+https://www.iplaysoft.com/get-more-out-of-google.html
+https://www.mifengtd.cn/articles/5-tips-improve-search-results.html
+https://www.pc841.com/article/20120731-7509.html

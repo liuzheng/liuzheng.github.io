@@ -15,15 +15,15 @@ tags: [hbase]
 
 下载 Hbase 源码包
 
-<http://www.apache.org/dyn/closer.cgi/hbase/>
+<https://www.apache.org/dyn/closer.cgi/hbase/>
 
 ## Windows 篇
 
-<http://apache.fayea.com/apache-mirror/thrift/0.9.1/thrift-0.9.1.exe>
+<https://apache.fayea.com/apache-mirror/thrift/0.9.1/thrift-0.9.1.exe>
 
 将其拷贝到默认 PATH 路径下，若喜欢安文件分类，手动加PATH吧，我懒。。。直接加到Git/bin下面
 
-找到 Hbase 源码文件中 hbase.thrift 。当然，你会发现上级目录有一个thrift2，其对比我在该链接(Thrift介绍与应用（三）—hbase的thrift接口)[http://blog.csdn.net/guxch/article/details/12163047]找到了他们的不同，深入了解的话可以细看。
+找到 Hbase 源码文件中 hbase.thrift 。当然，你会发现上级目录有一个thrift2，其对比我在该链接(Thrift介绍与应用（三）—hbase的thrift接口)[https://blog.csdn.net/guxch/article/details/12163047]找到了他们的不同，深入了解的话可以细看。
 
 cd 到刚才找到的文件，运行
 

@@ -83,4 +83,4 @@ CCACHE_SIZE="2G"
 
 <https://wiki.gentoo.org/wiki/Distcc>
 
-<http://www.gentoo.org/doc/zh_cn/handbook/handbook-x86.xml?part=2&chap=3>
+<https://www.gentoo.org/doc/zh_cn/handbook/handbook-x86.xml?part=2&chap=3>

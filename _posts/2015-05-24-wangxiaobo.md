@@ -7,7 +7,7 @@ tags: [life]
 ---
 
 
-转：http://www.lz13.cn/jingdianyulu/4199.html
+转：https://www.lz13.cn/jingdianyulu/4199.html
 
 1、这个世界自始至终只有两种人：一种是像我这样的人，一种是不像我这样的人。
 

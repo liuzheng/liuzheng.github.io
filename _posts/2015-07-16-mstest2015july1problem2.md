@@ -9,7 +9,7 @@ tags: []
 
 表示对微软不感冒，然后呢也没关注，今天看到同学在玩这题，感觉很好玩，就玩玩哈。
 
-原题：<http://hihocoder.com/contest/mstest2015july1/problem/2>
+原题：<https://hihocoder.com/contest/mstest2015july1/problem/2>
 
 时间限制:10000ms
 

@@ -6,7 +6,7 @@ category:
 tags: [twitter, interview]
 ---
 
-刚才看微信推荐说了一道twitter的面试题，题目链接<http://blog.jobbole.com/50705>
+刚才看微信推荐说了一道twitter的面试题，题目链接<https://blog.jobbole.com/50705>
 
 题目中对方提到可以使用`更有意思的一次遍历`，我就提起兴趣了
 
