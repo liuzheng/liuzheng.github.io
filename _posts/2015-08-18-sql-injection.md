@@ -33,7 +33,7 @@ tags: [sql]
 
 如下图，这时候Burp会拦截到了我们的登录POST请求
 
-![](/imgs/2015-08-18-01.jpg)
+![](/assets/imgs/2015-08-18-01.jpg)
 
 5. 把这个post请求复制为txt, 我这命名为search-test.txt 然后把它放至sqlmap目录下
 
@@ -91,7 +91,7 @@ tags: [sql]
 
     sqlmap -u "http://url/news?id=1" --level 3    #--level参数来进行不同全面性的测试，默认为1，不同的参数影响了使用哪些payload，2时会进行cookie注入检测，3时会进行useragent检测
 
-![](/imgs/2015-08-18-02.jpg)
+![](/assets/imgs/2015-08-18-02.jpg)
 
 # 风险等级：
 

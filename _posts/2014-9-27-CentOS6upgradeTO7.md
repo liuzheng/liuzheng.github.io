@@ -14,7 +14,7 @@ CentOS 7 已经发布了，很多情况不允许重装系统，我这里就写�
 
 VirtualBox 配置的机器如下
 
-![CentOS 6 安装](http://ilz.me/imgs/CentOS6TO7_1.png)
+![CentOS 6 安装](http://ilz.me/assets/imgs/CentOS6TO7_1.png)
 
 安装都是基本默认配置，未做特殊修改，仅仅设置磁盘大小为18GB
 

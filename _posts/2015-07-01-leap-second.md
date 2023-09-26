@@ -15,7 +15,7 @@ tags: [运维]
 
 这是群内某人的实况截图
 
-![](/imgs/LeapSecond.jpg)
+![](/assets/imgs/LeapSecond.jpg)
 
 高亮处其实是kernel的信息，下面的ntpd才是正真的ntp服务的log
 

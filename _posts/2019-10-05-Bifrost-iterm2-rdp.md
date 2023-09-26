@@ -13,7 +13,7 @@ tags: ["Bastion"]
 
 设置Iterm2的Tirgger特性，Profiles->Default->Advanced中的Tirgger 
 
-![iTerm2](/imgs/bifrost/iterm2.png)
+![iTerm2](/assets/imgs/bifrost/iterm2.png)
 
 之后在连接Bifrost中链接rdp时会显示rdp会话的url，iTerm2会自动打开Windows Remote Desktop 去连接，前提当然得安装了该软件。
 
