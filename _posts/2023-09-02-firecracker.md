@@ -81,7 +81,7 @@ ip route add default via 172.16.0.1 dev eth0
 
 ```bash
 curl --unix-socket /tmp/firecracker.socket -i \
-    -X PUT "http://localhost/actions" \
+    -X PUT "https://localhost/actions" \
     -d '{ "action_type": "SendCtrlAltDel" }'
 ```
 

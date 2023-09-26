@@ -6,7 +6,7 @@ category:
 tags: [Linux]
 ---
 
-转自：http://www.freeoa.net/osuport/sysec/simple-linux-sys-users-operate-manage-solution_1880.html
+转自：https://www.freeoa.net/osuport/sysec/simple-linux-sys-users-operate-manage-solution_1880.html
 
 
 当需要登录服务器的用户增加时，就必须知道运维人员、开发人员或者黑客在机器上进行了什么样的操作，或如果机器上的重要文件被删除了，你是否很想知道是谁在什么时候删的？

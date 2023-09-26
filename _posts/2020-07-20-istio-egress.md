@@ -126,7 +126,7 @@ metadata:
 spec:
   hosts:
     - "*.qq.com"
-  http:
+  https:
   - route:
     - destination:
         host: http-proxy.default.svc.cluster.local

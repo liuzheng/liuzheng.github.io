@@ -7,7 +7,7 @@ tags: [life]
 ---
 
 
-转自：<http://orthop.dxy.cn/article/15105?trace=related>
+转自：<https://orthop.dxy.cn/article/15105?trace=related>
 
 # 第一部分 前言
 颈椎病（Cervical Spondylosis）是一种常见病和多发病。

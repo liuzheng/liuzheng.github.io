@@ -8,23 +8,23 @@ tags: [Android]
 
 
 # Android 手记
-参考：<http://stackoverflow.com/questions/16316526/how-to-sign-android-rom-zip-file>
+参考：<https://stackoverflow.com/questions/16316526/how-to-sign-android-rom-zip-file>
 
-下载[apk-zip-signing-tools.zip](/soft/apk-zip-signing-tools.zip)或者<http://goo.gl/lRNlE8>
+下载[apk-zip-signing-tools.zip](/soft/apk-zip-signing-tools.zip)或者<https://goo.gl/lRNlE8>
 
 解压后在该文件目录下运行如下命令，当然各种指路径都是可以的
 
     java -Xmx1024m -jar signapk.jar -w testkey.x509.pem testkey.pk8 my_rom.zip my_signed_rom.zip
 
 ## 分离驱动和内核（暂时未验证是否有效）
-参考：<http://forum.ubuntu.org.cn/viewtopic.php?t=450939>
+参考：<https://forum.ubuntu.org.cn/viewtopic.php?t=450939>
 
 ### 提取驱动
 驱动提取很好办，在/system/vendor/modules里面，那一堆.ko文件就是。另外可能还需要固件，在/system/vendor/firmware里面。
 
 ### 提取内核:
 
-工具下载，[本地地址](/soft/tools.tar.gz),<http://dl.linux-sunxi.org/users/arete74/tools.tar.gz>
+工具下载，[本地地址](/soft/tools.tar.gz),<https://dl.linux-sunxi.org/users/arete74/tools.tar.gz>
 
 通过命令 `split_bootimg.pl ../boot.img` 来得到一个boot.img-kernel的文件，将它转换成可以从卡上引导的镜像：
 

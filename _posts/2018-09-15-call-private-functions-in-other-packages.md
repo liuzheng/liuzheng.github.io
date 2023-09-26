@@ -288,7 +288,7 @@ sec, nsec := timeNow()
  - <https://siadat.github.io/post/golinkname>
  - <https://sitano.github.io/2016/04/28/golang-private/>
  - <https://golang.org/doc/go1.4#internalpackages>
- - <http://www.alangpierce.com/blog/2016/03/17/adventures-in-go-accessing-unexported-functions/>
+ - <https://www.alangpierce.com/blog/2016/03/17/adventures-in-go-accessing-unexported-functions/>
  - <https://groups.google.com/forum/#!topic/golang-nuts/ppGGazd9KXI>
 
 

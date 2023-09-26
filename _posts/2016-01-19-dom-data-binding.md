@@ -9,17 +9,17 @@ tags: [JavaScript]
 
 因为觉得AngularJS太重了，一般都会想尝试重新造轮子，先做一些基础调查吧。
 
-<http://www.html-js.com/article/A-day-to-learn-JavaScript-using-the-native-JavaScript-data-binding>
+<https://www.html-js.com/article/A-day-to-learn-JavaScript-using-the-native-JavaScript-data-binding>
 
 ps: 上面链接的讨论圆点功能不错考虑后期加上^_^!
 
-<http://www.jianshu.com/p/ee014d86cd3f>
+<https://www.jianshu.com/p/ee014d86cd3f>
 
 <https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md>
 
 AngularJS是脏值检测，想着用原生办法解决，试试吧，如果不用jQuery的话。
 
-<http://www.zhuowenli.com/frontend/easy-two-way-data-binding-in-javascript.html>
+<https://www.zhuowenli.com/frontend/easy-two-way-data-binding-in-javascript.html>
 
 这篇文章讲的比较细致
 
@@ -29,7 +29,7 @@ AngularJS是脏值检测，想着用原生办法解决，试试吧，如果不�
 按照手机10kb/s就是20秒，但是大多都是牛逼的手机吧，应该两秒内可以下完，但是，哎哎哎，为什么要考虑手机呢。。。我也就是自己想重新造个轮子。。。不过200kb确实似乎有点耗时间啊>_<
 
 
-再贴一篇：<http://www.ituring.com.cn/article/48463>
+再贴一篇：<https://www.ituring.com.cn/article/48463>
 
 囫囵吞枣的了解了大概，估计过两天就忘了。。。
 

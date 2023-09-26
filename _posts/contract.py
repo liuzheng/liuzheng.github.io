@@ -9,7 +9,7 @@ import cStringIO
 import re
 from bs4 import BeautifulSoup
 
-MAIN = 'http://www.64365.com'
+MAIN = 'https://www.64365.com'
 
 
 def getHTT_Header(url):
@@ -31,7 +31,7 @@ def getHTT_Header(url):
 
 
 def main():
-    url = 'http://www.64365.com/article/contract/down_283.aspx'
+    url = 'https://www.64365.com/article/contract/down_283.aspx'
     # opener = urllib2.build_opener()
     # request = urllib2.Request(url)
     # request.get_method = lambda: 'HEAD'
@@ -62,7 +62,7 @@ def download(filename, url):
 
 
 def getList():
-    url = 'http://www.64365.com/contract/tdzyht/'
+    url = 'https://www.64365.com/contract/tdzyht/'
     req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0')
     req.add_header('Host', 'www.64365.com')
@@ -130,7 +130,7 @@ def mkdir(path):
 
 if __name__ == '__main__':
     # main()
-    # url = 'http://www.64365.com/article/contract/down_283.aspx'
+    # url = 'https://www.64365.com/article/contract/down_283.aspx'
     if os.name == 'posix':
         PATH = '/opt/yun/contract'
     else:
@@ -149,7 +149,7 @@ if __name__ == '__main__':
                     ppath + urllib.unquote(re.search(q, getHTT_Header(MAIN + g)['Content-Disposition']).group(1)[:-1]),
                     MAIN + g)
 
-                # getDownlink('http://www.64365.com/contract/lcht/')
+                # getDownlink('https://www.64365.com/contract/lcht/')
                 # p = getHTT_Header(url)
                 #
                 # filename = 'D:/' + urllib.unquote(re.search(q, p['Content-Disposition']).group(1)[:-1])
