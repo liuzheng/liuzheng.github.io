@@ -40,7 +40,7 @@ RUN apt update && \
 # truncate -s 1G images/${file}.ext4 
 # mkfs.ext4 images/${file}.ext4 
 # mount -t ext4 images/${file}.ext4 rootfs
-# debootstrap --include apt,netplan.io,vim stable rootfs http://ftp.debian.org/debian
+# debootstrap --include apt,netplan.io,vim stable rootfs http://deb.debian.org/debian
 # echo 'debain-stable' > /rootfs/etc/hostname
 # mkdir rootfs/etc/systemd/system/serial-getty@ttyS0.service.d/
 # cat <<EOF > rootfs/etc/systemd/system/serial-getty@ttyS0.service.d/autologin.conf
