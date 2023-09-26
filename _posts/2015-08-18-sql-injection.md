@@ -91,8 +91,6 @@ tags: [sql]
 
     sqlmap -u "https://url/news?id=1" --level 3    #--level参数来进行不同全面性的测试，默认为1，不同的参数影响了使用哪些payload，2时会进行cookie注入检测，3时会进行useragent检测
 
-![](/assets/imgs/2015-08-18-02.jpg)
-
 # 风险等级：
 
 --risk   #共有三个风险等级，默认是1会测试大部分的测试语句，2会增加基于事件的测试语句，3会增加OR语句的SQL注入测试。
