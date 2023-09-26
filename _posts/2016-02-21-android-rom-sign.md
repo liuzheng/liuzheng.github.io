@@ -10,7 +10,7 @@ tags: [Android]
 # Android 手记
 参考：<https://stackoverflow.com/questions/16316526/how-to-sign-android-rom-zip-file>
 
-下载[apk-zip-signing-tools.zip](/soft/apk-zip-signing-tools.zip)或者<https://goo.gl/lRNlE8>
+下载[apk-zip-signing-tools.zip](/assets/soft/apk-zip-signing-tools.zip)或者<https://goo.gl/lRNlE8>
 
 解压后在该文件目录下运行如下命令，当然各种指路径都是可以的
 
@@ -24,7 +24,7 @@ tags: [Android]
 
 ### 提取内核:
 
-工具下载，[本地地址](/soft/tools.tar.gz),<https://dl.linux-sunxi.org/users/arete74/tools.tar.gz>
+工具下载，[本地地址](/assets/soft/tools.tar.gz),<https://dl.linux-sunxi.org/users/arete74/tools.tar.gz>
 
 通过命令 `split_bootimg.pl ../boot.img` 来得到一个boot.img-kernel的文件，将它转换成可以从卡上引导的镜像：
 
