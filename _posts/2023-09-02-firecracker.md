@@ -68,7 +68,7 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 sudo iptables -A FORWARD -i tap0 -o eth0 -j ACCEPT
 ```
-在实例中需要执行：
+~在实例中需要执行~(可参考 [boot args](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-configuring_ip_networking_from_the_kernel_command_line))：
 ```
 ip addr add 172.16.0.2/24 dev eth0
 ip link set eth0 up
