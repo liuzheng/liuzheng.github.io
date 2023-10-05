@@ -41,7 +41,7 @@ RUN apt update && \
 # mkfs.ext4 images/${file}.ext4 
 # mount -t ext4 images/${file}.ext4 rootfs
 # debootstrap --include apt,netplan.io,vim stable rootfs http://deb.debian.org/debian
-# echo 'debain-stable' > /rootfs/etc/hostname
+# echo 'debain-stable' > rootfs/etc/hostname
 # mkdir rootfs/etc/systemd/system/serial-getty@ttyS0.service.d/
 # cat <<EOF > rootfs/etc/systemd/system/serial-getty@ttyS0.service.d/autologin.conf
 # [Service]
