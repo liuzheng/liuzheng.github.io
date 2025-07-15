@@ -154,6 +154,13 @@ baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-include-cache
+
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
