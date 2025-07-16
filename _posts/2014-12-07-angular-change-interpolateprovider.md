@@ -1,8 +1,8 @@
 ---
 title: "Angular change interpolateProvider"
 description: ""
-# category:
-# tags: [Angular]
+categorys: 
+tags: [Angular]
 ---
 
 

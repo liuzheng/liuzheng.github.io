@@ -1,8 +1,8 @@
 ---
 title: "CentOS6 x64 Hadoop编译"
 description: ""
-# category:
-# tags: [hadoop]
+categorys: 
+tags: [hadoop]
 ---
 
 

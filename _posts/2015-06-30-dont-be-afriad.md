@@ -1,8 +1,8 @@
 ---
 title: "读后感：《怕什么？人生本来就不确定》"
 description: "don't be afriad"
-# category: 
-# tags: [读后感]
+categorys: 
+tags: [读后感]
 ---
 
 

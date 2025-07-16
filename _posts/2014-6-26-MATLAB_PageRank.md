@@ -2,8 +2,8 @@
 title: "MATLAB PageRank小结"
 tagline: ""
 description: "MATLAB PageRank"
-# category: study
-# tags: [MATLAB, PageRank]
+categorys: [study]
+tags: [MATLAB, PageRank]
 ---
 
 

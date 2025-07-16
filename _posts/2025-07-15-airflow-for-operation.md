@@ -2,8 +2,8 @@
 title: "Airflow for Operation"
 tagline: ""
 description: ""
-# category: operation
-# tags: [operation,airflow]
+categorys: [operation]
+tags: [operation,airflow]
 ---
 
 ## Airflow

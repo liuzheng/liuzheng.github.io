@@ -1,8 +1,8 @@
 ---
 title: "Ansible Inventory"
 description: "Ansible Inventory"
-# category: 
-# tags: [SA]
+categorys: 
+tags: [SA]
 ---
 
 

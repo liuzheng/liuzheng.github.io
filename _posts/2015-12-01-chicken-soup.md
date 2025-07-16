@@ -1,8 +1,8 @@
 ---
 title: "Chicken Soup"
 description: ""
-# category: 
-# tags: [life]
+categorys: 
+tags: [life]
 ---
 
 

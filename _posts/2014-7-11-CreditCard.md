@@ -2,8 +2,8 @@
 title: "[转]各大银行信用卡指南"
 tagline: "曾经转到精弘里的贴"
 description: "各大银行信用卡指南"
-# category: study
-# tags: [转, 信用卡]
+categorys: [study]
+tags: [转, 信用卡]
 ---
 
 

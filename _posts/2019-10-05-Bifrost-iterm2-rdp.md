@@ -2,8 +2,8 @@
 title: "终端访问代理系统(2)"
 tagline: "Mac iTerm2 自动启动rdp链接后端"
 description: ""
-# category: 
-# tags: ["Bastion"]
+categorys: 
+tags: ["Bastion"]
 ---
 
 个人日常使用均是MBP，今天研究rz/sz功能的时候想着如何自动启动Windows会话链接。

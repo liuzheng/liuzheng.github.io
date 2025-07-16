@@ -1,8 +1,8 @@
 ---
 title: "KVM + VNC (ubuntu)"
 description: ""
-# category: 
-# tags: [KVM]
+categorys: 
+tags: [KVM]
 ---
 
 

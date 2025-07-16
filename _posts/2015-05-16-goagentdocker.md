@@ -1,8 +1,8 @@
 ---
 title: "goagent+docker"
 description: ""
-# category: 
-# tags: [gfw]
+categorys: 
+tags: [gfw]
 ---
 
 

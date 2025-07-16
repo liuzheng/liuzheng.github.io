@@ -1,8 +1,8 @@
 ---
 title: "awk inner var"
 description: ""
-# category: 
-# tags: []
+categorys: 
+tags: []
 ---
 
 

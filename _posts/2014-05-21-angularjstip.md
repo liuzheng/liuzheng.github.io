@@ -1,8 +1,8 @@
 ---
 title: "AngularJS做网站的一些想法"
 description: "AngularJS"
-# category: 
-# tags: [AngularJS]
+categorys: 
+tags: [AngularJS]
 ---
 
 

@@ -2,8 +2,8 @@
 title: "Fxxk AWS Elasticsearch service"
 tagline: ""
 description: ""
-# category: 
-# tags: [AWS]
+categorys: 
+tags: [AWS]
 ---
 
 # AWS Elasticsearch

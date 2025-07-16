@@ -1,8 +1,8 @@
 ---
 title: "Mac docker-manchine 问题"
 description: ""
-# category: 
-# tags: [docker]
+categorys: 
+tags: [docker]
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "DOM 双向绑定"
 description: ""
-# category: 
-# tags: [JavaScript]
+categorys: 
+tags: [JavaScript]
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "CentOS6 安装Python2.7 及 pip记录"
 description: ""
-# category:
-# tags: []
+categorys: 
+tags: []
 ---
 
 

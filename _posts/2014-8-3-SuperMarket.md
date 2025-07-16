@@ -3,8 +3,8 @@
 title: "超市里的潜规则"
 tagline: ""
 description: "超市里的潜规则"
-# category: life
-# tags: [生活]
+categorys: [life]
+tags: [生活]
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Python, Hbase, Thrift"
 description: "Python, Hbase, Thrift"
-# category: hbase
-# tags: [hbase]
+categorys: [hbase]
+tags: [hbase]
 ---
 
 

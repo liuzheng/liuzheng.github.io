@@ -2,8 +2,8 @@
 title: "搜索之道"
 tagline: ""
 description: "搜索之道"
-# category: study
-# tags: [Search]
+categorys: [study]
+tags: [Search]
 ---
 
 

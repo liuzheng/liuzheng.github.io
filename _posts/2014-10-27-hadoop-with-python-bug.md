@@ -1,8 +1,8 @@
 ---
 title: "Hadoop with Python 遇到的问题"
 description: "Hadoop with Python 遇到的问题"
-# category: Hadoop
-# tags: ['Hadoop','Python']
+categorys: [Hadoop]
+tags: ['Hadoop','Python']
 ---
 
 

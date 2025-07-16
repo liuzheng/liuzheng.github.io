@@ -2,8 +2,8 @@
 title: "Google突破"
 tagline: ""
 description: ""
-# category: 技术
-# tags: [技术]
+categorys: [$1]
+tags: [技术]
 ---
 
 

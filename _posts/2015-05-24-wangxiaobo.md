@@ -1,8 +1,8 @@
 ---
 title: "[转]王小波经典语录"
 description: ""
-# category:
-# tags: [life]
+categorys: 
+tags: [life]
 ---
 
 

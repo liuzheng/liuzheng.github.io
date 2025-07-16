@@ -2,8 +2,8 @@
 title: "Jumpserver Docker App"
 tagline: ""
 description: ""
-# category: 
-# tags: [Jumpserver]
+categorys: 
+tags: [Jumpserver]
 ---
 
 ## 方案分析

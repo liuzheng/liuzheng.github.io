@@ -2,8 +2,8 @@
 title: "Firecracker 根镜像制作"
 tagline: ""
 description: ""
-# category: firecracker
-# tags: [firecracker]
+categorys: [firecracker]
+tags: [firecracker]
 ---
 
 ## AlmaLinux

@@ -1,8 +1,8 @@
 ---
 title: "front-end idea"
 description: ""
-# category: 
-# tags: [front-end]
+categorys: 
+tags: [front-end]
 ---
 
 

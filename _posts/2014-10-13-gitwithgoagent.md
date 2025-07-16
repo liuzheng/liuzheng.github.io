@@ -1,8 +1,8 @@
 ---
 title: "gitWithGoAgent"
 description: ""
-# category: proxy
-# tags: [proxy, goagent]
+categorys: [proxy]
+tags: [proxy, goagent]
 ---
 
 

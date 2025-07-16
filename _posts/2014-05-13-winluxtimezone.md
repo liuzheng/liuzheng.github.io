@@ -2,8 +2,8 @@
 title: "Windows 和 Linux共存时时间不一致"
 tagline: "让Windows把硬件时间当作UTC"
 description: "Windows Linux 时时间不一致 相差8小时"
-# category: windows
-# tags: [windows, linux, timezone]
+categorys: [windows]
+tags: [windows, linux, timezone]
 ---
 
 

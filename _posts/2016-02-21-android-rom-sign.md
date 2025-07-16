@@ -1,8 +1,8 @@
 ---
 title: "Android ROM sign"
 description: ""
-# category: 
-# tags: [Android]
+categorys: 
+tags: [Android]
 ---
 
 

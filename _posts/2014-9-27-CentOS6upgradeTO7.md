@@ -1,7 +1,7 @@
 ---
 title: "CentOS6 升级到 7"
-# category: study
-# tags: [study, 运维]
+categorys: [study]
+tags: [study, 运维]
 ---
 
 

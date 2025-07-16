@@ -1,8 +1,8 @@
 ---
 title: "sqlmap 攻击日志分析及自动化解决想法"
 description: ""
-# category: 
-# tags: [sqlmap, hack]
+categorys: 
+tags: [sqlmap, hack]
 ---
 
 以下内容高危，如你知道密码，请输入

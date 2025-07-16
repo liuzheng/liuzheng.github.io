@@ -1,8 +1,8 @@
 ---
 title: "Add Two Numbers"
 description: ""
-# category: 
-# tags: []
+categorys: 
+tags: []
 ---
 
 

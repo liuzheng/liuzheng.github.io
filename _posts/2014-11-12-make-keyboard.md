@@ -1,8 +1,8 @@
 ---
 title: "make keyboard"
 description: ""
-# category: 
-# tags: [keyboard]
+categorys: 
+tags: [keyboard]
 ---
 
 

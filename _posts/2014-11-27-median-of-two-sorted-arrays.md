@@ -1,8 +1,8 @@
 ---
 title: "Median of Two Sorted Arrays"
 description: ""
-# category: 
-# tags: [leetcode,python]
+categorys: 
+tags: [leetcode,python]
 ---
 
 

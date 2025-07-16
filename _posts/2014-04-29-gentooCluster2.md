@@ -2,8 +2,8 @@
 title: "Gentoo集群架设（2）"
 tagline: "分布式编译emerge"
 description: "Gentoo集群架设（2） 分布式编译emerge"
-# category: study
-# tags: [gentoo, 集群]
+categorys: [study]
+tags: [gentoo, 集群]
 ---
 
 

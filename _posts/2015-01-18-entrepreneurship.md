@@ -1,8 +1,8 @@
 ---
 title: "创业的合伙、翻脸、分赃、散伙法则"
 description: ""
-# category:
-# tags: [Entrepreneurship]
+categorys: 
+tags: [Entrepreneurship]
 ---
 
 [转]<https://newshtml.iheima.com/2014/0810/144814.html>

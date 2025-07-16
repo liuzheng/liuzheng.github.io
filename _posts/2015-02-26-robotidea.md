@@ -1,8 +1,8 @@
 ---
 title: "robotIdea"
 description: ""
-# category: 
-# tags: [idea]
+categorys: 
+tags: [idea]
 ---
 
 

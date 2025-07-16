@@ -2,8 +2,8 @@
 title: "Gentoo集群架设（1）"
 tagline: "安装系统"
 description: "Gentoo集群架设（1） 安装系统"
-# category: study
-# tags: [gentoo, 集群]
+categorys: [study]
+tags: [gentoo, 集群]
 ---
 
 

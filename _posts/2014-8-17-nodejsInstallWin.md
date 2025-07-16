@@ -2,8 +2,8 @@
 title: "Node for windows Install"
 tagline: ""
 description: ""
-# category: Node
-# tags: [Node, guide]
+categorys: [Node]
+tags: [Node, guide]
 ---
 
 

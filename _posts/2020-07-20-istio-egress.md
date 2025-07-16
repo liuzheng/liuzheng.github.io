@@ -2,8 +2,8 @@
 title: "istio sidecar 出向劫持"
 tagline: ""
 description: ""
-# category: istio
-# tags: [kubernetes, istio]
+categorys: [istio]
+tags: [kubernetes, istio]
 ---
 
 istio 方案在方案设计上和网络讨论热点都是入向策略，在出向方面聊的不多，且官方给的出向方案让我难以接受。

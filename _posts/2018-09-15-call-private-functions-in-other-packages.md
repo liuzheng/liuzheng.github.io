@@ -2,8 +2,8 @@
 title: "突破限制,访问其它Go package中的私有函数"
 tagline: ""
 description: ""
-# category: 
-# tags: ["go"]
+categorys: 
+tags: ["go"]
 ---
 
 转自：<https://colobu.com/2017/05/12/call-private-functions-in-other-packages/>

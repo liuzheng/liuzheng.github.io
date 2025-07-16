@@ -1,8 +1,8 @@
 ---
 title: "mysql slow log"
 description: ""
-# category: 
-# tags: [Ops]
+categorys: 
+tags: [Ops]
 ---
 
 上午MySQL日志打爆，同事之前已经设置slow_query_log 5 秒，经过排查，是某表未加index，并且 log_queries_not_using_indexes is ON

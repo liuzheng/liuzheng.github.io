@@ -1,8 +1,8 @@
 ---
 title: "你真的会开自动档车吗???"
 description: "你真的会开自动档车吗???"
-# category: car
-# tags: [car]
+categorys: [car]
+tags: [car]
 ---
 
 from:/htm_data/7/1409/1228151.html

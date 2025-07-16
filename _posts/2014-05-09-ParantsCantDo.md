@@ -1,8 +1,8 @@
 ---
 title: "[转]孩子9歲前 父母別做的7件事"
 description: "孩子9歲前 父母別做的7件事"
-# category: life
-# tags: [转, 孩子, 教育, 生活]
+categorys: [life]
+tags: [转, 孩子, 教育, 生活]
 ---
 
 

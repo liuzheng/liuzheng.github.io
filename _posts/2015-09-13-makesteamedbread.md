@@ -1,8 +1,8 @@
 ---
 title: "一个运维做馒头"
 description: ""
-# category: 
-# tags: [life]
+categorys: 
+tags: [life]
 ---
 
 

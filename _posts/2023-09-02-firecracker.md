@@ -2,8 +2,8 @@
 title: "Firecracker 学习记录"
 tagline: ""
 description: ""
-# category: firecracker
-# tags: [firecracker]
+categorys: [firecracker]
+tags: [firecracker]
 ---
 
 早两年就知道firecracker，去年空的时候尝试过基本的启动实例的操作，体感还行，最近重新回顾，并尝试结合设计新的使用模式。

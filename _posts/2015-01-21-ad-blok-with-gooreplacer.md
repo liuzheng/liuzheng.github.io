@@ -1,8 +1,8 @@
 ---
 title: "使用 gooreplacer block ad"
 description: ""
-# category: 
-# tags: []
+categorys: 
+tags: []
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "[转]西红柿遇上鸡蛋 只能“炒”在一起吗"
 description: ""
-# category: 
-# tags: [life]
+categorys: 
+tags: [life]
 ---
 
 

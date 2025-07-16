@@ -1,8 +1,8 @@
 ---
 title: "Activating a volume group"
 description: ""
-# category: 
-# tags: [运维]
+categorys: 
+tags: [运维]
 ---
 
 <https://tldp.org/HOWTO/LVM-HOWTO/activatevgs.html>

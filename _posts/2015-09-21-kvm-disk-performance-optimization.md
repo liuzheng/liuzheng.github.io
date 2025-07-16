@@ -1,8 +1,8 @@
 ---
 title: "[转]KVM Disk Performance Optimization"
 description: ""
-# category: 
-# tags: [KVM]
+categorys: 
+tags: [KVM]
 ---
 
 

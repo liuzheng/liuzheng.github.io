@@ -1,8 +1,8 @@
 ---
 title: "实验室集群重装Plan"
 description: ""
-# category:
-# tags: [SA]
+categorys: 
+tags: [SA]
 ---
 
 

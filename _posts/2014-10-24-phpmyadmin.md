@@ -1,8 +1,8 @@
 ---
 title: "phpmyadmin去除iframe限制"
 description: ""
-# category:
-# tags: [phpmyadmin]
+categorys: 
+tags: [phpmyadmin]
 ---
 
 

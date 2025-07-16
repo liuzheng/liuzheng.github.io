@@ -1,8 +1,8 @@
 ---
 title: "twitter 面试题，水墙"
 description: ""
-# category: 
-# tags: [twitter, interview]
+categorys: 
+tags: [twitter, interview]
 ---
 
 刚才看微信推荐说了一道twitter的面试题，题目链接<https://blog.jobbole.com/50705>

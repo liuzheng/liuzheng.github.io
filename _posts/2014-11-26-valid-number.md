@@ -1,8 +1,8 @@
 ---
 title: "Valid Number"
 description: ""
-# category: 
-# tags: [leetcode,python]
+categorys: 
+tags: [leetcode,python]
 ---
 
 
