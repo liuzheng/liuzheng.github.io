@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Apache Config 记录"
 tagline: ""
 description: "Apache Config 记录"
-category: study
-tags: [Apache]
+# category: study
+# tags: [Apache]
 ---
 
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Chicken Soup"
 description: ""
-category: 
-tags: [life]
+# category: 
+# tags: [life]
 ---
 
 

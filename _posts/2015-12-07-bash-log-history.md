@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "[转]记录bash的操作"
 description: "简单的Linux系统用户操作行为管理方案"
-category: 
-tags: [Linux]
+# category: 
+# tags: [Linux]
 ---
 
 转自：https://www.freeoa.net/osuport/sysec/simple-linux-sys-users-operate-manage-solution_1880.html

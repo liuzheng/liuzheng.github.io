@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Ansible Inventory"
 description: "Ansible Inventory"
-category: 
-tags: [SA]
+# category: 
+# tags: [SA]
 ---
 
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "DOM 双向绑定"
 description: ""
-category: 
-tags: [JavaScript]
+# category: 
+# tags: [JavaScript]
 ---
 
 

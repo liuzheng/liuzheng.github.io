@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Android ROM sign"
 description: ""
-category: 
-tags: [Android]
+# category: 
+# tags: [Android]
 ---
 
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "[转]KVM Disk Performance Optimization"
 description: ""
-category: 
-tags: [KVM]
+# category: 
+# tags: [KVM]
 ---
 
 

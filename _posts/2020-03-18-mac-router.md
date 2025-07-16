@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Mac 刷路由器固件"
 tagline: ""
 description: ""
-category: 
-tags: []
+# category: 
+# tags: []
 ---
 
 今天写一下刷路由器等固件时所需的环境，mac版，因为网上也大多是Windows的，可能mac用户本身买mac就是解决生产力，懒的折腾吧。

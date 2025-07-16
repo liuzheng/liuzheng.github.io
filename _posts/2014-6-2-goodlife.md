@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "[转]一些教育自己的话"
 tagline: ""
 description: ""
-category: life
-tags: [life]
+# category: life
+# tags: [life]
 ---
 
 

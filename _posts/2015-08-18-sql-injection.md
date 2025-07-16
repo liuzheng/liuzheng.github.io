@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "[转]【tools】SQLMAP注入工具手册"
 description: ""
-category: 
-tags: [sql]
+# category: 
+# tags: [sql]
 ---
 
 转自:<https://sh4dow.lofter.com/post/395c80_121497d>

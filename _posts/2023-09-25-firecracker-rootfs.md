@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Firecracker 根镜像制作"
 tagline: ""
 description: ""
-category: firecracker
-tags: [firecracker]
+# category: firecracker
+# tags: [firecracker]
 ---
 
 ## AlmaLinux

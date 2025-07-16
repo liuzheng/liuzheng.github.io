@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Jumpserver Docker App"
 tagline: ""
 description: ""
-category: 
-tags: [Jumpserver]
+# category: 
+# tags: [Jumpserver]
 ---
 
 ## 方案分析

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "make keyboard"
 description: ""
-category: 
-tags: [keyboard]
+# category: 
+# tags: [keyboard]
 ---
 
 

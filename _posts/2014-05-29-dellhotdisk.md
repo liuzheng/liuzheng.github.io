@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Dell 服务器 SAS硬盘热插拔识别问题解决"
 description: ""
-category: server
-tags: [Dell, Server, Disk]
+# category: server
+# tags: [Dell, Server, Disk]
 ---
 
 

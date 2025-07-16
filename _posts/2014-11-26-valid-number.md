@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Valid Number"
 description: ""
-category: 
-tags: [leetcode,python]
+# category: 
+# tags: [leetcode,python]
 ---
 
 

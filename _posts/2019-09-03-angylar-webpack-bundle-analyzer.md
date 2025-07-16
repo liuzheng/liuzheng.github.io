@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Angular webpack-bundle-analyzer"
 tagline: ""
 description: ""
-category: 
-tags: [fontend]
+# category: 
+# tags: [fontend]
 ---
 ## 起因：
 编译 angular 项目时遇到文件较大的问题，之前一直没怎么查到解决方案，今日尝试优化一下。

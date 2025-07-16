@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "goagent+docker"
 description: ""
-category: 
-tags: [gfw]
+# category: 
+# tags: [gfw]
 ---
 
 

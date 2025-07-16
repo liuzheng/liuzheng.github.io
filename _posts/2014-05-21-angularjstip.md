@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "AngularJS做网站的一些想法"
 description: "AngularJS"
-category: 
-tags: [AngularJS]
+# category: 
+# tags: [AngularJS]
 ---
 
 

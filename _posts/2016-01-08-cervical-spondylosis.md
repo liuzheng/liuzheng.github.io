@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "[转]颈椎病诊治与康复指南 2010 版"
 description: ""
-category: 
-tags: [life]
+# category: 
+# tags: [life]
 ---
 
 

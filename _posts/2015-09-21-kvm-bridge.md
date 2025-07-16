@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "[转]桥网络配置"
 description: ""
-category: 
-tags: [KVM]
+# category: 
+# tags: [KVM]
 ---
 
 转：<https://blog.csdn.net/cybertan/article/details/8160102>

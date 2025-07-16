@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Ubuntu add ppa Error"
 description: ""
-category: 
-tags: [ubuntu, ppa]
+# category: 
+# tags: [ubuntu, ppa]
 ---
 
 参考<https://askubuntu.com/questions/212132/i-cant-add-ppa-repository-behind-the-proxy>
