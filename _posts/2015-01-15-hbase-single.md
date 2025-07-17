@@ -2,7 +2,7 @@
 layout: post
 title: "HBase 单机运行出的神奇的问题"
 description: "regionserver.HRegionServer: No master found; retry"
-category: 
+category: HBase
 tags: [HBase]
 ---
 

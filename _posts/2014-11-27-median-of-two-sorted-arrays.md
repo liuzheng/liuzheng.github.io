@@ -3,7 +3,7 @@ layout: post
 title: "Median of Two Sorted Arrays"
 description: ""
 category: 
-tags: [leetcode,python]
+tags: [leetcode, Python]
 ---
 
 

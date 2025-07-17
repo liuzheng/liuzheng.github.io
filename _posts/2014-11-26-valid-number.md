@@ -3,7 +3,7 @@ layout: post
 title: "Valid Number"
 description: ""
 category: 
-tags: [leetcode,python]
+tags: [leetcode, Python]
 ---
 
 
