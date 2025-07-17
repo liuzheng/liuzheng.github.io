@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "实验室集群重装Plan"
 description: ""
-categorys: 
+category:
 tags: [SA]
 ---
 

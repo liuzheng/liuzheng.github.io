@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "你真的会开自动档车吗???"
 description: "你真的会开自动档车吗???"
-categorys: [car]
+category: car
 tags: [car]
 ---
 

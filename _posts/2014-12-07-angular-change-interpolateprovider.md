@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Angular change interpolateProvider"
 description: ""
-categorys: 
+category:
 tags: [Angular]
 ---
 

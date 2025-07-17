@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "shell变量"
 description: "Daily Shell"
-categorys: [dailyShell]
+category: dailyShell
 tags: [dailyShell]
 ---
 

@@ -1,6 +1,7 @@
 ---
+layout: post
 title: "CentOS6 升级到 7"
-categorys: [study]
+category: study
 tags: [study, 运维]
 ---
 

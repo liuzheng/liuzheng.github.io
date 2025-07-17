@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "MATLAB PageRank小结"
 tagline: ""
 description: "MATLAB PageRank"
-categorys: [study]
+category: study
 tags: [MATLAB, PageRank]
 ---
 

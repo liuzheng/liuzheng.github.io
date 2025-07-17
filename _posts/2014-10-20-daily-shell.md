@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "挂载 smb 盘"
 description: "Daily Shell"
-categorys: [dailyShell]
+category: dailyShell
 tags: [dailyShell]
 ---
 

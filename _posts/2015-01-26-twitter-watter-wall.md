@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "twitter 面试题，水墙"
 description: ""
-categorys: 
+category: 
 tags: [twitter, interview]
 ---
 

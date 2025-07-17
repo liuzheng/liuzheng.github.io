@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Leap second"
 description: ""
-categorys: 
+category: 
 tags: [运维]
 ---
 

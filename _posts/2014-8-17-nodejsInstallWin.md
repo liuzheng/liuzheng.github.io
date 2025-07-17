@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Node for windows Install"
 tagline: ""
 description: ""
-categorys: [Node]
+category: Node
 tags: [Node, guide]
 ---
 

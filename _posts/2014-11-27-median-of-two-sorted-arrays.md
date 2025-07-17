@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Median of Two Sorted Arrays"
 description: ""
-categorys: 
+category: 
 tags: [leetcode,python]
 ---
 

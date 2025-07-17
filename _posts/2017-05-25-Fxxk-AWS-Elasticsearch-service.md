@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Fxxk AWS Elasticsearch service"
 tagline: ""
 description: ""
-categorys: 
+category: 
 tags: [AWS]
 ---
 

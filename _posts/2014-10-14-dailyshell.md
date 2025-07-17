@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "某日志处理"
 description: "Daily Shell"
-categorys: [dailyShell]
+category: dailyShell
 tags: [dailyShell]
 ---
 

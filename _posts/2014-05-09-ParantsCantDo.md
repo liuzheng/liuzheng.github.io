@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]孩子9歲前 父母別做的7件事"
 description: "孩子9歲前 父母別做的7件事"
-categorys: [life]
+category: life
 tags: [转, 孩子, 教育, 生活]
 ---
 

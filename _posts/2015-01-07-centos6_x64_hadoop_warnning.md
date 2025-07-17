@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "CentOS6 x64 Hadoop编译"
 description: ""
-categorys: 
+category:
 tags: [hadoop]
 ---
 

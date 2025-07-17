@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Ubuntu add ppa Error"
 description: ""
-categorys: 
+category: 
 tags: [ubuntu, ppa]
 ---
 

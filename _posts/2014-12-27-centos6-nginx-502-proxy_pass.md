@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "CentOS6 Nginx 502 proxy_pass"
 description: ""
-categorys: 
+category:
 tags: [SA]
 ---
 

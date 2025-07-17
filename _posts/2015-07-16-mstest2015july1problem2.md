@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "微软2016年校招探星夏令营第二题：最多约数问题"
 description: ""
-categorys: 
+category: 
 tags: []
 ---
 

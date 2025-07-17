@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Python, Hbase, Thrift"
 description: "Python, Hbase, Thrift"
-categorys: [hbase]
+category: hbase
 tags: [hbase]
 ---
 

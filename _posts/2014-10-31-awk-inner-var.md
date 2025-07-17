@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "awk inner var"
 description: ""
-categorys: 
+category: 
 tags: []
 ---
 

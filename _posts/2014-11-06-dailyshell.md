@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "ubuntu启动声卡不工作"
 description: ""
-categorys: 
+category:
 tags: [alsa]
 ---
 

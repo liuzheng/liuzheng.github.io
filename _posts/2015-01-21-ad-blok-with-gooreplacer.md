@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "使用 gooreplacer block ad"
 description: ""
-categorys: 
+category: 
 tags: []
 ---
 

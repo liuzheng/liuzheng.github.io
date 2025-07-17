@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "sqlmap 攻击日志分析及自动化解决想法"
 description: ""
-categorys: 
+category: 
 tags: [sqlmap, hack]
 ---
 

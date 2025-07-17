@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]送给准备结婚拍结婚照一些建议"
 description: ""
-categorys: [life]
+category: life
 tags: [转, CL, 建议, 生活]
 ---
 

@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Gentoo集群架设（3）"
 tagline: "配置buildhost"
 description: "Gentoo集群架设（3） 配置buildhost"
-categorys: [study]
+category: study
 tags: [gentoo, 集群]
 ---
 

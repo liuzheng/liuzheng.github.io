@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]王小波经典语录"
 description: ""
-categorys: 
+category:
 tags: [life]
 ---
 

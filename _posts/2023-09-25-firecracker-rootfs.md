@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Firecracker 根镜像制作"
 tagline: ""
 description: ""
-categorys: [firecracker]
+category: firecracker
 tags: [firecracker]
 ---
 

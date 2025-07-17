@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "终端访问代理系统(2)"
 tagline: "Mac iTerm2 自动启动rdp链接后端"
 description: ""
-categorys: 
+category: 
 tags: ["Bastion"]
 ---
 

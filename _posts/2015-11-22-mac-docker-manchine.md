@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Mac docker-manchine 问题"
 description: ""
-categorys: 
+category: 
 tags: [docker]
 ---
 

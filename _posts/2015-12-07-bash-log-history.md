@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]记录bash的操作"
 description: "简单的Linux系统用户操作行为管理方案"
-categorys: 
+category: 
 tags: [Linux]
 ---
 

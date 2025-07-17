@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]【tools】SQLMAP注入工具手册"
 description: ""
-categorys: 
+category: 
 tags: [sql]
 ---
 

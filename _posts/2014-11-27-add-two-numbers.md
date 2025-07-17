@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Add Two Numbers"
 description: ""
-categorys: 
+category: 
 tags: []
 ---
 

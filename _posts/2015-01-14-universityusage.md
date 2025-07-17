@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]现在上大学有用吗？看后你就明白了"
 description: ""
-categorys: 
+category:
 tags: [life]
 ---
 

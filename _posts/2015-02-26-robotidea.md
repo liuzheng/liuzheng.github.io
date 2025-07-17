@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "robotIdea"
 description: ""
-categorys: 
+category: 
 tags: [idea]
 ---
 

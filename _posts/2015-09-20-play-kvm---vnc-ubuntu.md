@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "KVM + VNC (ubuntu)"
 description: ""
-categorys: 
+category: 
 tags: [KVM]
 ---
 

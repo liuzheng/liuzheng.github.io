@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Google HTML/CSS Style Guide"
 description: ""
-categorys: [code]
+category: code
 tags: [代码规范, Google, HTML/CSS, style guide]
 ---
 

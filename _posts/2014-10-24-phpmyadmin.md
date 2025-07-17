@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "phpmyadmin去除iframe限制"
 description: ""
-categorys: 
+category:
 tags: [phpmyadmin]
 ---
 

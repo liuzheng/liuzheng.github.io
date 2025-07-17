@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "[转]各大银行信用卡指南"
 tagline: "曾经转到精弘里的贴"
 description: "各大银行信用卡指南"
-categorys: [study]
+category: study
 tags: [转, 信用卡]
 ---
 

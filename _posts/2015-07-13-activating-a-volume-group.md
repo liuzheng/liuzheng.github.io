@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Activating a volume group"
 description: ""
-categorys: 
+category: 
 tags: [运维]
 ---
 

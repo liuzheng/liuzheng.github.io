@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Gentoo集群架设（1）"
 tagline: "安装系统"
 description: "Gentoo集群架设（1） 安装系统"
-categorys: [study]
+category: study
 tags: [gentoo, 集群]
 ---
 

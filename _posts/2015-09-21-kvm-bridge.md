@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]桥网络配置"
 description: ""
-categorys: 
+category: 
 tags: [KVM]
 ---
 

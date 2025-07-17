@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "gitWithGoAgent"
 description: ""
-categorys: [proxy]
+category: proxy
 tags: [proxy, goagent]
 ---
 

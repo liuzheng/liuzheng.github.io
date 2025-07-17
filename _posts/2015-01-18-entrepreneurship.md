@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "创业的合伙、翻脸、分赃、散伙法则"
 description: ""
-categorys: 
+category:
 tags: [Entrepreneurship]
 ---
 

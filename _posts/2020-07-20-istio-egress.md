@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "istio sidecar 出向劫持"
 tagline: ""
 description: ""
-categorys: [istio]
+category: istio
 tags: [kubernetes, istio]
 ---
 

@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "搜索之道"
 tagline: ""
 description: "搜索之道"
-categorys: [study]
+category: study
 tags: [Search]
 ---
 

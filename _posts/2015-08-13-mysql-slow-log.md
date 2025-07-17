@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "mysql slow log"
 description: ""
-categorys: 
+category: 
 tags: [Ops]
 ---
 

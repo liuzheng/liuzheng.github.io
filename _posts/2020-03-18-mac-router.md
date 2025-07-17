@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Mac 刷路由器固件"
 tagline: ""
 description: ""
-categorys: 
+category: 
 tags: []
 ---
 

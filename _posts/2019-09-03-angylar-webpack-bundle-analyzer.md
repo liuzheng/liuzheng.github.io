@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Angular webpack-bundle-analyzer"
 tagline: ""
 description: ""
-categorys: 
+category: 
 tags: [fontend]
 ---
 ## 起因：

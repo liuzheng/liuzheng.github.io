@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Google突破"
 tagline: ""
 description: ""
-categorys: [$1]
+category: 技术
 tags: [技术]
 ---
 

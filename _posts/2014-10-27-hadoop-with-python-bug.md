@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Hadoop with Python 遇到的问题"
 description: "Hadoop with Python 遇到的问题"
-categorys: [Hadoop]
+category: Hadoop
 tags: ['Hadoop','Python']
 ---
 

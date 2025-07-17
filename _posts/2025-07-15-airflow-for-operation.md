@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Airflow for Operation"
 tagline: ""
 description: ""
-categorys: [operation]
+category: operation
 tags: [operation,airflow]
 ---
 

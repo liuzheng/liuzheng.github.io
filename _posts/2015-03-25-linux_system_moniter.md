@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "[转]你值得拥有 —— 25 个 Linux 性能监控工具"
 description: ""
-categorys: 
+category: 
 tags: [Linux, 性能监控工具]
 ---
 

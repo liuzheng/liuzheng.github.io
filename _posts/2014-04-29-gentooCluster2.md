@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Gentoo集群架设（2）"
 tagline: "分布式编译emerge"
 description: "Gentoo集群架设（2） 分布式编译emerge"
-categorys: [study]
+category: study
 tags: [gentoo, 集群]
 ---
 

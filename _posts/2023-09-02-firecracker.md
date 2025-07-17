@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Firecracker 学习记录"
 tagline: ""
 description: ""
-categorys: [firecracker]
+category: firecracker
 tags: [firecracker]
 ---
 

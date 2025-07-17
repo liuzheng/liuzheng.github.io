@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "front-end idea"
 description: ""
-categorys: 
+category: 
 tags: [front-end]
 ---
 

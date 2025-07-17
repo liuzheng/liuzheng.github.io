@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "突破限制,访问其它Go package中的私有函数"
 tagline: ""
 description: ""
-categorys: 
+category: 
 tags: ["go"]
 ---
 

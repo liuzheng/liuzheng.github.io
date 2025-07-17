@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "一个运维做馒头"
 description: ""
-categorys: 
+category: 
 tags: [life]
 ---
 
